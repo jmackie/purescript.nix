@@ -1,0 +1,25 @@
+cabal-version: 2.0
+
+name: elaborator
+version: 1.0.0
+license: BSD3
+license-file: LICENSE
+build-type: Simple
+
+executable elaborate-purescript-packages
+  hs-source-dirs: src
+  main-is: Main.hs
+  other-modules:
+    Control.Monad.Script
+    Data.Error
+    Nix
+    PscPackage
+    PureScript
+    Options
+  default-language: Haskell2010
+  default-extensions: NoImplicitPrelude
+  ghc-options: -Wall
+  build-depends:
+    base < 5, bytestring, text, containers, process, directory,
+    async, safe-exceptions, aeson, aeson-pretty, optparse-applicative,
+    path, path-io, prettyprinter, attoparsec
