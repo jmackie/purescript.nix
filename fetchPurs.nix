@@ -9,16 +9,17 @@ nixpkgs.stdenv.mkDerivation rec {
     gmp
     ncurses5
   ];
-  libPath = nixpkgs.lib.makeLibraryPath buildInputs;
-  dontStrip = true;
-  installPhase = ''
+  buildCommand = ''
+    tar -zxf $src --strip-components 1 purescript/purs
+
     mkdir -p $out/bin
     PURS="$out/bin/purs"
     install -D -m555 -T purs $PURS
 
     ${if nixpkgs.stdenv.isDarwin then "" else ''
     chmod u+w $PURS
-    patchelf --interpreter ${nixpkgs.stdenv.cc.bintools.dynamicLinker} --set-rpath ${libPath} $PURS
+    patchelf --interpreter ${nixpkgs.stdenv.cc.bintools.dynamicLinker} \
+      --set-rpath ${nixpkgs.lib.makeLibraryPath buildInputs} $PURS
     chmod u-w $PURS
     ''}
   '';
