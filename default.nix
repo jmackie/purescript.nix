@@ -1,10 +1,12 @@
-{ nixpkgs ? import <nixpkgs> {}
-, purs ? import ./purs_0.12.nix { inherit nixpkgs; } # v0.12.3
+{ pkgs ? import <nixpkgs> {}
+, purs ? "v0.12.3"
 , packageSet ? builtins.fromJSON (builtins.readFile ./packages.json) # psc-0.12.3-20190409
 }:
 let
+  compiler = (import ./purs.nix { inherit pkgs; }).${purs};
+
   getExtension = path: with builtins;
-    let parts = nixpkgs.lib.splitString "." path;
+    let parts = pkgs.lib.splitString "." path;
     in elemAt parts (length parts - 1);
   isPurs = path: getExtension path == "purs";
   isJs   = path: getExtension path == "js";
@@ -22,9 +24,9 @@ let
         (walkFiles root);
 
   tsortDeps = deps:
-    (nixpkgs.lib.toposort (a: b: builtins.elem a packageSet.${b}.dependencies) deps).result;
+    (pkgs.lib.toposort (a: b: builtins.elem a packageSet.${b}.dependencies) deps).result;
 
-  flattenDeps = with nixpkgs.lib;
+  flattenDeps = with pkgs.lib;
     foldl' (accum: dep: unique (accum ++ [dep] ++ flattenDeps packageSet.${dep}.dependencies)) [];
 
   compilePackage =
@@ -36,14 +38,14 @@ let
     } @ args :
     let
       flattenCompiledDeps = deps: builtins.attrValues (flattenCompiledDeps' deps);
-      flattenCompiledDeps' = with nixpkgs.lib;
-        nixpkgs.lib.foldl'
+      flattenCompiledDeps' = with pkgs.lib;
+        pkgs.lib.foldl'
           (accum: dep: accum // { ${dep._args.name} = dep; } // flattenCompiledDeps' dep._args.dependencies) {};
     in
-    (nixpkgs.stdenv.mkDerivation {
+    (pkgs.stdenv.mkDerivation {
       name = "purescript-" + name;
       inherit src;
-      buildInputs = [ purs ];
+      buildInputs = [ compiler ];
       buildCommand = with builtins; ''
         mkdir -p $out
 
@@ -70,7 +72,7 @@ let
         (accum: name: let info = packageSet.${name}; in accum // {
           ${name} = compilePackage {
             inherit name;
-            src = nixpkgs.fetchgit {
+            src = pkgs.fetchgit {
               url = info.repo;
               rev = info.version;
               sha256 = info.sha256;
