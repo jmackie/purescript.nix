@@ -29,6 +29,11 @@ let
   flattenDeps = with pkgs.lib;
     foldl' (accum: dep: unique (accum ++ [dep] ++ flattenDeps packageSet.${dep}.dependencies)) [];
 
+  flattenCompiledDeps = deps: builtins.attrValues (flattenCompiledDeps' deps);
+  flattenCompiledDeps' = with pkgs.lib;
+    pkgs.lib.foldl'
+      (accum: dep: accum // { ${dep._args.name} = dep; } // flattenCompiledDeps' dep._args.dependencies) {};
+
   compilePackage =
     { name
     , src
@@ -36,12 +41,6 @@ let
     , sources        # list of relative (stringy) paths
     , foreigns       # list of relative (stringy) paths
     } @ args :
-    let
-      flattenCompiledDeps = deps: builtins.attrValues (flattenCompiledDeps' deps);
-      flattenCompiledDeps' = with pkgs.lib;
-        pkgs.lib.foldl'
-          (accum: dep: accum // { ${dep._args.name} = dep; } // flattenCompiledDeps' dep._args.dependencies) {};
-    in
     (pkgs.stdenv.mkDerivation {
       name = "purescript-" + name;
       inherit src;
@@ -87,7 +86,8 @@ let
         {}
         (tsortDeps (flattenDeps deps))
     );
-
+in
+{
   compile = { name, src, srcDirs, dependencies }:
     let
       inputs =
@@ -100,5 +100,35 @@ let
         sources = builtins.filter isPurs inputs;
         foreigns = builtins.filter isJs inputs;
     };
-in
-{ inherit compile; }
+
+  dumpDependencies = name: dependencies:
+    let
+      compiled = compileDependencies dependencies;
+    in
+    derivation {
+      inherit name;
+      system = builtins.currentSystem;
+      buildInputs = [pkgs.gnutar pkgs.coreutils];
+      builder = "${pkgs.bash}/bin/bash";
+      args = ["-c" ''
+        set -e
+        unset PATH
+        for p in $buildInputs; do
+          export PATH=$p/bin''${PATH:+:}$PATH
+        done
+
+        ${toString (map (dep:
+          "(cd ${dep.src} && mkdir -p $out/src/${baseNameOf dep} && \
+              tar cf - ${toString (dep._args.sources ++ dep._args.foreigns)} | \
+              tar -C $out/src/${baseNameOf dep} -xf -)\n"
+        ) compiled)}
+
+        mkdir -p $out/output
+        for outdir in ${toString (map (dep: "${dep}/*") (flattenCompiledDeps compiled))}; do
+          if [ ! -e "$out/output/$(basename $outdir)" ]; then
+            ln -s $outdir $out/output
+          fi
+        done
+      ''];
+    };
+}
