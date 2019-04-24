@@ -12,16 +12,13 @@ let
     "prelude"
     "console"
   ];
-in
-{
-  project = purescript.compile {
-    name = "example";
-    src = ./.;
-    srcDirs = [
-      "src"
-    ];
-    inherit dependencies;
-  };
 
-  deps = purescript.dumpDependencies "example-deps" dependencies;
+in
+purescript.compile {
+  name = "example";
+  src = ./.;
+  srcDirs = [
+    "src"
+  ];
+  inherit dependencies;
 }

@@ -8,6 +8,7 @@ let
   getExtension = path: with builtins;
     let parts = pkgs.lib.splitString "." path;
     in elemAt parts (length parts - 1);
+
   isPurs = path: getExtension path == "purs";
   isJs   = path: getExtension path == "js";
 
@@ -29,10 +30,9 @@ let
   flattenDeps = with pkgs.lib;
     foldl' (accum: dep: unique (accum ++ [dep] ++ flattenDeps packageSet.${dep}.dependencies)) [];
 
-  flattenCompiledDeps = deps: builtins.attrValues (flattenCompiledDeps' deps);
+  flattenCompiledDeps  = deps: builtins.attrValues (flattenCompiledDeps' deps);
   flattenCompiledDeps' = with pkgs.lib;
-    pkgs.lib.foldl'
-      (accum: dep: accum // { ${dep._args.name} = dep; } // flattenCompiledDeps' dep._args.dependencies) {};
+    foldl' (accum: dep: accum // { ${dep._args.name} = dep; } // flattenCompiledDeps' dep._args.dependencies) {};
 
   compilePackage =
     { name
@@ -41,29 +41,40 @@ let
     , sources        # list of relative (stringy) paths
     , foreigns       # list of relative (stringy) paths
     } @ args :
-    (pkgs.stdenv.mkDerivation {
+    let
+      deps = flattenCompiledDeps dependencies;
+      depInputs = map (dep: map (f: "${dep.src}/${f}") dep._args.sources) deps;
+      srcInputs = map (f: "${src}/${f}") sources;
+      pursInputs = depInputs ++ srcInputs;
+    in
+    pkgs.stdenv.mkDerivation {
       name = "purescript-" + name;
       inherit src;
       buildInputs = [ compiler ];
       buildCommand = with builtins; ''
         mkdir -p $out
 
-        ${if length dependencies == 0 then "" else ''
-        for outdir in ${toString (map (dep: "${dep}/*") (flattenCompiledDeps dependencies))}; do
+        ${if length deps == 0 then "" else ''
+        for outdir in ${toString (map (dep: "${dep}/*") deps)}; do
           if [ ! -e "$out/$(basename $outdir)" ]; then
             ln -s $outdir $out
           fi
         done
         ''}
 
-        purs compile --output $out \
-          ${toString (map (f: "${src}/${f}") sources)} \
-          ${toString
-              (map (dep: map (f: "${dep.src}/${f}") dep._args.sources) (flattenCompiledDeps dependencies))
-           }
+        purs compile --output $out ${toString pursInputs}
       '';
-    } // { _args = args; });
-    #       ^^^^ Need to hang on to these
+
+    } // {
+      _args = args; # Need to hang on to these
+
+      env = pkgs.mkShell {
+        PURS_FILES = toString depInputs;
+        buildInputs = [
+          compiler
+        ];
+      };
+    };
 
   compileDependencies = deps:
     builtins.attrValues (
@@ -91,7 +102,9 @@ in
   compile = { name, src, srcDirs, dependencies }:
     let
       inputs =
-        builtins.concatMap (dir: map (f: dir + f) (walkFilesRel (src + "/${dir}"))) srcDirs;
+        builtins.concatMap
+          (dir: map (f: dir + f) (walkFilesRel (src + "/${dir}")))
+          srcDirs;
     in
     compilePackage {
         name = name;
@@ -99,36 +112,5 @@ in
         dependencies = compileDependencies dependencies;
         sources = builtins.filter isPurs inputs;
         foreigns = builtins.filter isJs inputs;
-    };
-
-  dumpDependencies = name: dependencies:
-    let
-      compiled = compileDependencies dependencies;
-    in
-    derivation {
-      inherit name;
-      system = builtins.currentSystem;
-      buildInputs = [pkgs.gnutar pkgs.coreutils];
-      builder = "${pkgs.bash}/bin/bash";
-      args = ["-c" ''
-        set -e
-        unset PATH
-        for p in $buildInputs; do
-          export PATH=$p/bin''${PATH:+:}$PATH
-        done
-
-        ${toString (map (dep:
-          "(cd ${dep.src} && mkdir -p $out/src/${baseNameOf dep} && \
-              tar cf - ${toString (dep._args.sources ++ dep._args.foreigns)} | \
-              tar -C $out/src/${baseNameOf dep} -xf -)\n"
-        ) compiled)}
-
-        mkdir -p $out/output
-        for outdir in ${toString (map (dep: "${dep}/*") (flattenCompiledDeps compiled))}; do
-          if [ ! -e "$out/output/$(basename $outdir)" ]; then
-            ln -s $outdir $out/output
-          fi
-        done
-      ''];
     };
 }
