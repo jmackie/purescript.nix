@@ -21,4 +21,5 @@ purescript.compile {
     "src"
   ];
   inherit dependencies;
+  package-set = purescript.package-sets."psc-0.12.3-20190409";
 }

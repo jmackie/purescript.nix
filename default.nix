@@ -1,6 +1,5 @@
 { pkgs ? import <nixpkgs> {}
-, purs ? "v0.12.3"
-, packageSet ? builtins.fromJSON (builtins.readFile ./packages.json) # psc-0.12.3-20190409
+, purs ? "v0.12.3" 
 }:
 let
   compiler = (import ./purs.nix { inherit pkgs; }).${purs};
@@ -24,11 +23,11 @@ let
                          (toString path))
         (walkFiles root);
 
-  tsortDeps = deps:
-    (pkgs.lib.toposort (a: b: builtins.elem a packageSet.${b}.dependencies) deps).result;
+  tsortDeps = package-set: deps:
+    (pkgs.lib.toposort (a: b: builtins.elem a package-set.${b}.dependencies) deps).result;
 
-  flattenDeps = with pkgs.lib;
-    foldl' (accum: dep: unique (accum ++ [dep] ++ flattenDeps packageSet.${dep}.dependencies)) [];
+  flattenDeps = package-set: with pkgs.lib;
+    foldl' (accum: dep: unique (accum ++ [dep] ++ flattenDeps package-set package-set.${dep}.dependencies)) [];
 
   flattenCompiledDeps  = deps: builtins.attrValues (flattenCompiledDeps' deps);
   flattenCompiledDeps' = with pkgs.lib;
@@ -76,10 +75,10 @@ let
       };
     };
 
-  compileDependencies = deps:
+  compileDependencies = package-set: deps:
     builtins.attrValues (
       builtins.foldl'
-        (accum: name: let info = packageSet.${name}; in accum // {
+        (accum: name: let info = package-set.${name}; in accum // {
           ${name} = compilePackage {
             inherit name;
             src = pkgs.fetchgit {
@@ -95,11 +94,11 @@ let
           };
         })
         {}
-        (tsortDeps (flattenDeps deps))
+        (tsortDeps package-set (flattenDeps package-set deps))
     );
 in
 {
-  compile = { name, src, srcDirs, dependencies }:
+  compile = { name, src, srcDirs, dependencies, package-set }:
     let
       inputs =
         builtins.concatMap
@@ -109,10 +108,20 @@ in
     compilePackage {
         name = name;
         inherit src;
-        dependencies = compileDependencies dependencies;
+        dependencies = compileDependencies package-set dependencies;
         sources = builtins.filter isPurs inputs;
         foreigns = builtins.filter isJs inputs;
     };
+
+  package-sets = with pkgs.lib;
+    attrsets.mapAttrs'
+      (name: value:
+      attrsets.nameValuePair
+        (strings.removeSuffix ".json" name)
+        (builtins.fromJSON (builtins.readFile (./package-sets + "/${name}"))))
+      (attrsets.filterAttrs
+        (name: value: value != "directory" && strings.hasSuffix ".json" name)
+        (builtins.readDir ./package-sets));
 
   elaborator = import ./elaborator { inherit pkgs; returnShellEnv = false; };
 }

@@ -1,0 +1,3982 @@
+{
+  "aff": {
+    "dependencies": [
+      "datetime",
+      "effect",
+      "exceptions",
+      "functions",
+      "parallel",
+      "transformers",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/slamdata/purescript-aff.git",
+    "version": "v5.0.0",
+    "sha256": "0gllymxxbwyw3rqmwfhj5668i7cn3jhn3f0n1brz68ps1p12hkj6",
+    "sources": {
+      "Effect.Aff": "src/Effect/Aff.purs",
+      "Effect.Aff.Class": "src/Effect/Aff/Class.purs",
+      "Effect.Aff.Compat": "src/Effect/Aff/Compat.purs"
+    },
+    "foreigns": [
+      "src/Effect/Aff.js"
+    ]
+  },
+  "aff-coroutines": {
+    "dependencies": [
+      "aff",
+      "avar",
+      "console",
+      "coroutines"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-aff-coroutines.git",
+    "version": "v7.0.0",
+    "sha256": "1cbly4m2na5kf3halj68rjy5khydb71gzz0ry323z5h1i0fna2g9",
+    "sources": {
+      "Control.Coroutine.Aff": "src/Control/Coroutine/Aff.purs"
+    },
+    "foreigns": []
+  },
+  "aff-promise": {
+    "dependencies": [
+      "aff",
+      "foreign"
+    ],
+    "repo": "https://github.com/nwolverson/purescript-aff-promise.git",
+    "version": "v2.0.0",
+    "sha256": "12z4kw4l0sccd0cbx1avb0r2ysjsx9n74xjp87ak7prp5i4a7v5z",
+    "sources": {
+      "Control.Promise": "src/Control/Promise.purs"
+    },
+    "foreigns": [
+      "src/Control/Promise.js"
+    ]
+  },
+  "affjax": {
+    "dependencies": [
+      "aff",
+      "argonaut-core",
+      "arraybuffer-types",
+      "foreign",
+      "form-urlencoded",
+      "http-methods",
+      "integers",
+      "math",
+      "media-types",
+      "nullable",
+      "refs",
+      "unsafe-coerce",
+      "web-xhr"
+    ],
+    "repo": "https://github.com/slamdata/purescript-affjax.git",
+    "version": "v6.0.0",
+    "sha256": "1f2bcvi5jwsl04p4gbh2zcypfqncjp23p8pczgkclvayh085fwii",
+    "sources": {
+      "Network.HTTP.Affjax": "src/Network/HTTP/Affjax.purs",
+      "Network.HTTP.Affjax.Request": "src/Network/HTTP/Affjax/Request.purs",
+      "Network.HTTP.Affjax.Response": "src/Network/HTTP/Affjax/Response.purs",
+      "Network.HTTP.RequestHeader": "src/Network/HTTP/RequestHeader.purs",
+      "Network.HTTP.ResponseHeader": "src/Network/HTTP/ResponseHeader.purs",
+      "Network.HTTP.StatusCode": "src/Network/HTTP/StatusCode.purs"
+    },
+    "foreigns": [
+      "src/Network/HTTP/Affjax.js"
+    ]
+  },
+  "ansi": {
+    "dependencies": [
+      "foldable-traversable",
+      "lists",
+      "strings"
+    ],
+    "repo": "https://github.com/hdgarrood/purescript-ansi.git",
+    "version": "v5.0.0",
+    "sha256": "16kgy9zbdms9appd69gad2bka44ijkcnc9p0kf5g7x672jypx3ar",
+    "sources": {
+      "Ansi.Codes": "src/Ansi/Codes.purs",
+      "Ansi.Output": "src/Ansi/Output.purs"
+    },
+    "foreigns": []
+  },
+  "argonaut": {
+    "dependencies": [
+      "argonaut-codecs",
+      "argonaut-core",
+      "argonaut-traversals"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-argonaut.git",
+    "version": "v4.0.1",
+    "sha256": "02yc1r3p37xfkxcxpyxaacrjj367mypdxalib74vpp7j49qzii73",
+    "sources": {
+      "Data.Argonaut": "src/Data/Argonaut.purs"
+    },
+    "foreigns": []
+  },
+  "argonaut-codecs": {
+    "dependencies": [
+      "argonaut-core",
+      "foreign-object",
+      "integers",
+      "maybe",
+      "ordered-collections"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-argonaut-codecs.git",
+    "version": "v4.0.2",
+    "sha256": "02kv23a6wpzndwgyqbfncnm40vhfhg5i6303v12sc8nnaxjfkfbj",
+    "sources": {
+      "Data.Argonaut.Decode": "src/Data/Argonaut/Decode.purs",
+      "Data.Argonaut.Decode.Class": "src/Data/Argonaut/Decode/Class.purs",
+      "Data.Argonaut.Decode.Combinators": "src/Data/Argonaut/Decode/Combinators.purs",
+      "Data.Argonaut.Encode": "src/Data/Argonaut/Encode.purs",
+      "Data.Argonaut.Encode.Class": "src/Data/Argonaut/Encode/Class.purs",
+      "Data.Argonaut.Encode.Combinators": "src/Data/Argonaut/Encode/Combinators.purs"
+    },
+    "foreigns": []
+  },
+  "argonaut-core": {
+    "dependencies": [
+      "arrays",
+      "control",
+      "either",
+      "foreign-object",
+      "functions",
+      "gen",
+      "maybe",
+      "nonempty",
+      "prelude",
+      "strings",
+      "tailrec"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-argonaut-core.git",
+    "version": "v4.0.1",
+    "sha256": "0rvqgm07ikbw7832fb9kb1gxwzd8cnjl9r58rdciz0jy3vkb22dm",
+    "sources": {
+      "Data.Argonaut.Core": "src/Data/Argonaut/Core.purs",
+      "Data.Argonaut.Gen": "src/Data/Argonaut/Gen.purs",
+      "Data.Argonaut.Parser": "src/Data/Argonaut/Parser.purs"
+    },
+    "foreigns": [
+      "src/Data/Argonaut/Parser.js",
+      "src/Data/Argonaut/Core.js"
+    ]
+  },
+  "argonaut-generic": {
+    "dependencies": [
+      "argonaut-codecs",
+      "argonaut-core",
+      "generics-rep",
+      "record"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-argonaut-generic.git",
+    "version": "v2.0.0",
+    "sha256": "09rxzk8l120jzb1v31vs7r14al32v35frywrjxx5fkrqzmk74s3n",
+    "sources": {
+      "Data.Argonaut.Decode.Generic.Rep": "src/Data/Argonaut/Decode/Generic/Rep.purs",
+      "Data.Argonaut.Encode.Generic.Rep": "src/Data/Argonaut/Encode/Generic/Rep.purs"
+    },
+    "foreigns": []
+  },
+  "argonaut-traversals": {
+    "dependencies": [
+      "argonaut-codecs",
+      "argonaut-core",
+      "profunctor-lenses"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-argonaut-traversals.git",
+    "version": "v4.0.1",
+    "sha256": "0kq2m1d9mj828d8w60slxkvr01c0w99qagjsq3bgh26wha5djngz",
+    "sources": {
+      "Data.Argonaut.JCursor": "src/Data/Argonaut/JCursor.purs",
+      "Data.Argonaut.JCursor.Gen": "src/Data/Argonaut/JCursor/Gen.purs",
+      "Data.Argonaut.Prisms": "src/Data/Argonaut/Prisms.purs",
+      "Data.Argonaut.Traversals": "src/Data/Argonaut/Traversals.purs"
+    },
+    "foreigns": []
+  },
+  "arraybuffer": {
+    "dependencies": [
+      "arraybuffer-types",
+      "effect",
+      "functions",
+      "maybe",
+      "text-encoding",
+      "uint"
+    ],
+    "repo": "https://github.com/jacereda/purescript-arraybuffer.git",
+    "version": "v8.0.0",
+    "sha256": "0sq925psqk60l52h9j3aqxip6lnwzzgjhyys55awsyvj0yswww58",
+    "sources": {
+      "Data.ArrayBuffer.ArrayBuffer": "src/Data/ArrayBuffer/ArrayBuffer.purs",
+      "Data.ArrayBuffer.DataView": "src/Data/ArrayBuffer/DataView.purs",
+      "Data.ArrayBuffer.Show": "src/Data/ArrayBuffer/Show.purs",
+      "Data.ArrayBuffer.Typed": "src/Data/ArrayBuffer/Typed.purs"
+    },
+    "foreigns": [
+      "src/Data/ArrayBuffer/Typed.js",
+      "src/Data/ArrayBuffer/ArrayBuffer.js",
+      "src/Data/ArrayBuffer/Show.js",
+      "src/Data/ArrayBuffer/DataView.js"
+    ]
+  },
+  "arraybuffer-types": {
+    "dependencies": [],
+    "repo": "https://github.com/purescript-contrib/purescript-arraybuffer-types.git",
+    "version": "v2.0.0",
+    "sha256": "059a8n49yhl46l1b1j2qj4ichzq6dzj29ajkfvw88npzj5w2rshy",
+    "sources": {
+      "Data.ArrayBuffer.Types": "src/Data/ArrayBuffer/Types.purs"
+    },
+    "foreigns": []
+  },
+  "arrays": {
+    "dependencies": [
+      "bifunctors",
+      "control",
+      "foldable-traversable",
+      "maybe",
+      "nonempty",
+      "partial",
+      "prelude",
+      "st",
+      "tailrec",
+      "tuples",
+      "unfoldable",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript/purescript-arrays.git",
+    "version": "v5.0.0",
+    "sha256": "08zr13k6r1vfn4yicnqa2z1bna93imdi6yhara93wq0k5pivmk10",
+    "sources": {
+      "Data.Array": "src/Data/Array.purs",
+      "Data.Array.NonEmpty": "src/Data/Array/NonEmpty.purs",
+      "Data.Array.NonEmpty.Internal": "src/Data/Array/NonEmpty/Internal.purs",
+      "Data.Array.Partial": "src/Data/Array/Partial.purs",
+      "Data.Array.ST": "src/Data/Array/ST.purs",
+      "Data.Array.ST.Iterator": "src/Data/Array/ST/Iterator.purs",
+      "Data.Array.ST.Partial": "src/Data/Array/ST/Partial.purs"
+    },
+    "foreigns": [
+      "src/Data/Array.js",
+      "src/Data/Array/ST.js",
+      "src/Data/Array/ST/Partial.js",
+      "src/Data/Array/NonEmpty/Internal.js"
+    ]
+  },
+  "assert": {
+    "dependencies": [
+      "console",
+      "effect",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-assert.git",
+    "version": "v4.0.0",
+    "sha256": "1bg60rx1r2kc41vzpp420v5gnl6njgqna4h6qcyr3zh1rrzj965l",
+    "sources": {
+      "Test.Assert": "src/Test/Assert.purs"
+    },
+    "foreigns": [
+      "src/Test/Assert.js"
+    ]
+  },
+  "avar": {
+    "dependencies": [
+      "aff",
+      "effect",
+      "either",
+      "exceptions",
+      "functions",
+      "maybe"
+    ],
+    "repo": "https://github.com/slamdata/purescript-avar.git",
+    "version": "v3.0.0",
+    "sha256": "14g05jm2xricy5b9vn4k4lhc9lzi5jvpvv85h10s17kn4wwi9igk",
+    "sources": {
+      "Effect.AVar": "src/Effect/AVar.purs",
+      "Effect.Aff.AVar": "src/Effect/Aff/AVar.purs"
+    },
+    "foreigns": [
+      "src/Effect/AVar.js"
+    ]
+  },
+  "behaviors": {
+    "dependencies": [
+      "effect",
+      "event",
+      "filterable",
+      "nullable",
+      "ordered-collections",
+      "prelude",
+      "web-events",
+      "web-html",
+      "web-uievents"
+    ],
+    "repo": "https://github.com/paf31/purescript-behaviors.git",
+    "version": "v7.0.0",
+    "sha256": "1gy5pwk408pq8di89ql88qngazf93izkbrjx91vasfzbryvs2pg8",
+    "sources": {
+      "FRP.Behavior": "src/FRP/Behavior.purs",
+      "FRP.Behavior.Keyboard": "src/FRP/Behavior/Keyboard.purs",
+      "FRP.Behavior.Mouse": "src/FRP/Behavior/Mouse.purs",
+      "FRP.Behavior.Time": "src/FRP/Behavior/Time.purs",
+      "FRP.Event.AnimationFrame": "src/FRP/Event/AnimationFrame.purs",
+      "FRP.Event.Keyboard": "src/FRP/Event/Keyboard.purs",
+      "FRP.Event.Mouse": "src/FRP/Event/Mouse.purs",
+      "FRP.Event.Semantic": "src/FRP/Event/Semantic.purs"
+    },
+    "foreigns": []
+  },
+  "bifunctors": {
+    "dependencies": [
+      "newtype",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-bifunctors.git",
+    "version": "v4.0.0",
+    "sha256": "1bdra5fbkraglqrrm484vw8h0wwk48kzkn586v4y7fg106q1q386",
+    "sources": {
+      "Control.Biapplicative": "src/Control/Biapplicative.purs",
+      "Control.Biapply": "src/Control/Biapply.purs",
+      "Data.Bifunctor": "src/Data/Bifunctor.purs",
+      "Data.Bifunctor.Clown": "src/Data/Bifunctor/Clown.purs",
+      "Data.Bifunctor.Flip": "src/Data/Bifunctor/Flip.purs",
+      "Data.Bifunctor.Join": "src/Data/Bifunctor/Join.purs",
+      "Data.Bifunctor.Joker": "src/Data/Bifunctor/Joker.purs",
+      "Data.Bifunctor.Product": "src/Data/Bifunctor/Product.purs",
+      "Data.Bifunctor.Wrap": "src/Data/Bifunctor/Wrap.purs"
+    },
+    "foreigns": []
+  },
+  "bigints": {
+    "dependencies": [
+      "integers",
+      "maybe",
+      "strings"
+    ],
+    "repo": "https://github.com/sharkdp/purescript-bigints.git",
+    "version": "v4.0.0",
+    "sha256": "1m9v4an4y55rhiknr2spyllf80chl61w2xzmg90p58f8q4mzih8r",
+    "sources": {
+      "Data.BigInt": "src/Data/BigInt.purs"
+    },
+    "foreigns": [
+      "src/Data/BigInt.js"
+    ]
+  },
+  "canvas": {
+    "dependencies": [
+      "arraybuffer-types",
+      "effect",
+      "exceptions",
+      "functions",
+      "maybe"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-canvas.git",
+    "version": "v4.0.0",
+    "sha256": "0m7a523hr6jn8wg3d1jck1s3bar81gq4ar8bq658sbsysh73n1py",
+    "sources": {
+      "Graphics.Canvas": "src/Graphics/Canvas.purs"
+    },
+    "foreigns": [
+      "src/Graphics/Canvas.js"
+    ]
+  },
+  "catenable-lists": {
+    "dependencies": [
+      "control",
+      "foldable-traversable",
+      "lists",
+      "maybe",
+      "prelude",
+      "tuples",
+      "unfoldable"
+    ],
+    "repo": "https://github.com/purescript/purescript-catenable-lists.git",
+    "version": "v5.0.0",
+    "sha256": "1zhc6mfgzkahrnbrl39vdj6biy75gibmayw8ahj9a23amsggs6df",
+    "sources": {
+      "Data.CatList": "src/Data/CatList.purs",
+      "Data.CatQueue": "src/Data/CatQueue.purs"
+    },
+    "foreigns": []
+  },
+  "cheerio": {
+    "dependencies": [
+      "console",
+      "effect",
+      "functions",
+      "prelude",
+      "psci-support",
+      "test-unit"
+    ],
+    "repo": "https://github.com/icyrockcom/purescript-cheerio.git",
+    "version": "v0.2.0",
+    "sha256": "0d6lqxbj3l997ky8ymfd97msgnwjn9i4w66iqrgzkx4rw4fpdjwi",
+    "sources": {
+      "Cheerio": "src/Cheerio.purs",
+      "Cheerio.Static": "src/Cheerio/Static.purs"
+    },
+    "foreigns": [
+      "src/Cheerio.js",
+      "src/Cheerio/Static.js"
+    ]
+  },
+  "choco-pie": {
+    "dependencies": [
+      "event",
+      "prelude",
+      "record",
+      "typelevel-prelude"
+    ],
+    "repo": "https://github.com/justinwoo/purescript-choco-pie.git",
+    "version": "v2.0.0",
+    "sha256": "1h2awc2n4jxb22a5r9m1wijsr58bclxilml0nwz00bvyvi4da5r7",
+    "sources": {
+      "ChocoPie": "src/ChocoPie.purs"
+    },
+    "foreigns": []
+  },
+  "colors": {
+    "dependencies": [
+      "arrays",
+      "integers",
+      "lists",
+      "partial",
+      "strings"
+    ],
+    "repo": "https://github.com/sharkdp/purescript-colors.git",
+    "version": "v5.0.0",
+    "sha256": "05bkfqllfpkh7nj0nzgd5p387hlpk0x35nam1i6xm3vzma9csj18",
+    "sources": {
+      "Color": "src/Color.purs",
+      "Color.Blending": "src/Color/Blending.purs",
+      "Color.Scale": "src/Color/Scale.purs",
+      "Color.Scale.Perceptual": "src/Color/Scale/Perceptual.purs",
+      "Color.Scheme.Clrs": "src/Color/Scheme/Clrs.purs",
+      "Color.Scheme.HTML": "src/Color/Scheme/HTML.purs",
+      "Color.Scheme.Harmonic": "src/Color/Scheme/Harmonic.purs",
+      "Color.Scheme.MaterialDesign": "src/Color/Scheme/MaterialDesign.purs",
+      "Color.Scheme.X11": "src/Color/Scheme/X11.purs"
+    },
+    "foreigns": []
+  },
+  "console": {
+    "dependencies": [
+      "effect",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-console.git",
+    "version": "v4.1.0",
+    "sha256": "1rc9b53q0l7g37113nspdcxcysg19wfq0l9d84gys8dp3q9n8vbf",
+    "sources": {
+      "Effect.Class.Console": "src/Effect/Class/Console.purs",
+      "Effect.Console": "src/Effect/Console.purs"
+    },
+    "foreigns": [
+      "src/Effect/Console.js"
+    ]
+  },
+  "const": {
+    "dependencies": [
+      "contravariant",
+      "foldable-traversable",
+      "invariant",
+      "newtype",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-const.git",
+    "version": "v4.0.0",
+    "sha256": "1fzj2zak5a59lxg7vhxsp24hqydhxs8iq89rbl7qm4zcqb0lvw70",
+    "sources": {
+      "Data.Const": "src/Data/Const.purs"
+    },
+    "foreigns": []
+  },
+  "contravariant": {
+    "dependencies": [
+      "either",
+      "newtype",
+      "prelude",
+      "tuples"
+    ],
+    "repo": "https://github.com/purescript/purescript-contravariant.git",
+    "version": "v4.0.0",
+    "sha256": "0vvcgfclx236kg4y76nwih787wyqacq8mmx42q64xzl964yrwxkk",
+    "sources": {
+      "Data.Comparison": "src/Data/Comparison.purs",
+      "Data.Decidable": "src/Data/Decidable.purs",
+      "Data.Decide": "src/Data/Decide.purs",
+      "Data.Divide": "src/Data/Divide.purs",
+      "Data.Divisible": "src/Data/Divisible.purs",
+      "Data.Equivalence": "src/Data/Equivalence.purs",
+      "Data.Functor.Contravariant": "src/Data/Functor/Contravariant.purs",
+      "Data.Op": "src/Data/Op.purs",
+      "Data.Predicate": "src/Data/Predicate.purs"
+    },
+    "foreigns": []
+  },
+  "control": {
+    "dependencies": [
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-control.git",
+    "version": "v4.0.0",
+    "sha256": "00f4s11djyjnsjvgjjkbsvx671j1y32l2nh2j49a15a2cdk3i633",
+    "sources": {
+      "Control.Alt": "src/Control/Alt.purs",
+      "Control.Alternative": "src/Control/Alternative.purs",
+      "Control.Comonad": "src/Control/Comonad.purs",
+      "Control.Extend": "src/Control/Extend.purs",
+      "Control.Lazy": "src/Control/Lazy.purs",
+      "Control.MonadPlus": "src/Control/MonadPlus.purs",
+      "Control.MonadZero": "src/Control/MonadZero.purs",
+      "Control.Plus": "src/Control/Plus.purs"
+    },
+    "foreigns": [
+      "src/Control/Extend.js"
+    ]
+  },
+  "coroutines": {
+    "dependencies": [
+      "freet",
+      "parallel",
+      "profunctor"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-coroutines.git",
+    "version": "v5.0.0",
+    "sha256": "1jax7by8kn9fjg00avhziy3n18i3510iwzs3d73ziplanbw4qw4k",
+    "sources": {
+      "Control.Coroutine": "src/Control/Coroutine.purs"
+    },
+    "foreigns": []
+  },
+  "css": {
+    "dependencies": [
+      "colors",
+      "console",
+      "generics-rep",
+      "nonempty",
+      "profunctor",
+      "strings",
+      "these",
+      "transformers"
+    ],
+    "repo": "https://github.com/slamdata/purescript-css.git",
+    "version": "v4.0.0",
+    "sha256": "0f6gib6rp20qz08vramw7k6kv2ck315lmshjpii8zmkjb5ya0w55",
+    "sources": {
+      "CSS": "src/CSS.purs",
+      "CSS.Animation": "src/CSS/Animation.purs",
+      "CSS.Background": "src/CSS/Background.purs",
+      "CSS.Border": "src/CSS/Border.purs",
+      "CSS.Box": "src/CSS/Box.purs",
+      "CSS.Color": "src/CSS/Color.purs",
+      "CSS.Common": "src/CSS/Common.purs",
+      "CSS.Display": "src/CSS/Display.purs",
+      "CSS.Elements": "src/CSS/Elements.purs",
+      "CSS.Flexbox": "src/CSS/Flexbox.purs",
+      "CSS.Font": "src/CSS/Font.purs",
+      "CSS.FontFace": "src/CSS/FontFace.purs",
+      "CSS.Geometry": "src/CSS/Geometry.purs",
+      "CSS.Gradient": "src/CSS/Gradient.purs",
+      "CSS.ListStyle": "src/CSS/ListStyle.purs",
+      "CSS.ListStyle.Image": "src/CSS/ListStyle/Image.purs",
+      "CSS.ListStyle.Position": "src/CSS/ListStyle/Position.purs",
+      "CSS.ListStyle.Type": "src/CSS/ListStyle/Type.purs",
+      "CSS.Media": "src/CSS/Media.purs",
+      "CSS.Overflow": "src/CSS/Overflow.purs",
+      "CSS.Property": "src/CSS/Property.purs",
+      "CSS.Pseudo": "src/CSS/Pseudo.purs",
+      "CSS.Render": "src/CSS/Render.purs",
+      "CSS.Selector": "src/CSS/Selector.purs",
+      "CSS.Size": "src/CSS/Size.purs",
+      "CSS.String": "src/CSS/String.purs",
+      "CSS.Stylesheet": "src/CSS/Stylesheet.purs",
+      "CSS.Text": "src/CSS/Text.purs",
+      "CSS.Text.Shadow": "src/CSS/Text/Shadow.purs",
+      "CSS.Text.Transform": "src/CSS/Text/Transform.purs",
+      "CSS.Text.Whitespace": "src/CSS/Text/Whitespace.purs",
+      "CSS.TextAlign": "src/CSS/TextAlign.purs",
+      "CSS.Time": "src/CSS/Time.purs",
+      "CSS.Transform": "src/CSS/Transform.purs",
+      "CSS.Transition": "src/CSS/Transition.purs",
+      "CSS.VerticalAlign": "src/CSS/VerticalAlign.purs"
+    },
+    "foreigns": []
+  },
+  "datetime": {
+    "dependencies": [
+      "bifunctors",
+      "control",
+      "either",
+      "enums",
+      "foldable-traversable",
+      "functions",
+      "gen",
+      "integers",
+      "lists",
+      "math",
+      "maybe",
+      "newtype",
+      "ordered-collections",
+      "partial",
+      "prelude",
+      "tuples"
+    ],
+    "repo": "https://github.com/purescript/purescript-datetime.git",
+    "version": "v4.0.0",
+    "sha256": "0zpjpnsnn95cscc95p9p59g7fvcc4qcl5yjmlrkjln4swi62jggd",
+    "sources": {
+      "Data.Date": "src/Data/Date.purs",
+      "Data.Date.Component": "src/Data/Date/Component.purs",
+      "Data.Date.Component.Gen": "src/Data/Date/Component/Gen.purs",
+      "Data.Date.Gen": "src/Data/Date/Gen.purs",
+      "Data.DateTime": "src/Data/DateTime.purs",
+      "Data.DateTime.Gen": "src/Data/DateTime/Gen.purs",
+      "Data.DateTime.Instant": "src/Data/DateTime/Instant.purs",
+      "Data.Interval": "src/Data/Interval.purs",
+      "Data.Interval.Duration": "src/Data/Interval/Duration.purs",
+      "Data.Interval.Duration.Iso": "src/Data/Interval/Duration/Iso.purs",
+      "Data.Time": "src/Data/Time.purs",
+      "Data.Time.Component": "src/Data/Time/Component.purs",
+      "Data.Time.Component.Gen": "src/Data/Time/Component/Gen.purs",
+      "Data.Time.Duration": "src/Data/Time/Duration.purs",
+      "Data.Time.Duration.Gen": "src/Data/Time/Duration/Gen.purs",
+      "Data.Time.Gen": "src/Data/Time/Gen.purs"
+    },
+    "foreigns": [
+      "src/Data/DateTime.js",
+      "src/Data/Date.js",
+      "src/Data/DateTime/Instant.js"
+    ]
+  },
+  "debug": {
+    "dependencies": [
+      "prelude"
+    ],
+    "repo": "https://github.com/garyb/purescript-debug.git",
+    "version": "v4.0.0",
+    "sha256": "0gwjj80akys0h111i74n429fmny992gx0r4rk1n98gqlqm5cmi21",
+    "sources": {
+      "Debug.Trace": "src/Debug/Trace.purs"
+    },
+    "foreigns": [
+      "src/Debug/Trace.js"
+    ]
+  },
+  "decimals": {
+    "dependencies": [
+      "maybe"
+    ],
+    "repo": "https://github.com/sharkdp/purescript-decimals.git",
+    "version": "v4.0.0",
+    "sha256": "02cvrjq81rrfql9ygfpiq4zvbx11a8m8fb1jy7mb44qjrddaywx3",
+    "sources": {
+      "Data.Decimal": "src/Data/Decimal.purs"
+    },
+    "foreigns": [
+      "src/Data/Decimal.js"
+    ]
+  },
+  "distributive": {
+    "dependencies": [
+      "identity",
+      "newtype",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-distributive.git",
+    "version": "v4.0.0",
+    "sha256": "0zbn0yq1vv7fbbf1lncg80irz0vg7wnw9b9wrzxhdzpbkw4jinsl",
+    "sources": {
+      "Data.Distributive": "src/Data/Distributive.purs"
+    },
+    "foreigns": []
+  },
+  "dom-indexed": {
+    "dependencies": [
+      "media-types",
+      "prelude",
+      "web-clipboard",
+      "web-touchevents"
+    ],
+    "repo": "https://github.com/slamdata/purescript-dom-indexed.git",
+    "version": "v6.0.0",
+    "sha256": "0gbmli54smjwwpwq0pa44vjqsbhhyfvm4c56issrd8f405wgrwn0",
+    "sources": {
+      "DOM.HTML.Indexed": "src/DOM/HTML/Indexed.purs",
+      "DOM.HTML.Indexed.ButtonType": "src/DOM/HTML/Indexed/ButtonType.purs",
+      "DOM.HTML.Indexed.CrossOriginValue": "src/DOM/HTML/Indexed/CrossOriginValue.purs",
+      "DOM.HTML.Indexed.DirValue": "src/DOM/HTML/Indexed/DirValue.purs",
+      "DOM.HTML.Indexed.FormMethod": "src/DOM/HTML/Indexed/FormMethod.purs",
+      "DOM.HTML.Indexed.InputType": "src/DOM/HTML/Indexed/InputType.purs",
+      "DOM.HTML.Indexed.KindValue": "src/DOM/HTML/Indexed/KindValue.purs",
+      "DOM.HTML.Indexed.MenuType": "src/DOM/HTML/Indexed/MenuType.purs",
+      "DOM.HTML.Indexed.MenuitemType": "src/DOM/HTML/Indexed/MenuitemType.purs",
+      "DOM.HTML.Indexed.OnOff": "src/DOM/HTML/Indexed/OnOff.purs",
+      "DOM.HTML.Indexed.OrderedListType": "src/DOM/HTML/Indexed/OrderedListType.purs",
+      "DOM.HTML.Indexed.PreloadValue": "src/DOM/HTML/Indexed/PreloadValue.purs",
+      "DOM.HTML.Indexed.ScopeValue": "src/DOM/HTML/Indexed/ScopeValue.purs",
+      "DOM.HTML.Indexed.StepValue": "src/DOM/HTML/Indexed/StepValue.purs",
+      "DOM.HTML.Indexed.WrapValue": "src/DOM/HTML/Indexed/WrapValue.purs"
+    },
+    "foreigns": []
+  },
+  "effect": {
+    "dependencies": [
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-effect.git",
+    "version": "v2.0.0",
+    "sha256": "0l46xqz39khf2c779d8mvax1fp2phy5sf8qdn31x67dz389mjr81",
+    "sources": {
+      "Effect": "src/Effect.purs",
+      "Effect.Class": "src/Effect/Class.purs",
+      "Effect.Uncurried": "src/Effect/Uncurried.purs",
+      "Effect.Unsafe": "src/Effect/Unsafe.purs"
+    },
+    "foreigns": [
+      "src/Effect.js",
+      "src/Effect/Uncurried.js",
+      "src/Effect/Unsafe.js"
+    ]
+  },
+  "either": {
+    "dependencies": [
+      "bifunctors",
+      "control",
+      "foldable-traversable",
+      "invariant",
+      "maybe",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-either.git",
+    "version": "v4.0.0",
+    "sha256": "0c72wk4hdcayj1jvwk1i6fny8r9iflxblvng6a265hb9r8gnjnwn",
+    "sources": {
+      "Data.Either": "src/Data/Either.purs",
+      "Data.Either.Inject": "src/Data/Either/Inject.purs",
+      "Data.Either.Nested": "src/Data/Either/Nested.purs"
+    },
+    "foreigns": []
+  },
+  "email-validate": {
+    "dependencies": [
+      "aff",
+      "generics-rep",
+      "string-parsers",
+      "transformers"
+    ],
+    "repo": "https://github.com/cdepillabout/purescript-email-validate.git",
+    "version": "v4.0.0",
+    "sha256": "0djpflz78llz0wri6qrf9z4yjzvj2kv704nvpi7z361flv8ll0xi",
+    "sources": {
+      "Text.Email.Parser": "src/Text/Email/Parser.purs",
+      "Text.Email.Validate": "src/Text/Email/Validate.purs"
+    },
+    "foreigns": []
+  },
+  "enums": {
+    "dependencies": [
+      "control",
+      "either",
+      "gen",
+      "maybe",
+      "newtype",
+      "nonempty",
+      "partial",
+      "prelude",
+      "tuples",
+      "unfoldable"
+    ],
+    "repo": "https://github.com/purescript/purescript-enums.git",
+    "version": "v4.0.0",
+    "sha256": "1g2zns5xsdb9xyv14iwyvg2x39hjpsyvvrkh8gy1pqgzv6frmb18",
+    "sources": {
+      "Data.Enum": "src/Data/Enum.purs",
+      "Data.Enum.Gen": "src/Data/Enum/Gen.purs"
+    },
+    "foreigns": [
+      "src/Data/Enum.js"
+    ]
+  },
+  "errors": {
+    "dependencies": [
+      "control",
+      "effect",
+      "either",
+      "maybe",
+      "transformers"
+    ],
+    "repo": "https://github.com/passy/purescript-errors.git",
+    "version": "v4.0.1",
+    "sha256": "15n32gmrbw7s980nwj40mls4wv6w4501x9172kr2sp579kbxzh20",
+    "sources": {
+      "Control.Error.Util": "src/Control/Error/Util.purs",
+      "Data.EitherR": "src/Data/EitherR.purs"
+    },
+    "foreigns": []
+  },
+  "event": {
+    "dependencies": [
+      "console",
+      "effect",
+      "filterable",
+      "js-timers",
+      "now",
+      "nullable",
+      "prelude",
+      "unsafe-reference"
+    ],
+    "repo": "https://github.com/paf31/purescript-event.git",
+    "version": "v1.2.4",
+    "sha256": "0zzlg4ggzv9s2ipg84wj4qbdib3qn38zdzpr8brv79kvb3f0lnzz",
+    "sources": {
+      "FRP.Event": "src/FRP/Event.purs",
+      "FRP.Event.Class": "src/FRP/Event/Class.purs",
+      "FRP.Event.Time": "src/FRP/Event/Time.purs"
+    },
+    "foreigns": []
+  },
+  "exceptions": {
+    "dependencies": [
+      "effect",
+      "either",
+      "maybe",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-exceptions.git",
+    "version": "v4.0.0",
+    "sha256": "17s0rg9k4phivhx9j3l2vqqfdhk61gpj1xfqy8w6zj3rnxj0b2cv",
+    "sources": {
+      "Effect.Exception": "src/Effect/Exception.purs",
+      "Effect.Exception.Unsafe": "src/Effect/Exception/Unsafe.purs"
+    },
+    "foreigns": [
+      "src/Effect/Exception.js"
+    ]
+  },
+  "exists": {
+    "dependencies": [
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript/purescript-exists.git",
+    "version": "v4.0.0",
+    "sha256": "0bbdbw3jaqyi8dj2d52zvfgx4vl84d8cr6hp43vy8lfjfcbj0wlk",
+    "sources": {
+      "Data.Exists": "src/Data/Exists.purs"
+    },
+    "foreigns": []
+  },
+  "filterable": {
+    "dependencies": [
+      "arrays",
+      "either",
+      "foldable-traversable",
+      "identity",
+      "lists",
+      "ordered-collections"
+    ],
+    "repo": "https://github.com/LiamGoodacre/purescript-filterable.git",
+    "version": "v3.0.0",
+    "sha256": "16lgv4v5x0w7fjgp0cm560a214j91v3hwg3hbd4ycghs6cbhxh9x",
+    "sources": {
+      "Data.Compactable": "src/Data/Compactable.purs",
+      "Data.Filterable": "src/Data/Filterable.purs",
+      "Data.Witherable": "src/Data/Witherable.purs"
+    },
+    "foreigns": []
+  },
+  "fixed-points": {
+    "dependencies": [
+      "exists",
+      "newtype",
+      "prelude",
+      "transformers"
+    ],
+    "repo": "https://github.com/slamdata/purescript-fixed-points.git",
+    "version": "v5.1.0",
+    "sha256": "14acfi7897z2vd8mq52h0gz8x31wyrvalb490rqjf4nyk73vhg36",
+    "sources": {
+      "Data.Functor.Mu": "src/Data/Functor/Mu.purs",
+      "Data.Functor.Nu": "src/Data/Functor/Nu.purs",
+      "Data.TacitString": "src/Data/TacitString.purs"
+    },
+    "foreigns": []
+  },
+  "foldable-traversable": {
+    "dependencies": [
+      "bifunctors",
+      "control",
+      "maybe",
+      "newtype",
+      "orders",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-foldable-traversable.git",
+    "version": "v4.0.0",
+    "sha256": "0dscsshm80j08qyv504mj77xb4f1bic9jbzqlgd2vbx6wpdcv9ll",
+    "sources": {
+      "Data.Bifoldable": "src/Data/Bifoldable.purs",
+      "Data.Bitraversable": "src/Data/Bitraversable.purs",
+      "Data.Foldable": "src/Data/Foldable.purs",
+      "Data.FoldableWithIndex": "src/Data/FoldableWithIndex.purs",
+      "Data.FunctorWithIndex": "src/Data/FunctorWithIndex.purs",
+      "Data.Semigroup.Foldable": "src/Data/Semigroup/Foldable.purs",
+      "Data.Semigroup.Traversable": "src/Data/Semigroup/Traversable.purs",
+      "Data.Traversable": "src/Data/Traversable.purs",
+      "Data.Traversable.Accum": "src/Data/Traversable/Accum.purs",
+      "Data.Traversable.Accum.Internal": "src/Data/Traversable/Accum/Internal.purs",
+      "Data.TraversableWithIndex": "src/Data/TraversableWithIndex.purs"
+    },
+    "foreigns": [
+      "src/Data/Foldable.js",
+      "src/Data/FunctorWithIndex.js",
+      "src/Data/Traversable.js"
+    ]
+  },
+  "foreign": {
+    "dependencies": [
+      "either",
+      "functions",
+      "identity",
+      "integers",
+      "lists",
+      "maybe",
+      "prelude",
+      "strings",
+      "transformers"
+    ],
+    "repo": "https://github.com/purescript/purescript-foreign.git",
+    "version": "v5.0.0",
+    "sha256": "15mz2s4f8crkd721z4df2aag4s0wil6fs07cpcmi7dpnkn7a4nab",
+    "sources": {
+      "Foreign": "src/Foreign.purs",
+      "Foreign.Index": "src/Foreign/Index.purs",
+      "Foreign.Keys": "src/Foreign/Keys.purs"
+    },
+    "foreigns": [
+      "src/Foreign.js",
+      "src/Foreign/Index.js",
+      "src/Foreign/Keys.js"
+    ]
+  },
+  "foreign-generic": {
+    "dependencies": [
+      "effect",
+      "exceptions",
+      "foreign",
+      "foreign-object",
+      "generics-rep",
+      "ordered-collections",
+      "proxy",
+      "record"
+    ],
+    "repo": "https://github.com/paf31/purescript-foreign-generic.git",
+    "version": "v7.0.0",
+    "sha256": "1cylycwiiq3ihbh21x3g91ilcw2yf9p3z6afjfylw8sb9ps61gda",
+    "sources": {
+      "Foreign.Class": "src/Foreign/Class.purs",
+      "Foreign.Generic": "src/Foreign/Generic.purs",
+      "Foreign.Generic.Class": "src/Foreign/Generic/Class.purs",
+      "Foreign.Generic.EnumEncoding": "src/Foreign/Generic/Enum.purs",
+      "Foreign.Generic.Types": "src/Foreign/Generic/Types.purs",
+      "Foreign.Internal": "src/Foreign/Internal.purs",
+      "Foreign.JSON": "src/Foreign/JSON.purs",
+      "Foreign.NullOrUndefined": "src/Foreign/NullOrUndefined.purs"
+    },
+    "foreigns": [
+      "src/Foreign/NullOrUndefined.js",
+      "src/Foreign/JSON.js"
+    ]
+  },
+  "foreign-object": {
+    "dependencies": [
+      "arrays",
+      "foldable-traversable",
+      "functions",
+      "gen",
+      "lists",
+      "maybe",
+      "prelude",
+      "st",
+      "tailrec",
+      "tuples",
+      "unfoldable"
+    ],
+    "repo": "https://github.com/purescript/purescript-foreign-object.git",
+    "version": "v1.0.0",
+    "sha256": "19jz8nqkj2h24r1ay08ba65qqpg4b0a1x31ncsq7jg77ayfhl4ms",
+    "sources": {
+      "Foreign.Object": "src/Foreign/Object.purs",
+      "Foreign.Object.Gen": "src/Foreign/Object/Gen.purs",
+      "Foreign.Object.ST": "src/Foreign/Object/ST.purs",
+      "Foreign.Object.ST.Unsafe": "src/Foreign/Object/ST/Unsafe.purs",
+      "Foreign.Object.Unsafe": "src/Foreign/Object/Unsafe.purs"
+    },
+    "foreigns": [
+      "src/Foreign/Object.js",
+      "src/Foreign/Object/ST.js",
+      "src/Foreign/Object/Unsafe.js",
+      "src/Foreign/Object/ST/Unsafe.js"
+    ]
+  },
+  "fork": {
+    "dependencies": [
+      "aff"
+    ],
+    "repo": "https://github.com/slamdata/purescript-fork.git",
+    "version": "v4.0.0",
+    "sha256": "1jygqzyci40c28gw2ygnx8v52hilhajj1bdpn7ndvss4i7yh1lcp",
+    "sources": {
+      "Control.Monad.Fork.Class": "src/Control/Monad/Fork/Class.purs"
+    },
+    "foreigns": []
+  },
+  "form-urlencoded": {
+    "dependencies": [
+      "globals",
+      "maybe",
+      "newtype",
+      "prelude",
+      "strings",
+      "tuples"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-form-urlencoded.git",
+    "version": "v4.0.1",
+    "sha256": "14nb7mslmbms4wn4j6a7nrz8xmnach3qgcf8i1hgql1c8j7zkqz8",
+    "sources": {
+      "Data.FormURLEncoded": "src/Data/FormURLEncoded.purs"
+    },
+    "foreigns": []
+  },
+  "formatters": {
+    "dependencies": [
+      "datetime",
+      "fixed-points",
+      "generics-rep",
+      "lists",
+      "parsing",
+      "prelude",
+      "transformers"
+    ],
+    "repo": "https://github.com/slamdata/purescript-formatters.git",
+    "version": "v4.0.0",
+    "sha256": "0yah0i748gw5spfirjqvjpl6anmxx1p3bi2ks9rpknsqa49czfqk",
+    "sources": {
+      "Data.Formatter.DateTime": "src/Data/Formatter/DateTime.purs",
+      "Data.Formatter.Internal": "src/Data/Formatter/Internal.purs",
+      "Data.Formatter.Interval": "src/Data/Formatter/Interval.purs",
+      "Data.Formatter.Number": "src/Data/Formatter/Number.purs",
+      "Data.Formatter.Parser.Interval": "src/Data/Formatter/Parser/Interval.purs",
+      "Data.Formatter.Parser.Number": "src/Data/Formatter/Parser/Number.purs",
+      "Data.Formatter.Parser.Utils": "src/Data/Formatter/Parser/Utils.purs"
+    },
+    "foreigns": []
+  },
+  "free": {
+    "dependencies": [
+      "catenable-lists",
+      "control",
+      "distributive",
+      "either",
+      "exists",
+      "foldable-traversable",
+      "invariant",
+      "lazy",
+      "maybe",
+      "prelude",
+      "tailrec",
+      "transformers",
+      "tuples",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript/purescript-free.git",
+    "version": "v5.1.0",
+    "sha256": "0f093s5wvbip547fyfxyjqn60z5ay11hs9vzw1h480307vpzq3wm",
+    "sources": {
+      "Control.Comonad.Cofree": "src/Control/Comonad/Cofree.purs",
+      "Control.Comonad.Cofree.Class": "src/Control/Comonad/Cofree/Class.purs",
+      "Control.Monad.Free": "src/Control/Monad/Free.purs",
+      "Control.Monad.Free.Class": "src/Control/Monad/Free/Class.purs",
+      "Control.Monad.Trampoline": "src/Control/Monad/Trampoline.purs",
+      "Data.Coyoneda": "src/Data/Coyoneda.purs",
+      "Data.Yoneda": "src/Data/Yoneda.purs"
+    },
+    "foreigns": []
+  },
+  "freeap": {
+    "dependencies": [
+      "const",
+      "exists",
+      "gen",
+      "lists"
+    ],
+    "repo": "https://github.com/ethul/purescript-freeap.git",
+    "version": "v5.0.1",
+    "sha256": "007840vpxa4gz0fvjbahyky2xzz625gzfaiy2wjpb50d9qacsr7y",
+    "sources": {
+      "Control.Applicative.Free": "src/Control/Applicative/Free.purs",
+      "Control.Applicative.Free.Gen": "src/Control/Applicative/Free/Gen.purs"
+    },
+    "foreigns": []
+  },
+  "freet": {
+    "dependencies": [
+      "bifunctors",
+      "effect",
+      "either",
+      "exists",
+      "prelude",
+      "tailrec",
+      "transformers"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-freet.git",
+    "version": "v4.0.0",
+    "sha256": "1kpgggwimxjvdvhn6s7z4lzg3yw1rqg5f7pyamx9gh232s4va40i",
+    "sources": {
+      "Control.Monad.Free.Trans": "src/Control/Monad/Free/Trans.purs"
+    },
+    "foreigns": []
+  },
+  "functions": {
+    "dependencies": [
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-functions.git",
+    "version": "v4.0.0",
+    "sha256": "0675k5kxxwdvsjs6a3is8pwm3hmv0vbcza1b8ls10gymmfz3k3hj",
+    "sources": {
+      "Data.Function.Uncurried": "src/Data/Function/Uncurried.purs"
+    },
+    "foreigns": [
+      "src/Data/Function/Uncurried.js"
+    ]
+  },
+  "functors": {
+    "dependencies": [
+      "bifunctors",
+      "const",
+      "control",
+      "either",
+      "foldable-traversable",
+      "maybe",
+      "newtype",
+      "prelude",
+      "tuples",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript/purescript-functors.git",
+    "version": "v3.0.0",
+    "sha256": "0rq2n2f0103fzpjvg288i4xzcgwbhjljdzaj4wmdgqgbknsjl1xq",
+    "sources": {
+      "Data.Functor.App": "src/Data/Functor/App.purs",
+      "Data.Functor.Compose": "src/Data/Functor/Compose.purs",
+      "Data.Functor.Coproduct": "src/Data/Functor/Coproduct.purs",
+      "Data.Functor.Coproduct.Inject": "src/Data/Functor/Coproduct/Inject.purs",
+      "Data.Functor.Coproduct.Nested": "src/Data/Functor/Coproduct/Nested.purs",
+      "Data.Functor.Product": "src/Data/Functor/Product.purs",
+      "Data.Functor.Product.Nested": "src/Data/Functor/Product/Nested.purs"
+    },
+    "foreigns": []
+  },
+  "fuzzy": {
+    "dependencies": [
+      "foldable-traversable",
+      "foreign-object",
+      "generics-rep",
+      "newtype",
+      "ordered-collections",
+      "prelude",
+      "rationals",
+      "strings",
+      "strongcheck",
+      "tuples"
+    ],
+    "repo": "https://github.com/citizennet/purescript-fuzzy.git",
+    "version": "v0.2.1",
+    "sha256": "1sn46sqkc3ygxsn003b4q1ff7x73315mpfhz9n0jj5nvbjd345ir",
+    "sources": {
+      "Data.Fuzzy": "src/Data/Fuzzy.purs"
+    },
+    "foreigns": []
+  },
+  "gen": {
+    "dependencies": [
+      "either",
+      "foldable-traversable",
+      "identity",
+      "maybe",
+      "newtype",
+      "nonempty",
+      "prelude",
+      "tailrec",
+      "tuples",
+      "unfoldable"
+    ],
+    "repo": "https://github.com/purescript/purescript-gen.git",
+    "version": "v2.1.0",
+    "sha256": "0ddsfb6a23rahkw9d3ymp2sf6d6vxndj73y61cdv74zrlr2nx74p",
+    "sources": {
+      "Control.Monad.Gen": "src/Control/Monad/Gen.purs",
+      "Control.Monad.Gen.Class": "src/Control/Monad/Gen/Class.purs",
+      "Control.Monad.Gen.Common": "src/Control/Monad/Gen/Common.purs"
+    },
+    "foreigns": []
+  },
+  "generics-rep": {
+    "dependencies": [
+      "enums",
+      "foldable-traversable",
+      "maybe",
+      "newtype",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-generics-rep.git",
+    "version": "v6.0.0",
+    "sha256": "0p9c29hgd418hqfa0nmgrw84j3daabbx9bxys8pnlgq4dmglkzyv",
+    "sources": {
+      "Data.Generic.Rep": "src/Data/Generic/Rep.purs",
+      "Data.Generic.Rep.Bounded": "src/Data/Generic/Rep/Bounded.purs",
+      "Data.Generic.Rep.Enum": "src/Data/Generic/Rep/Enum.purs",
+      "Data.Generic.Rep.Eq": "src/Data/Generic/Rep/Eq.purs",
+      "Data.Generic.Rep.Monoid": "src/Data/Generic/Rep/Monoid.purs",
+      "Data.Generic.Rep.Ord": "src/Data/Generic/Rep/Ord.purs",
+      "Data.Generic.Rep.Semigroup": "src/Data/Generic/Rep/Semigroup.purs",
+      "Data.Generic.Rep.Show": "src/Data/Generic/Rep/Show.purs"
+    },
+    "foreigns": []
+  },
+  "globals": {
+    "dependencies": [],
+    "repo": "https://github.com/purescript/purescript-globals.git",
+    "version": "v4.0.0",
+    "sha256": "150mc0kv0cb5fkx0szicwczjr54bglmlyaynj2grf1r4gnjg967s",
+    "sources": {
+      "Global": "src/Global.purs",
+      "Global.Unsafe": "src/Global/Unsafe.purs"
+    },
+    "foreigns": [
+      "src/Global.js",
+      "src/Global/Unsafe.js"
+    ]
+  },
+  "group": {
+    "dependencies": [
+      "lists"
+    ],
+    "repo": "https://github.com/morganthomas/purescript-group.git",
+    "version": "v4.0.0",
+    "sha256": "1kzvwrxdn83ybbpsvv64jk30ba8l0l6lm3gwlm96qwkdysdvz09q",
+    "sources": {
+      "Data.Group": "src/Data/Group.purs",
+      "Data.Group.Action": "src/Data/Group/Action.purs",
+      "Data.Group.Free": "src/Data/Group/Free.purs",
+      "Data.Semigroup.Commutative": "src/Data/Semigroup/Commutative.purs"
+    },
+    "foreigns": []
+  },
+  "halogen": {
+    "dependencies": [
+      "aff",
+      "avar",
+      "console",
+      "const",
+      "coroutines",
+      "dom-indexed",
+      "foreign",
+      "fork",
+      "free",
+      "freeap",
+      "halogen-vdom",
+      "media-types",
+      "nullable",
+      "ordered-collections",
+      "parallel",
+      "profunctor",
+      "profunctor-lenses",
+      "transformers",
+      "unsafe-coerce",
+      "unsafe-reference",
+      "web-uievents"
+    ],
+    "repo": "https://github.com/slamdata/purescript-halogen.git",
+    "version": "v4.0.0",
+    "sha256": "13q1fj33wmqa8bhxp0k6cc7v218b0xnx8rnh4p3ci637x3via3bh",
+    "sources": {
+      "Halogen": "src/Halogen.purs",
+      "Halogen.Aff": "src/Halogen/Aff.purs",
+      "Halogen.Aff.Driver": "src/Halogen/Aff/Driver.purs",
+      "Halogen.Aff.Driver.Eval": "src/Halogen/Aff/Driver/Eval.purs",
+      "Halogen.Aff.Driver.State": "src/Halogen/Aff/Driver/State.purs",
+      "Halogen.Aff.Util": "src/Halogen/Aff/Util.purs",
+      "Halogen.Component": "src/Halogen/Component.purs",
+      "Halogen.Component.ChildPath": "src/Halogen/Component/ChildPath.purs",
+      "Halogen.Component.Profunctor": "src/Halogen/Component/Profunctor.purs",
+      "Halogen.Data.OrdBox": "src/Halogen/Data/OrdBox.purs",
+      "Halogen.Data.Prism": "src/Halogen/Data/Prism.purs",
+      "Halogen.HTML": "src/Halogen/HTML.purs",
+      "Halogen.HTML.Core": "src/Halogen/HTML/Core.purs",
+      "Halogen.HTML.Elements": "src/Halogen/HTML/Elements.purs",
+      "Halogen.HTML.Elements.Keyed": "src/Halogen/HTML/Elements/Keyed.purs",
+      "Halogen.HTML.Events": "src/Halogen/HTML/Events.purs",
+      "Halogen.HTML.Properties": "src/Halogen/HTML/Properties.purs",
+      "Halogen.HTML.Properties.ARIA": "src/Halogen/HTML/Properties/ARIA.purs",
+      "Halogen.Query": "src/Halogen/Query.purs",
+      "Halogen.Query.EventSource": "src/Halogen/Query/EventSource.purs",
+      "Halogen.Query.ForkF": "src/Halogen/Query/ForkF.purs",
+      "Halogen.Query.HalogenM": "src/Halogen/Query/HalogenM.purs",
+      "Halogen.Query.InputF": "src/Halogen/Query/InputF.purs",
+      "Halogen.VDom.Driver": "src/Halogen/VDom/Driver.purs"
+    },
+    "foreigns": []
+  },
+  "halogen-css": {
+    "dependencies": [
+      "css",
+      "halogen"
+    ],
+    "repo": "https://github.com/slamdata/purescript-halogen-css.git",
+    "version": "v8.0.0",
+    "sha256": "1a8sj8ydfnvj3vh2l3f0yyd69y7v4qki1a5m99n0v2aqc1y6nrzl",
+    "sources": {
+      "Halogen.HTML.CSS": "src/Halogen/HTML/CSS.purs"
+    },
+    "foreigns": []
+  },
+  "halogen-select": {
+    "dependencies": [
+      "halogen"
+    ],
+    "repo": "https://github.com/citizennet/purescript-halogen-select.git",
+    "version": "v2.0.0",
+    "sha256": "1772w7af94m0jrd8xdd5j09vj6q5d1dy1qxy2jfy39hblhd4g8j4",
+    "sources": {
+      "Select": "src/Select.purs",
+      "Select.Internal.State": "src/Internal/State.purs",
+      "Select.Utils.Setters": "src/Utils/Setters.purs"
+    },
+    "foreigns": []
+  },
+  "halogen-vdom": {
+    "dependencies": [
+      "bifunctors",
+      "effect",
+      "foreign",
+      "foreign-object",
+      "maybe",
+      "prelude",
+      "refs",
+      "tuples",
+      "unsafe-coerce",
+      "web-html"
+    ],
+    "repo": "https://github.com/slamdata/purescript-halogen-vdom.git",
+    "version": "v3.0.0",
+    "sha256": "0zs82fymvg1w2ifkj3h3hnq2cpa88lzkbl3i35rp1fccn5f70bpi",
+    "sources": {
+      "Halogen.VDom": "src/Halogen/VDom.purs",
+      "Halogen.VDom.DOM": "src/Halogen/VDom/DOM.purs",
+      "Halogen.VDom.DOM.Prop": "src/Halogen/VDom/DOM/Prop.purs",
+      "Halogen.VDom.Machine": "src/Halogen/VDom/Machine.purs",
+      "Halogen.VDom.Types": "src/Halogen/VDom/Types.purs",
+      "Halogen.VDom.Util": "src/Halogen/VDom/Util.purs"
+    },
+    "foreigns": [
+      "src/Halogen/VDom/Util.js"
+    ]
+  },
+  "hedwig": {
+    "dependencies": [
+      "aff",
+      "affjax",
+      "console",
+      "effect",
+      "integers",
+      "nullable",
+      "prelude",
+      "psci-support",
+      "random",
+      "web-dom",
+      "web-events",
+      "web-html"
+    ],
+    "repo": "https://github.com/utkarshkukreti/purescript-hedwig.git",
+    "version": "0.1.1",
+    "sha256": "0x7gjlsrr3kw9cqwpma4sbln1k8334x7hh0p2j5y0kyyvzvn8w79",
+    "sources": {
+      "Hedwig": "src/Hedwig.purs",
+      "Hedwig.Application": "src/Hedwig/Application.purs",
+      "Hedwig.Devtools": "src/Hedwig/Devtools.purs",
+      "Hedwig.Element": "src/Hedwig/Element.purs",
+      "Hedwig.Event": "src/Hedwig/Event.purs",
+      "Hedwig.Foreign": "src/Hedwig/Foreign.purs",
+      "Hedwig.Property": "src/Hedwig/Property.purs"
+    },
+    "foreigns": [
+      "src/Hedwig/Foreign.js",
+      "src/Hedwig/Devtools.js"
+    ]
+  },
+  "http-methods": {
+    "dependencies": [
+      "either",
+      "prelude",
+      "strings"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-http-methods.git",
+    "version": "v4.0.1",
+    "sha256": "0varzp64k6pwf7grjyw7ddp71i2hk8ywkyqdj28w0w0qv5gi8zlr",
+    "sources": {
+      "Data.HTTP.Method": "src/Data/HTTP/Method.purs"
+    },
+    "foreigns": []
+  },
+  "identity": {
+    "dependencies": [
+      "control",
+      "foldable-traversable",
+      "invariant",
+      "newtype",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-identity.git",
+    "version": "v4.0.0",
+    "sha256": "0jw61rk4308qmbjxkdb37fdw2r08pzh8z3lg2x29f9l9f7ra5ggw",
+    "sources": {
+      "Data.Identity": "src/Data/Identity.purs"
+    },
+    "foreigns": []
+  },
+  "integers": {
+    "dependencies": [
+      "globals",
+      "math",
+      "maybe",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-integers.git",
+    "version": "v4.0.0",
+    "sha256": "17d4bfpnrmbxlc7hhhrvnli70ydaqyr26zgvc9q52a76zgdcb4cf",
+    "sources": {
+      "Data.Int": "src/Data/Int.purs",
+      "Data.Int.Bits": "src/Data/Int/Bits.purs"
+    },
+    "foreigns": [
+      "src/Data/Int.js",
+      "src/Data/Int/Bits.js"
+    ]
+  },
+  "invariant": {
+    "dependencies": [
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-invariant.git",
+    "version": "v4.0.0",
+    "sha256": "1g4dahf9swkw45i3x6kgl7x0gvfv3r5zzbfrazspg73vdxll2na5",
+    "sources": {
+      "Data.Functor.Invariant": "src/Data/Functor/Invariant.purs"
+    },
+    "foreigns": []
+  },
+  "js-date": {
+    "dependencies": [
+      "datetime",
+      "exceptions",
+      "foreign",
+      "integers",
+      "now"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-js-date.git",
+    "version": "v6.0.0",
+    "sha256": "19qyzbr4a1ca8znbd8gcbz0a801f5p1v238ky3408gdx4ba32zjd",
+    "sources": {
+      "Data.JSDate": "src/Data/JSDate.purs"
+    },
+    "foreigns": [
+      "src/Data/JSDate.js"
+    ]
+  },
+  "js-timers": {
+    "dependencies": [
+      "effect"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-js-timers.git",
+    "version": "v4.0.1",
+    "sha256": "1a8092sli7zqw1wflibhjza1ww21dxl7x7r602iazzwh2g70v4dg",
+    "sources": {
+      "Effect.Timer": "src/Effect/Timer.purs"
+    },
+    "foreigns": [
+      "src/Effect/Timer.js"
+    ]
+  },
+  "lazy": {
+    "dependencies": [
+      "control",
+      "foldable-traversable",
+      "invariant",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-lazy.git",
+    "version": "v4.0.0",
+    "sha256": "156q89l4nvvn14imbhp6xvvm82q7kqh1pyndmldmnkhiqyr84vqv",
+    "sources": {
+      "Data.Lazy": "src/Data/Lazy.purs"
+    },
+    "foreigns": [
+      "src/Data/Lazy.js"
+    ]
+  },
+  "lcg": {
+    "dependencies": [
+      "effect",
+      "integers",
+      "math",
+      "maybe",
+      "partial",
+      "prelude",
+      "random"
+    ],
+    "repo": "https://github.com/purescript/purescript-lcg.git",
+    "version": "v2.0.0",
+    "sha256": "1851cq2g84jzjbvbmncbivbhaqzj9zv5ni3gs14k04nmx2brxmvj",
+    "sources": {
+      "Random.LCG": "src/Random/LCG.purs"
+    },
+    "foreigns": []
+  },
+  "lists": {
+    "dependencies": [
+      "bifunctors",
+      "control",
+      "foldable-traversable",
+      "lazy",
+      "maybe",
+      "newtype",
+      "nonempty",
+      "partial",
+      "prelude",
+      "tailrec",
+      "tuples",
+      "unfoldable"
+    ],
+    "repo": "https://github.com/purescript/purescript-lists.git",
+    "version": "v5.0.0",
+    "sha256": "01q9nhspwfbbfiblz1vczf09xyix86vimggpjgk9jbhglqvb9qw9",
+    "sources": {
+      "Data.List": "src/Data/List.purs",
+      "Data.List.Lazy": "src/Data/List/Lazy.purs",
+      "Data.List.Lazy.NonEmpty": "src/Data/List/Lazy/NonEmpty.purs",
+      "Data.List.Lazy.Types": "src/Data/List/Lazy/Types.purs",
+      "Data.List.NonEmpty": "src/Data/List/NonEmpty.purs",
+      "Data.List.Partial": "src/Data/List/Partial.purs",
+      "Data.List.Types": "src/Data/List/Types.purs",
+      "Data.List.ZipList": "src/Data/List/ZipList.purs"
+    },
+    "foreigns": []
+  },
+  "machines": {
+    "dependencies": [
+      "arrays",
+      "control",
+      "effect",
+      "lists",
+      "maybe",
+      "prelude",
+      "profunctor",
+      "tuples",
+      "unfoldable"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-machines.git",
+    "version": "v5.1.0",
+    "sha256": "0yhbhnsdf0cnvwr199ydhfh7n6z1sanyspscnfzqqavz4zj0isxc",
+    "sources": {
+      "Data.Machine.Mealy": "src/Data/Machine/Mealy.purs"
+    },
+    "foreigns": []
+  },
+  "math": {
+    "dependencies": [],
+    "repo": "https://github.com/purescript/purescript-math.git",
+    "version": "v2.1.1",
+    "sha256": "1msmy9w7y6fij62sdc55w68gpwkhm6lhgc8qjisjk4sxx1wdg1rr",
+    "sources": {
+      "Math": "src/Math.purs"
+    },
+    "foreigns": [
+      "src/Math.js"
+    ]
+  },
+  "maybe": {
+    "dependencies": [
+      "control",
+      "invariant",
+      "newtype",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-maybe.git",
+    "version": "v4.0.0",
+    "sha256": "06mm4a6lbp5by14vms3lyhqp64211lwnq1dqbaazvdp0afykx1z5",
+    "sources": {
+      "Data.Maybe": "src/Data/Maybe.purs",
+      "Data.Maybe.First": "src/Data/Maybe/First.purs",
+      "Data.Maybe.Last": "src/Data/Maybe/Last.purs"
+    },
+    "foreigns": []
+  },
+  "media-types": {
+    "dependencies": [
+      "newtype",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-media-types.git",
+    "version": "v4.0.1",
+    "sha256": "0ykwmxrhmwfy6c5mxjxa43xdf5xqakrqyvr5fn986yad50gjqj75",
+    "sources": {
+      "Data.MediaType": "src/Data/MediaType.purs",
+      "Data.MediaType.Common": "src/Data/MediaType/Common.purs"
+    },
+    "foreigns": []
+  },
+  "memoize": {
+    "dependencies": [
+      "either",
+      "generics-rep",
+      "integers",
+      "lazy",
+      "lists",
+      "maybe",
+      "strings",
+      "tuples"
+    ],
+    "repo": "https://github.com/paf31/purescript-memoize.git",
+    "version": "v5.0.0",
+    "sha256": "191dsdp2znx028y8jg2c7iz2zpj8xfgd0zvnb5bx2zqky934a4dv",
+    "sources": {
+      "Data.Function.Memoize": "src/Data/Function/Memoize.purs"
+    },
+    "foreigns": []
+  },
+  "milkis": {
+    "dependencies": [
+      "aff-promise",
+      "foreign-object",
+      "prelude",
+      "typelevel-prelude"
+    ],
+    "repo": "https://github.com/justinwoo/purescript-milkis.git",
+    "version": "v6.0.1",
+    "sha256": "1x12h3bsc09373j3z87cv5w3xs8by17k8xnjsf8gyx51pbfbfsf3",
+    "sources": {
+      "Milkis": "src/Milkis.purs",
+      "Milkis.Impl": "src/Milkis.Impl.purs",
+      "Milkis.Impl.Node": "src/Milkis.Impl.Node.purs",
+      "Milkis.Impl.Window": "src/Milkis.Impl.Window.purs"
+    },
+    "foreigns": [
+      "src/Milkis.Impl.Window.js",
+      "src/Milkis.js",
+      "src/Milkis.Impl.Node.js"
+    ]
+  },
+  "minibench": {
+    "dependencies": [
+      "console",
+      "effect",
+      "globals",
+      "integers",
+      "math",
+      "partial",
+      "prelude",
+      "refs"
+    ],
+    "repo": "https://github.com/purescript/purescript-minibench.git",
+    "version": "v2.0.0",
+    "sha256": "166hbl30bd3x14fld77f97h9bpkq3z775g3ymk61nsnfpf640p22",
+    "sources": {
+      "Performance.Minibench": "src/Performance/Minibench.purs"
+    },
+    "foreigns": [
+      "src/Performance/Minibench.js"
+    ]
+  },
+  "mmorph": {
+    "dependencies": [
+      "functors",
+      "transformers"
+    ],
+    "repo": "https://github.com/Thimoteus/purescript-mmorph.git",
+    "version": "v5.0.0",
+    "sha256": "1hyh66xnfjzlrhwv6w0qz3xr7yflpn6ld9k7w4qlfyyabfp6whkw",
+    "sources": {
+      "Control.Monad.Morph": "src/Control/Monad/Morph.purs"
+    },
+    "foreigns": []
+  },
+  "newtype": {
+    "dependencies": [
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-newtype.git",
+    "version": "v3.0.0",
+    "sha256": "0qvk9p41miy806b05b4ikbr3if0fcyc35gfrwd2mflcxxp46011c",
+    "sources": {
+      "Data.Newtype": "src/Data/Newtype.purs"
+    },
+    "foreigns": []
+  },
+  "node-buffer": {
+    "dependencies": [
+      "arraybuffer-types",
+      "effect",
+      "maybe"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-buffer.git",
+    "version": "v5.0.0",
+    "sha256": "0ih2y29srdxgn526fw2v1y95hpivjil44vkl93w6nrqsymki36y0",
+    "sources": {
+      "Node.Buffer": "src/Node/Buffer.purs",
+      "Node.Buffer.Unsafe": "src/Node/Buffer/Unsafe.purs",
+      "Node.Encoding": "src/Node/Encoding.purs"
+    },
+    "foreigns": [
+      "src/Node/Buffer.js",
+      "src/Node/Encoding.js",
+      "src/Node/Buffer/Unsafe.js"
+    ]
+  },
+  "node-child-process": {
+    "dependencies": [
+      "exceptions",
+      "foreign",
+      "foreign-object",
+      "functions",
+      "node-fs",
+      "node-streams",
+      "nullable",
+      "posix-types",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-child-process.git",
+    "version": "v5.0.0",
+    "sha256": "0igspvgsqabwrgync4znn7gg89xl4lck9hdqfscawj8fj7rg960d",
+    "sources": {
+      "Node.ChildProcess": "src/Node/ChildProcess.purs"
+    },
+    "foreigns": [
+      "src/Node/ChildProcess.js"
+    ]
+  },
+  "node-fs": {
+    "dependencies": [
+      "datetime",
+      "effect",
+      "either",
+      "enums",
+      "exceptions",
+      "functions",
+      "globals",
+      "integers",
+      "js-date",
+      "maybe",
+      "node-buffer",
+      "node-path",
+      "node-streams",
+      "nullable",
+      "partial",
+      "prelude",
+      "strings",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-fs.git",
+    "version": "v5.0.0",
+    "sha256": "1hkg8j4zkyq71g2bn3vpfqb8x49rdd9k0ayv3zf6l8k80gp3qigx",
+    "sources": {
+      "Node.FS": "src/Node/FS.purs",
+      "Node.FS.Async": "src/Node/FS/Async.purs",
+      "Node.FS.Internal": "src/Node/FS/Internal.purs",
+      "Node.FS.Perms": "src/Node/FS/Perms.purs",
+      "Node.FS.Stats": "src/Node/FS/Stats.purs",
+      "Node.FS.Stream": "src/Node/FS/Stream.purs",
+      "Node.FS.Sync": "src/Node/FS/Sync.purs"
+    },
+    "foreigns": [
+      "src/Node/FS/Stats.js",
+      "src/Node/FS/Async.js",
+      "src/Node/FS/Internal.js"
+    ]
+  },
+  "node-fs-aff": {
+    "dependencies": [
+      "aff",
+      "either",
+      "node-fs",
+      "node-path"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-fs-aff.git",
+    "version": "v6.0.0",
+    "sha256": "0vjc9zag7y20yxhhv45hrwv9fbpmp0szv40vaxl5x8mnd5wv28x7",
+    "sources": {
+      "Node.FS.Aff": "src/Node/FS/Aff.purs"
+    },
+    "foreigns": []
+  },
+  "node-http": {
+    "dependencies": [
+      "arraybuffer-types",
+      "contravariant",
+      "effect",
+      "foreign",
+      "foreign-object",
+      "maybe",
+      "node-buffer",
+      "node-streams",
+      "node-url",
+      "nullable",
+      "options",
+      "prelude",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-http.git",
+    "version": "v5.0.0",
+    "sha256": "1pwh3alx32gcih2w050pac4yy9l4q6zxar8i7yri3j23nfg6lcpi",
+    "sources": {
+      "Node.HTTP": "src/Node/HTTP.purs",
+      "Node.HTTP.Client": "src/Node/HTTP/Client.purs",
+      "Node.HTTP.Secure": "src/Node/HTTP/Secure.purs"
+    },
+    "foreigns": [
+      "src/Node/HTTP.js",
+      "src/Node/HTTP/Client.js",
+      "src/Node/HTTP/Secure.js"
+    ]
+  },
+  "node-path": {
+    "dependencies": [
+      "effect"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-path.git",
+    "version": "v3.0.0",
+    "sha256": "0j1ni52m62dpcrfakl1ik131i31bkg91yv0p1c40sdw0f59fzf6x",
+    "sources": {
+      "Node.Path": "src/Node/Path.purs"
+    },
+    "foreigns": [
+      "src/Node/Path.js"
+    ]
+  },
+  "node-postgres": {
+    "dependencies": [
+      "aff",
+      "arrays",
+      "datetime",
+      "either",
+      "foldable-traversable",
+      "foreign",
+      "integers",
+      "nullable",
+      "prelude",
+      "transformers",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/epost/purescript-node-postgres.git",
+    "version": "v5.0.0",
+    "sha256": "1lcsm2n1vqiji6hgm2nwd4q12iwhbq5a6n4ab2sqyk79ndk2vd8i",
+    "sources": {
+      "Database.Postgres": "src/Database/Postgres.purs",
+      "Database.Postgres.SqlValue": "src/Database/Postgres/SqlValue.purs",
+      "Database.Postgres.Transaction": "src/Database/Postgres/Transaction.purs"
+    },
+    "foreigns": [
+      "src/Database/Postgres.js"
+    ]
+  },
+  "node-process": {
+    "dependencies": [
+      "effect",
+      "foreign-object",
+      "maybe",
+      "node-streams",
+      "posix-types",
+      "prelude",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-process",
+    "version": "v6.0.0",
+    "sha256": "19p4ylxn9cfa7drxrl4gzsfp52jwgm67n5k7rs9lazkp1lvmk0jh",
+    "sources": {
+      "Node.Globals": "src/Node/Globals.purs",
+      "Node.Platform": "src/Node/Platform.purs",
+      "Node.Process": "src/Node/Process.purs"
+    },
+    "foreigns": [
+      "src/Node/Globals.js",
+      "src/Node/Process.js"
+    ]
+  },
+  "node-readline": {
+    "dependencies": [
+      "effect",
+      "foreign",
+      "node-process",
+      "node-streams",
+      "options",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-readline.git",
+    "version": "v4.0.0",
+    "sha256": "0sq33z74avxardarvcnyzsshwgjvrfjdyr3cya1br6gb52bbakjj",
+    "sources": {
+      "Node.ReadLine": "src/Node/ReadLine.purs"
+    },
+    "foreigns": [
+      "src/Node/ReadLine.js"
+    ]
+  },
+  "node-sqlite3": {
+    "dependencies": [
+      "aff",
+      "foreign"
+    ],
+    "repo": "https://github.com/justinwoo/purescript-node-sqlite3",
+    "version": "v3.1.0",
+    "sha256": "13nrgzs2jz686qjz8c8z36ixq0rpgr5njd35c5xq8mh0g58m29wj",
+    "sources": {
+      "SQLite3": "src/SQLite3.purs"
+    },
+    "foreigns": [
+      "src/SQLite3.js"
+    ]
+  },
+  "node-streams": {
+    "dependencies": [
+      "effect",
+      "either",
+      "exceptions",
+      "node-buffer",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-streams.git",
+    "version": "v4.0.0",
+    "sha256": "098wdq0rj4nkc470fwmiaars7vxac9n1dh4d82jrji3m77n473da",
+    "sources": {
+      "Node.Stream": "src/Node/Stream.purs"
+    },
+    "foreigns": [
+      "src/Node/Stream.js"
+    ]
+  },
+  "node-telegram-bot-api": {
+    "dependencies": [
+      "aff",
+      "foreign",
+      "simple-json",
+      "strings"
+    ],
+    "repo": "https://github.com/justinwoo/purescript-node-telegram-bot-api.git",
+    "version": "v4.0.0",
+    "sha256": "17srhm44210phyhd5ik936h9c8igz105g9mrfzi1qax6xcadkdgk",
+    "sources": {
+      "TelegramBot": "src/TelegramBot.purs"
+    },
+    "foreigns": [
+      "src/TelegramBot.js"
+    ]
+  },
+  "node-url": {
+    "dependencies": [
+      "nullable"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-node-url.git",
+    "version": "v4.0.0",
+    "sha256": "0qbpdz62psy7hb34hw5rw2x1pq7yhd214ysza0xh46c3nlp0ib9y",
+    "sources": {
+      "Node.URL": "src/Node/URL.purs"
+    },
+    "foreigns": [
+      "src/Node/URL.js"
+    ]
+  },
+  "nonempty": {
+    "dependencies": [
+      "control",
+      "foldable-traversable",
+      "maybe",
+      "prelude",
+      "tuples",
+      "unfoldable"
+    ],
+    "repo": "https://github.com/purescript/purescript-nonempty.git",
+    "version": "v5.0.0",
+    "sha256": "1vz174sg32cqrp52nwb2vz9frrzmdwzzlgl4vc2cm5wlf2anirxj",
+    "sources": {
+      "Data.NonEmpty": "src/Data/NonEmpty.purs"
+    },
+    "foreigns": []
+  },
+  "now": {
+    "dependencies": [
+      "datetime",
+      "effect"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-now.git",
+    "version": "v4.0.0",
+    "sha256": "18h5pif2dy4r7w1xg2zw4mvdqlar9xqp3rawkiavmsc946ncf3zs",
+    "sources": {
+      "Effect.Now": "src/Effect/Now.purs"
+    },
+    "foreigns": [
+      "src/Effect/Now.js"
+    ]
+  },
+  "nullable": {
+    "dependencies": [
+      "functions",
+      "maybe"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-nullable.git",
+    "version": "v4.0.0",
+    "sha256": "1ppv7qm9lnn26f8v1lpc5idx5kd7m0mdi48zazgz18hkfr5wxma5",
+    "sources": {
+      "Data.Nullable": "src/Data/Nullable.purs"
+    },
+    "foreigns": [
+      "src/Data/Nullable.js"
+    ]
+  },
+  "numbers": {
+    "dependencies": [
+      "globals",
+      "math",
+      "maybe"
+    ],
+    "repo": "https://github.com/sharkdp/purescript-numbers.git",
+    "version": "v6.0.0",
+    "sha256": "1kzdg69llbmrccmgwrpfiq6hr6jdg2zl40qgzj10nzbhgqrbv2y1",
+    "sources": {
+      "Data.Number": "src/Data/Number.purs",
+      "Data.Number.Approximate": "src/Data/Number/Approximate.purs",
+      "Data.Number.Format": "src/Data/Number/Format.purs"
+    },
+    "foreigns": [
+      "src/Data/Number/Format.js"
+    ]
+  },
+  "options": {
+    "dependencies": [
+      "contravariant",
+      "foreign",
+      "foreign-object",
+      "maybe",
+      "tuples"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-options.git",
+    "version": "v4.0.0",
+    "sha256": "1yfsx3fxwqkcb7q6kifbsrx8wnr8j6gg5nm3ybgiwkbdk6s1j7v2",
+    "sources": {
+      "Data.Options": "src/Data/Options.purs"
+    },
+    "foreigns": []
+  },
+  "ordered-collections": {
+    "dependencies": [
+      "arrays",
+      "foldable-traversable",
+      "gen",
+      "lists",
+      "maybe",
+      "partial",
+      "prelude",
+      "st",
+      "tailrec",
+      "tuples",
+      "unfoldable",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript/purescript-ordered-collections.git",
+    "version": "v1.0.0",
+    "sha256": "1yw5581clrw25rzhfgdk3qxb42h2g34g86a4252f4wygqndcxphc",
+    "sources": {
+      "Data.Map": "src/Data/Map.purs",
+      "Data.Map.Gen": "src/Data/Map/Gen.purs",
+      "Data.Map.Internal": "src/Data/Map/Internal.purs",
+      "Data.Set": "src/Data/Set.purs"
+    },
+    "foreigns": []
+  },
+  "orders": {
+    "dependencies": [
+      "newtype",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-orders.git",
+    "version": "v4.0.0",
+    "sha256": "13p1sm4dxkmxhld9x5qqg62iiajjb3qpzs66c1r24y5fs4zsfry4",
+    "sources": {
+      "Data.Ord.Down": "src/Data/Ord/Down.purs",
+      "Data.Ord.Max": "src/Data/Ord/Max.purs",
+      "Data.Ord.Min": "src/Data/Ord/Min.purs"
+    },
+    "foreigns": []
+  },
+  "pairing": {
+    "dependencies": [
+      "free",
+      "functors",
+      "transformers"
+    ],
+    "repo": "https://github.com/paf31/purescript-pairing.git",
+    "version": "v5.1.0",
+    "sha256": "1lh3lna84rrmqlcab2p012cjjndhi9wyx2f3lv3bgwfgj65r2nbx",
+    "sources": {
+      "Data.Functor.Pairing": "src/Data/Functor/Pairing.purs",
+      "Data.Functor.Pairing.Co": "src/Data/Functor/Pairing/Co.purs"
+    },
+    "foreigns": []
+  },
+  "pairs": {
+    "dependencies": [
+      "console",
+      "distributive",
+      "foldable-traversable",
+      "quickcheck"
+    ],
+    "repo": "https://github.com/sharkdp/purescript-pairs.git",
+    "version": "v6.0.0",
+    "sha256": "0vkxl3vavbgbdi4hfzvychf0g1xiaidfa4zamiynyv4awlwjh08q",
+    "sources": {
+      "Data.Pair": "src/Data/Pair.purs"
+    },
+    "foreigns": []
+  },
+  "parallel": {
+    "dependencies": [
+      "control",
+      "effect",
+      "either",
+      "foldable-traversable",
+      "functors",
+      "maybe",
+      "newtype",
+      "prelude",
+      "refs",
+      "transformers"
+    ],
+    "repo": "https://github.com/purescript/purescript-parallel.git",
+    "version": "v4.0.0",
+    "sha256": "1d5bnagabw2k8yxywkygwrpblb2ggqh2fhpqfrx2sj1y53x332hg",
+    "sources": {
+      "Control.Parallel": "src/Control/Parallel.purs",
+      "Control.Parallel.Class": "src/Control/Parallel/Class.purs"
+    },
+    "foreigns": []
+  },
+  "parsing": {
+    "dependencies": [
+      "arrays",
+      "either",
+      "foldable-traversable",
+      "identity",
+      "integers",
+      "lists",
+      "maybe",
+      "strings",
+      "transformers",
+      "unicode"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-parsing.git",
+    "version": "v5.0.1",
+    "sha256": "0b8d4rr96lrhqvnyb71v8by91sckixjhqzzl9acmidimsvls9ksr",
+    "sources": {
+      "Text.Parsing.Indent": "src/Text/Parsing/Parser/Indent.purs",
+      "Text.Parsing.Parser": "src/Text/Parsing/Parser.purs",
+      "Text.Parsing.Parser.Combinators": "src/Text/Parsing/Parser/Combinators.purs",
+      "Text.Parsing.Parser.Expr": "src/Text/Parsing/Parser/Expr.purs",
+      "Text.Parsing.Parser.Language": "src/Text/Parsing/Parser/Language.purs",
+      "Text.Parsing.Parser.Pos": "src/Text/Parsing/Parser/Pos.purs",
+      "Text.Parsing.Parser.String": "src/Text/Parsing/Parser/String.purs",
+      "Text.Parsing.Parser.Token": "src/Text/Parsing/Parser/Token.purs"
+    },
+    "foreigns": []
+  },
+  "partial": {
+    "dependencies": [],
+    "repo": "https://github.com/purescript/purescript-partial.git",
+    "version": "v2.0.0",
+    "sha256": "0nw5989ydin2d12b97ch4pdynxkq91xpj7yym5gpd5fpbgy36mdi",
+    "sources": {
+      "Partial": "src/Partial.purs",
+      "Partial.Unsafe": "src/Partial/Unsafe.purs"
+    },
+    "foreigns": [
+      "src/Partial.js",
+      "src/Partial/Unsafe.js"
+    ]
+  },
+  "phoenix": {
+    "dependencies": [
+      "options"
+    ],
+    "repo": "https://github.com/brandonhamilton/purescript-phoenix.git",
+    "version": "v4.0.0",
+    "sha256": "1v054b511vig4r2m4z6g53bagfwx523s9p662fq09jhwbf94v4ip",
+    "sources": {
+      "Phoenix": "src/Phoenix.purs"
+    },
+    "foreigns": [
+      "src/Phoenix.js"
+    ]
+  },
+  "pipes": {
+    "dependencies": [
+      "aff",
+      "lists",
+      "mmorph",
+      "prelude",
+      "tailrec",
+      "transformers",
+      "tuples"
+    ],
+    "repo": "https://github.com/felixSchl/purescript-pipes.git",
+    "version": "v6.0.0",
+    "sha256": "0vl37f42dy4w4hswiay22w0n14k7sr670x54iwn7428larzrzs8y",
+    "sources": {
+      "Pipes": "src/Pipes.purs",
+      "Pipes.Core": "src/Pipes/Core.purs",
+      "Pipes.Internal": "src/Pipes/Internal.purs",
+      "Pipes.ListT": "src/Pipes/ListT.purs",
+      "Pipes.Prelude": "src/Pipes/Prelude.purs"
+    },
+    "foreigns": []
+  },
+  "polyform": {
+    "dependencies": [
+      "foreign",
+      "foreign-object",
+      "generics-rep",
+      "invariant",
+      "newtype",
+      "ordered-collections",
+      "profunctor",
+      "run",
+      "transformers",
+      "variant"
+    ],
+    "repo": "https://github.com/paluh/purescript-polyform.git",
+    "version": "v0.7.0",
+    "sha256": "0pcd37in8ff0c5s8jkwvp6ysync3qb95967hyj10msh64xw9rczb",
+    "sources": {
+      "Polyform.Field": "src/Polyform/Field.purs",
+      "Polyform.Field.Generic": "src/Polyform/Field/Generic.purs",
+      "Polyform.Field.Generic.Option": "src/Polyform/Field/Generic/Option.purs",
+      "Polyform.Field.Html5": "src/Polyform/Field/Html5.purs",
+      "Polyform.Field.Validation.Combinators": "src/Polyform/Field/Validation/Combinators.purs",
+      "Polyform.Form.Component": "src/Polyform/Form/Component.purs",
+      "Polyform.Input.Foreign": "src/Polyform/Input/Foreign.purs",
+      "Polyform.Input.Http": "src/Polyform/Input/Http.purs",
+      "Polyform.Input.Interpret": "src/Polyform/Input/Interpret.purs",
+      "Polyform.Input.Interpret.Http": "src/Polyform/Input/Interpret/Http.purs",
+      "Polyform.Input.Interpret.Record": "src/Polyform/Input/Interpret/Record.purs",
+      "Polyform.Input.Interpret.Validation": "src/Polyform/Input/Interpret/Validation.purs",
+      "Polyform.Validation": "src/Polyform/Validation.purs",
+      "Polyform.Validation.Par": "src/Polyform/Validation/Par.purs"
+    },
+    "foreigns": []
+  },
+  "posix-types": {
+    "dependencies": [
+      "maybe",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript-node/purescript-posix-types",
+    "version": "v4.0.0",
+    "sha256": "0xvxjvxr7n4dv53p8w5qfmgx37cga5bp2rjhkbfvj89rb74vm3i1",
+    "sources": {
+      "Data.Posix": "src/Data/Posix.purs",
+      "Data.Posix.Signal": "src/Data/Posix/Signal.purs"
+    },
+    "foreigns": []
+  },
+  "prelude": {
+    "dependencies": [],
+    "repo": "https://github.com/purescript/purescript-prelude.git",
+    "version": "v4.0.1",
+    "sha256": "0mj4vgs8fy8imixmmh8rh2gd7sz63dybd4xam7j563n0g232i796",
+    "sources": {
+      "Control.Applicative": "src/Control/Applicative.purs",
+      "Control.Apply": "src/Control/Apply.purs",
+      "Control.Bind": "src/Control/Bind.purs",
+      "Control.Category": "src/Control/Category.purs",
+      "Control.Monad": "src/Control/Monad.purs",
+      "Control.Semigroupoid": "src/Control/Semigroupoid.purs",
+      "Data.Boolean": "src/Data/Boolean.purs",
+      "Data.BooleanAlgebra": "src/Data/BooleanAlgebra.purs",
+      "Data.Bounded": "src/Data/Bounded.purs",
+      "Data.CommutativeRing": "src/Data/CommutativeRing.purs",
+      "Data.DivisionRing": "src/Data/DivisionRing.purs",
+      "Data.Eq": "src/Data/Eq.purs",
+      "Data.EuclideanRing": "src/Data/EuclideanRing.purs",
+      "Data.Field": "src/Data/Field.purs",
+      "Data.Function": "src/Data/Function.purs",
+      "Data.Functor": "src/Data/Functor.purs",
+      "Data.HeytingAlgebra": "src/Data/HeytingAlgebra.purs",
+      "Data.Monoid": "src/Data/Monoid.purs",
+      "Data.Monoid.Additive": "src/Data/Monoid/Additive.purs",
+      "Data.Monoid.Conj": "src/Data/Monoid/Conj.purs",
+      "Data.Monoid.Disj": "src/Data/Monoid/Disj.purs",
+      "Data.Monoid.Dual": "src/Data/Monoid/Dual.purs",
+      "Data.Monoid.Endo": "src/Data/Monoid/Endo.purs",
+      "Data.Monoid.Multiplicative": "src/Data/Monoid/Multiplicative.purs",
+      "Data.NaturalTransformation": "src/Data/NaturalTransformation.purs",
+      "Data.Ord": "src/Data/Ord.purs",
+      "Data.Ord.Unsafe": "src/Data/Ord/Unsafe.purs",
+      "Data.Ordering": "src/Data/Ordering.purs",
+      "Data.Ring": "src/Data/Ring.purs",
+      "Data.Semigroup": "src/Data/Semigroup.purs",
+      "Data.Semigroup.First": "src/Data/Semigroup/First.purs",
+      "Data.Semigroup.Last": "src/Data/Semigroup/Last.purs",
+      "Data.Semiring": "src/Data/Semiring.purs",
+      "Data.Show": "src/Data/Show.purs",
+      "Data.Symbol": "src/Data/Symbol.purs",
+      "Data.Unit": "src/Data/Unit.purs",
+      "Data.Void": "src/Data/Void.purs",
+      "Prelude": "src/Prelude.purs",
+      "Record.Unsafe": "src/Record/Unsafe.purs",
+      "Type.Data.Row": "src/Type/Data/Row.purs",
+      "Type.Data.RowList": "src/Type/Data/RowList.purs"
+    },
+    "foreigns": [
+      "src/Data/EuclideanRing.js",
+      "src/Data/Semiring.js",
+      "src/Data/Unit.js",
+      "src/Data/Ord.js",
+      "src/Data/Eq.js",
+      "src/Data/Bounded.js",
+      "src/Data/Ring.js",
+      "src/Data/Semigroup.js",
+      "src/Data/Show.js",
+      "src/Data/HeytingAlgebra.js",
+      "src/Data/Symbol.js",
+      "src/Data/Functor.js",
+      "src/Data/Ord/Unsafe.js",
+      "src/Record/Unsafe.js",
+      "src/Control/Bind.js",
+      "src/Control/Apply.js"
+    ]
+  },
+  "prettier": {
+    "dependencies": [
+      "maybe",
+      "prelude"
+    ],
+    "repo": "https://github.com/gcanti/purescript-prettier.git",
+    "version": "v0.2.0",
+    "sha256": "17fkkdiiwd4ydqg606ragawxlf8kkl9nnizpsciginzw85jzpy5s",
+    "sources": {
+      "Text.Prettier": "src/Text/Prettier.purs"
+    },
+    "foreigns": [
+      "src/Text/Prettier.js"
+    ]
+  },
+  "profunctor": {
+    "dependencies": [
+      "contravariant",
+      "control",
+      "distributive",
+      "either",
+      "exists",
+      "invariant",
+      "newtype",
+      "prelude",
+      "tuples"
+    ],
+    "repo": "https://github.com/purescript/purescript-profunctor.git",
+    "version": "v4.0.0",
+    "sha256": "1v4kvmhmiwznd4lswp9339h64pgv5zvd3vm1q7gzj70767a3941i",
+    "sources": {
+      "Data.Profunctor": "src/Data/Profunctor.purs",
+      "Data.Profunctor.Choice": "src/Data/Profunctor/Choice.purs",
+      "Data.Profunctor.Closed": "src/Data/Profunctor/Closed.purs",
+      "Data.Profunctor.Clown": "src/Data/Profunctor/Clown.purs",
+      "Data.Profunctor.Cochoice": "src/Data/Profunctor/Cochoice.purs",
+      "Data.Profunctor.Costar": "src/Data/Profunctor/Costar.purs",
+      "Data.Profunctor.Costrong": "src/Data/Profunctor/Costrong.purs",
+      "Data.Profunctor.Cowrap": "src/Data/Profunctor/Cowrap.purs",
+      "Data.Profunctor.Join": "src/Data/Profunctor/Join.purs",
+      "Data.Profunctor.Joker": "src/Data/Profunctor/Joker.purs",
+      "Data.Profunctor.Split": "src/Data/Profunctor/Split.purs",
+      "Data.Profunctor.Star": "src/Data/Profunctor/Star.purs",
+      "Data.Profunctor.Strong": "src/Data/Profunctor/Strong.purs",
+      "Data.Profunctor.Wrap": "src/Data/Profunctor/Wrap.purs"
+    },
+    "foreigns": []
+  },
+  "profunctor-lenses": {
+    "dependencies": [
+      "arrays",
+      "bifunctors",
+      "const",
+      "control",
+      "distributive",
+      "either",
+      "foldable-traversable",
+      "foreign-object",
+      "functors",
+      "identity",
+      "lists",
+      "maybe",
+      "newtype",
+      "ordered-collections",
+      "partial",
+      "prelude",
+      "profunctor",
+      "record",
+      "transformers",
+      "tuples"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-profunctor-lenses.git",
+    "version": "v4.0.0",
+    "sha256": "09wbwqq5sbrq414i0ks1i8lvw4snsslaby2axfyvrwxnliybk9qz",
+    "sources": {
+      "Data.Lens": "src/Data/Lens.purs",
+      "Data.Lens.At": "src/Data/Lens/At.purs",
+      "Data.Lens.Common": "src/Data/Lens/Common.purs",
+      "Data.Lens.Fold": "src/Data/Lens/Fold.purs",
+      "Data.Lens.Fold.Partial": "src/Data/Lens/Fold/Partial.purs",
+      "Data.Lens.Getter": "src/Data/Lens/Getter.purs",
+      "Data.Lens.Grate": "src/Data/Lens/Grate.purs",
+      "Data.Lens.Index": "src/Data/Lens/Index.purs",
+      "Data.Lens.Indexed": "src/Data/Lens/Indexed.purs",
+      "Data.Lens.Internal.Exchange": "src/Data/Lens/Internal/Exchange.purs",
+      "Data.Lens.Internal.Focusing": "src/Data/Lens/Internal/Focusing.purs",
+      "Data.Lens.Internal.Forget": "src/Data/Lens/Internal/Forget.purs",
+      "Data.Lens.Internal.Grating": "src/Data/Lens/Internal/Grating.purs",
+      "Data.Lens.Internal.Indexed": "src/Data/Lens/Internal/Indexed.purs",
+      "Data.Lens.Internal.Market": "src/Data/Lens/Internal/Market.purs",
+      "Data.Lens.Internal.Re": "src/Data/Lens/Internal/Re.purs",
+      "Data.Lens.Internal.Shop": "src/Data/Lens/Internal/Shop.purs",
+      "Data.Lens.Internal.Tagged": "src/Data/Lens/Internal/Tagged.purs",
+      "Data.Lens.Internal.Wander": "src/Data/Lens/Internal/Wander.purs",
+      "Data.Lens.Internal.Zipping": "src/Data/Lens/Internal/Zipping.purs",
+      "Data.Lens.Iso": "src/Data/Lens/Iso.purs",
+      "Data.Lens.Iso.Newtype": "src/Data/Lens/Iso/Newtype.purs",
+      "Data.Lens.Lens": "src/Data/Lens/Lens.purs",
+      "Data.Lens.Lens.Product": "src/Data/Lens/Lens/Product.purs",
+      "Data.Lens.Lens.Tuple": "src/Data/Lens/Lens/Tuple.purs",
+      "Data.Lens.Lens.Unit": "src/Data/Lens/Lens/Unit.purs",
+      "Data.Lens.Lens.Void": "src/Data/Lens/Lens/Void.purs",
+      "Data.Lens.Prism": "src/Data/Lens/Prism.purs",
+      "Data.Lens.Prism.Coproduct": "src/Data/Lens/Prism/Coproduct.purs",
+      "Data.Lens.Prism.Either": "src/Data/Lens/Prism/Either.purs",
+      "Data.Lens.Prism.Maybe": "src/Data/Lens/Prism/Maybe.purs",
+      "Data.Lens.Record": "src/Data/Lens/Record.purs",
+      "Data.Lens.Setter": "src/Data/Lens/Setter.purs",
+      "Data.Lens.Traversal": "src/Data/Lens/Traversal.purs",
+      "Data.Lens.Types": "src/Data/Lens/Types.purs",
+      "Data.Lens.Zoom": "src/Data/Lens/Zoom.purs"
+    },
+    "foreigns": []
+  },
+  "proxy": {
+    "dependencies": [
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-proxy.git",
+    "version": "v3.0.0",
+    "sha256": "0rqf25b1n9p5sgx7gdsxwrfv9rb3sqxgqmqpp5kdm30lfk7snz24",
+    "sources": {
+      "Type.Proxy": "src/Type/Proxy.purs"
+    },
+    "foreigns": []
+  },
+  "psci-support": {
+    "dependencies": [
+      "console",
+      "effect",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-psci-support.git",
+    "version": "v4.0.0",
+    "sha256": "0jd773zcklr6hjddqingzmk20a0afpm2r9pczfjbj0d93pbxb4xh",
+    "sources": {
+      "PSCI.Support": "src/PSCI/Support.purs"
+    },
+    "foreigns": []
+  },
+  "pux": {
+    "dependencies": [
+      "aff",
+      "css",
+      "effect",
+      "foreign-object",
+      "functions",
+      "globals",
+      "lists",
+      "ordered-collections",
+      "profunctor",
+      "react",
+      "signal",
+      "smolder",
+      "web-html",
+      "web-uievents"
+    ],
+    "repo": "https://github.com/alexmingoia/purescript-pux.git",
+    "version": "v13.0.0",
+    "sha256": "1xypwj88ddrnwvnsrv0dcvx7fj8f35alf40srbnhvmmz9npqg5if",
+    "sources": {
+      "Pux": "src/Pux.purs",
+      "Pux.DOM.Events": "src/Pux/DOM/Events.purs",
+      "Pux.DOM.HTML": "src/Pux/DOM/HTML.purs",
+      "Pux.DOM.HTML.Attributes": "src/Pux/DOM/HTML/Attributes.purs",
+      "Pux.DOM.History": "src/Pux/DOM/History.purs",
+      "Pux.Renderer.React": "src/Pux/Renderer/React.purs",
+      "Pux.Router": "src/Pux/Router.purs"
+    },
+    "foreigns": [
+      "src/Pux.js",
+      "src/Pux/DOM/HTML.js",
+      "src/Pux/DOM/Events.js",
+      "src/Pux/Renderer/React.js"
+    ]
+  },
+  "quickcheck": {
+    "dependencies": [
+      "arrays",
+      "console",
+      "control",
+      "effect",
+      "either",
+      "enums",
+      "exceptions",
+      "foldable-traversable",
+      "gen",
+      "generics-rep",
+      "identity",
+      "integers",
+      "lazy",
+      "lcg",
+      "lists",
+      "math",
+      "maybe",
+      "newtype",
+      "nonempty",
+      "partial",
+      "prelude",
+      "record",
+      "st",
+      "strings",
+      "tailrec",
+      "transformers",
+      "tuples",
+      "unfoldable"
+    ],
+    "repo": "https://github.com/purescript/purescript-quickcheck.git",
+    "version": "v5.0.0",
+    "sha256": "18j0qg1xz7vzr7lscg2nn59i2cn3f3cf0pazbi3ka7nf4i1k1b1s",
+    "sources": {
+      "Test.QuickCheck": "src/Test/QuickCheck.purs",
+      "Test.QuickCheck.Arbitrary": "src/Test/QuickCheck/Arbitrary.purs",
+      "Test.QuickCheck.Gen": "src/Test/QuickCheck/Gen.purs"
+    },
+    "foreigns": [
+      "src/Test/QuickCheck/Gen.js"
+    ]
+  },
+  "quickcheck-laws": {
+    "dependencies": [
+      "enums",
+      "proxy",
+      "quickcheck"
+    ],
+    "repo": "https://github.com/garyb/purescript-quickcheck-laws",
+    "version": "v4.0.0",
+    "sha256": "1hkpscfi8avp2c4n9jdv7fx8dxww335c2q6kpwz3q8ppfknahr3a",
+    "sources": {
+      "Test.QuickCheck.Laws": "src/Test/QuickCheck/Laws.purs",
+      "Test.QuickCheck.Laws.Control": "src/Test/QuickCheck/Laws/Control.purs",
+      "Test.QuickCheck.Laws.Control.Alt": "src/Test/QuickCheck/Laws/Control/Alt.purs",
+      "Test.QuickCheck.Laws.Control.Alternative": "src/Test/QuickCheck/Laws/Control/Alternative.purs",
+      "Test.QuickCheck.Laws.Control.Applicative": "src/Test/QuickCheck/Laws/Control/Applicative.purs",
+      "Test.QuickCheck.Laws.Control.Apply": "src/Test/QuickCheck/Laws/Control/Apply.purs",
+      "Test.QuickCheck.Laws.Control.Bind": "src/Test/QuickCheck/Laws/Control/Bind.purs",
+      "Test.QuickCheck.Laws.Control.Category": "src/Test/QuickCheck/Laws/Control/Category.purs",
+      "Test.QuickCheck.Laws.Control.Comonad": "src/Test/QuickCheck/Laws/Control/Comonad.purs",
+      "Test.QuickCheck.Laws.Control.Extend": "src/Test/QuickCheck/Laws/Control/Extend.purs",
+      "Test.QuickCheck.Laws.Control.Monad": "src/Test/QuickCheck/Laws/Control/Monad.purs",
+      "Test.QuickCheck.Laws.Control.MonadPlus": "src/Test/QuickCheck/Laws/Control/MonadPlus.purs",
+      "Test.QuickCheck.Laws.Control.MonadZero": "src/Test/QuickCheck/Laws/Control/MonadZero.purs",
+      "Test.QuickCheck.Laws.Control.Plus": "src/Test/QuickCheck/Laws/Control/Plus.purs",
+      "Test.QuickCheck.Laws.Control.Semigroupoid": "src/Test/QuickCheck/Laws/Control/Semigroupoid.purs",
+      "Test.QuickCheck.Laws.Data": "src/Test/QuickCheck/Laws/Data.purs",
+      "Test.QuickCheck.Laws.Data.BooleanAlgebra": "src/Test/QuickCheck/Laws/Data/BooleanAlgebra.purs",
+      "Test.QuickCheck.Laws.Data.Bounded": "src/Test/QuickCheck/Laws/Data/Bounded.purs",
+      "Test.QuickCheck.Laws.Data.BoundedEnum": "src/Test/QuickCheck/Laws/Data/BoundedEnum.purs",
+      "Test.QuickCheck.Laws.Data.CommutativeRing": "src/Test/QuickCheck/Laws/Data/CommutativeRing.purs",
+      "Test.QuickCheck.Laws.Data.DivisionRing": "src/Test/QuickCheck/Laws/Data/DivisionRing.purs",
+      "Test.QuickCheck.Laws.Data.Eq": "src/Test/QuickCheck/Laws/Data/Eq.purs",
+      "Test.QuickCheck.Laws.Data.EuclideanRing": "src/Test/QuickCheck/Laws/Data/EuclideanRing.purs",
+      "Test.QuickCheck.Laws.Data.Field": "src/Test/QuickCheck/Laws/Data/Field.purs",
+      "Test.QuickCheck.Laws.Data.Foldable": "src/Test/QuickCheck/Laws/Data/Foldable.purs",
+      "Test.QuickCheck.Laws.Data.Functor": "src/Test/QuickCheck/Laws/Data/Functor.purs",
+      "Test.QuickCheck.Laws.Data.HeytingAlgebra": "src/Test/QuickCheck/Laws/Data/HeytingAlgebra.purs",
+      "Test.QuickCheck.Laws.Data.Monoid": "src/Test/QuickCheck/Laws/Data/Monoid.purs",
+      "Test.QuickCheck.Laws.Data.Ord": "src/Test/QuickCheck/Laws/Data/Ord.purs",
+      "Test.QuickCheck.Laws.Data.Ring": "src/Test/QuickCheck/Laws/Data/Ring.purs",
+      "Test.QuickCheck.Laws.Data.Semigroup": "src/Test/QuickCheck/Laws/Data/Semigroup.purs",
+      "Test.QuickCheck.Laws.Data.Semiring": "src/Test/QuickCheck/Laws/Data/Semiring.purs"
+    },
+    "foreigns": []
+  },
+  "random": {
+    "dependencies": [
+      "effect",
+      "integers",
+      "math"
+    ],
+    "repo": "https://github.com/purescript/purescript-random.git",
+    "version": "v4.0.0",
+    "sha256": "0k37v7z529adx6ypxj0xjyfrz45qia6p0vki2wpvi8lik7c698gf",
+    "sources": {
+      "Effect.Random": "src/Effect/Random.purs"
+    },
+    "foreigns": [
+      "src/Effect/Random.js"
+    ]
+  },
+  "rationals": {
+    "dependencies": [
+      "integers",
+      "prelude"
+    ],
+    "repo": "https://github.com/anttih/purescript-rationals.git",
+    "version": "v5.0.0",
+    "sha256": "1idvjvvx5kwmi8kj2ps95bcvlsgij1xgin4jfw3rmcqd930wqq6q",
+    "sources": {
+      "Data.Ratio": "src/Data/Ratio.purs",
+      "Data.Rational": "src/Data/Rational.purs"
+    },
+    "foreigns": []
+  },
+  "react": {
+    "dependencies": [
+      "effect",
+      "exceptions",
+      "maybe",
+      "nullable",
+      "prelude",
+      "typelevel-prelude",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-react.git",
+    "version": "v6.0.0",
+    "sha256": "13ymj03lfx52pz1s70wfmihihz7fp3d6jfk51dhij48lmi928lrp",
+    "sources": {
+      "React": "src/React.purs",
+      "React.DOM": "src/React/DOM.purs",
+      "React.DOM.Dynamic": "src/React/DOM/Dynamic.purs",
+      "React.DOM.Props": "src/React/DOM/Props.purs",
+      "React.DOM.SVG": "src/React/DOM/SVG.purs",
+      "React.DOM.SVG.Dynamic": "src/React/DOM/SVG/Dynamic.purs",
+      "React.SyntheticEvent": "src/React/SyntheticEvent.purs"
+    },
+    "foreigns": [
+      "src/React.js",
+      "src/React/SyntheticEvent.js",
+      "src/React/DOM/Props.js"
+    ]
+  },
+  "react-basic": {
+    "dependencies": [
+      "effect",
+      "exceptions",
+      "functions",
+      "nullable",
+      "record",
+      "typelevel-prelude",
+      "unsafe-coerce",
+      "web-dom",
+      "web-events",
+      "web-html"
+    ],
+    "repo": "https://github.com/lumihq/purescript-react-basic.git",
+    "version": "v2.0.1",
+    "sha256": "0c5pzk5hk87dz5ggncvqdhv3gc67l8i0g4f37r3pcp1v7xszyw9x",
+    "sources": {
+      "React.Basic": "src/React/Basic.purs",
+      "React.Basic.DOM": "src/React/Basic/DOM.purs",
+      "React.Basic.DOM.Events": "src/React/Basic/DOM/Events.purs",
+      "React.Basic.DOM.Generated": "src/React/Basic/DOM/Generated.purs",
+      "React.Basic.DOM.Internal": "src/React/Basic/DOM/Internal.purs",
+      "React.Basic.Events": "src/React/Basic/Events.purs"
+    },
+    "foreigns": [
+      "src/React/Basic.js",
+      "src/React/Basic/DOM.js"
+    ]
+  },
+  "react-dom": {
+    "dependencies": [
+      "effect",
+      "react",
+      "web-dom"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-react-dom.git",
+    "version": "v6.0.0",
+    "sha256": "0ay61542qvx18rpnc79ch91sbhf9jidj8fcmv5m8z9w3yi05d58k",
+    "sources": {
+      "ReactDOM": "src/ReactDOM.purs"
+    },
+    "foreigns": [
+      "src/ReactDOM.js"
+    ]
+  },
+  "read": {
+    "dependencies": [
+      "maybe",
+      "prelude",
+      "strings"
+    ],
+    "repo": "https://github.com/truqu/purescript-read.git",
+    "version": "v1.0.1",
+    "sha256": "0q8c1xbwh781c1jngy04lbbaq44idy33klq7q1j5ax4vzgd54z0f",
+    "sources": {
+      "Data.String.Read": "src/Data/String/Read.purs"
+    },
+    "foreigns": []
+  },
+  "record": {
+    "dependencies": [
+      "functions",
+      "prelude",
+      "st",
+      "typelevel-prelude",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript/purescript-record.git",
+    "version": "v1.0.0",
+    "sha256": "1vx6qlcg8x8cij3jsf52gqnd1dvam36pw83x4sad1ddir2s5h0i8",
+    "sources": {
+      "Record": "src/Record.purs",
+      "Record.Builder": "src/Record/Builder.purs",
+      "Record.ST": "src/Record/ST.purs",
+      "Record.Unsafe.Union": "src/Record/Unsafe/Union.purs"
+    },
+    "foreigns": [
+      "src/Record/ST.js",
+      "src/Record/Builder.js",
+      "src/Record/Unsafe/Union.js"
+    ]
+  },
+  "record-format": {
+    "dependencies": [
+      "record",
+      "strings",
+      "typelevel-prelude"
+    ],
+    "repo": "https://github.com/kcsongor/purescript-record-format.git",
+    "version": "v0.1.0",
+    "sha256": "1bw00l68azyad6b33iqhfjmm0n1j58h1ljli9772ybwhh8slsh5h",
+    "sources": {
+      "Record.Format": "src/Record/Format.purs"
+    },
+    "foreigns": []
+  },
+  "refs": {
+    "dependencies": [
+      "effect",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-refs.git",
+    "version": "v4.1.0",
+    "sha256": "08161iy1xbafzblv033v84156azpcqkiw9v9d6gliphrq5fm17gm",
+    "sources": {
+      "Effect.Ref": "src/Effect/Ref.purs"
+    },
+    "foreigns": [
+      "src/Effect/Ref.js"
+    ]
+  },
+  "remotedata": {
+    "dependencies": [
+      "bifunctors",
+      "either",
+      "generics-rep",
+      "profunctor-lenses"
+    ],
+    "repo": "https://github.com/krisajenkins/purescript-remotedata.git",
+    "version": "v4.0.0",
+    "sha256": "1n5xm07k6khc66aqzb6z3wsz96sjkr9g6a4wmjvv64bds6w6dbwx",
+    "sources": {
+      "Network.RemoteData": "src/Network/RemoteData.purs"
+    },
+    "foreigns": []
+  },
+  "routing": {
+    "dependencies": [
+      "aff",
+      "console",
+      "control",
+      "effect",
+      "either",
+      "foldable-traversable",
+      "globals",
+      "integers",
+      "lists",
+      "maybe",
+      "prelude",
+      "semirings",
+      "tuples",
+      "validation",
+      "web-html"
+    ],
+    "repo": "https://github.com/slamdata/purescript-routing.git",
+    "version": "v8.0.0",
+    "sha256": "1qa56aj8xy4pflwk9xwjf8rinpfzipcy2nakxjnh2ydlrq9b5w5v",
+    "sources": {
+      "Routing": "src/Routing.purs",
+      "Routing.Hash": "src/Routing/Hash.purs",
+      "Routing.Match": "src/Routing/Match.purs",
+      "Routing.Match.Error": "src/Routing/Match/Error.purs",
+      "Routing.Parser": "src/Routing/Parser.purs",
+      "Routing.PushState": "src/Routing/PushState.purs",
+      "Routing.Types": "src/Routing/Types.purs"
+    },
+    "foreigns": []
+  },
+  "run": {
+    "dependencies": [
+      "aff",
+      "effect",
+      "either",
+      "free",
+      "maybe",
+      "newtype",
+      "prelude",
+      "profunctor",
+      "tailrec",
+      "tuples",
+      "type-equality",
+      "unsafe-coerce",
+      "variant"
+    ],
+    "repo": "https://github.com/natefaubion/purescript-run.git",
+    "version": "v2.0.0",
+    "sha256": "0vz7a4wjpyyg4igqif4lp4g0n56084xilnqazq5sc8p934vk17xh",
+    "sources": {
+      "Run": "src/Run.purs",
+      "Run.Choose": "src/Run/Choose.purs",
+      "Run.Except": "src/Run/Except.purs",
+      "Run.Internal": "src/Run/Internal.purs",
+      "Run.Reader": "src/Run/Reader.purs",
+      "Run.State": "src/Run/State.purs",
+      "Run.Writer": "src/Run/Writer.purs"
+    },
+    "foreigns": []
+  },
+  "semirings": {
+    "dependencies": [
+      "foldable-traversable",
+      "lists",
+      "newtype",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-semirings.git",
+    "version": "v5.0.0",
+    "sha256": "0bhrhn2yvcgil7g63spb2xw966mdhlk9mpspnqfijdpb9n3b79ds",
+    "sources": {
+      "Data.Semiring.Free": "src/Data/Semiring/Free.purs"
+    },
+    "foreigns": []
+  },
+  "signal": {
+    "dependencies": [
+      "aff",
+      "foldable-traversable",
+      "js-timers",
+      "maybe",
+      "prelude"
+    ],
+    "repo": "https://github.com/bodil/purescript-signal.git",
+    "version": "v10.1.0",
+    "sha256": "03jkc6l01vv28drg1rjx9ymc2bndx9933ckf60bi4ar909kx64v5",
+    "sources": {
+      "Signal": "src/Signal.purs",
+      "Signal.Aff": "src/Signal/Aff.purs",
+      "Signal.Channel": "src/Signal/Channel.purs",
+      "Signal.DOM": "src/Signal/DOM.purs",
+      "Signal.Effect": "src/Signal/Effect.purs",
+      "Signal.Time": "src/Signal/Time.purs"
+    },
+    "foreigns": [
+      "src/Signal.js",
+      "src/Signal/Time.js",
+      "src/Signal/Aff.js",
+      "src/Signal/Effect.js",
+      "src/Signal/DOM.js",
+      "src/Signal/Channel.js"
+    ]
+  },
+  "simple-json": {
+    "dependencies": [
+      "exceptions",
+      "foreign",
+      "foreign-object",
+      "globals",
+      "nullable",
+      "prelude",
+      "record",
+      "typelevel-prelude",
+      "variant"
+    ],
+    "repo": "https://github.com/justinwoo/purescript-simple-json.git",
+    "version": "v4.1.0",
+    "sha256": "15wciml2bwklzqkl214gqh91bxls4bl60c2ip1s12fqcyspn68k4",
+    "sources": {
+      "Simple.JSON": "src/Simple/JSON.purs"
+    },
+    "foreigns": [
+      "src/Simple/JSON.js"
+    ]
+  },
+  "smolder": {
+    "dependencies": [
+      "bifunctors",
+      "catenable-lists",
+      "free",
+      "globals",
+      "ordered-collections",
+      "strings",
+      "transformers",
+      "tuples"
+    ],
+    "repo": "https://github.com/bodil/purescript-smolder.git",
+    "version": "v11.0.0",
+    "sha256": "001h4f7l71xkbdkq05rd5r9l16nhri2sjbzv7s5l9ir6mjhyfsg8",
+    "sources": {
+      "Text.Smolder.HTML": "src/Text/Smolder/HTML.purs",
+      "Text.Smolder.HTML.Attributes": "src/Text/Smolder/HTML/Attributes.purs",
+      "Text.Smolder.Markup": "src/Text/Smolder/Markup.purs",
+      "Text.Smolder.Renderer.String": "src/Text/Smolder/Renderer/String.purs",
+      "Text.Smolder.SVG": "src/Text/Smolder/SVG.purs",
+      "Text.Smolder.SVG.Attributes": "src/Text/Smolder/SVG/Attributes.purs"
+    },
+    "foreigns": []
+  },
+  "spec": {
+    "dependencies": [
+      "aff",
+      "ansi",
+      "console",
+      "exceptions",
+      "foldable-traversable",
+      "generics-rep",
+      "pipes",
+      "prelude",
+      "strings",
+      "transformers"
+    ],
+    "repo": "https://github.com/owickstrom/purescript-spec.git",
+    "version": "v3.0.0",
+    "sha256": "1kckpsjl9vgpqp86aw5gmf4as0ff6vx3x9zl60sxwiqc6pazxx3q",
+    "sources": {
+      "Test.Spec": "src/Test/Spec.purs",
+      "Test.Spec.Assertions": "src/Test/Spec/Assertions.purs",
+      "Test.Spec.Assertions.Aff": "src/Test/Spec/Assertions/Aff.purs",
+      "Test.Spec.Assertions.String": "src/Test/Spec/Assertions/String.purs",
+      "Test.Spec.Color": "src/Test/Spec/Color.purs",
+      "Test.Spec.Console": "src/Test/Spec/Console.purs",
+      "Test.Spec.Reporter": "src/Test/Spec/Reporter.purs",
+      "Test.Spec.Reporter.Base": "src/Test/Spec/Reporter/Base.purs",
+      "Test.Spec.Reporter.Console": "src/Test/Spec/Reporter/Console.purs",
+      "Test.Spec.Reporter.Dot": "src/Test/Spec/Reporter/Dot.purs",
+      "Test.Spec.Reporter.Spec": "src/Test/Spec/Reporter/Spec.purs",
+      "Test.Spec.Reporter.Tap": "src/Test/Spec/Reporter/Tap.purs",
+      "Test.Spec.Runner": "src/Test/Spec/Runner.purs",
+      "Test.Spec.Runner.Event": "src/Test/Spec/Runner/Event.purs",
+      "Test.Spec.Speed": "src/Test/Spec/Speed.purs",
+      "Test.Spec.Summary": "src/Test/Spec/Summary.purs"
+    },
+    "foreigns": [
+      "src/Test/Spec/Runner.js",
+      "src/Test/Spec/Console.js"
+    ]
+  },
+  "spec-quickcheck": {
+    "dependencies": [
+      "aff",
+      "prelude",
+      "quickcheck",
+      "random",
+      "spec"
+    ],
+    "repo": "https://github.com/owickstrom/purescript-spec-quickcheck.git",
+    "version": "v3.0.0",
+    "sha256": "1h41djivqqc7lzn038y18j9kbdi1gahbl79gy9iilcyh8b6axq0d",
+    "sources": {
+      "Test.Spec.QuickCheck": "src/Test/Spec/QuickCheck.purs"
+    },
+    "foreigns": []
+  },
+  "st": {
+    "dependencies": [
+      "partial",
+      "prelude",
+      "tailrec"
+    ],
+    "repo": "https://github.com/purescript/purescript-st.git",
+    "version": "v4.0.0",
+    "sha256": "0m2jkb9dmpbr8s1c20l7sm2q11y5rx8gqfiyspnyhq5apzkknjr0",
+    "sources": {
+      "Control.Monad.ST": "src/Control/Monad/ST.purs",
+      "Control.Monad.ST.Internal": "src/Control/Monad/ST/Internal.purs",
+      "Control.Monad.ST.Ref": "src/Control/Monad/ST/Ref.purs"
+    },
+    "foreigns": [
+      "src/Control/Monad/ST/Internal.js"
+    ]
+  },
+  "string-parsers": {
+    "dependencies": [
+      "arrays",
+      "bifunctors",
+      "control",
+      "either",
+      "foldable-traversable",
+      "lists",
+      "maybe",
+      "prelude",
+      "strings",
+      "tailrec"
+    ],
+    "repo": "https://github.com/paf31/purescript-string-parsers.git",
+    "version": "v5.0.0",
+    "sha256": "1lykswyd3icv9lx4r096lxfd244i0pzj2f4fpm604czzlfw6bspv",
+    "sources": {
+      "Text.Parsing.StringParser": "src/Text/Parsing/StringParser.purs",
+      "Text.Parsing.StringParser.CodePoints": "src/Text/Parsing/StringParser/CodePoints.purs",
+      "Text.Parsing.StringParser.CodeUnits": "src/Text/Parsing/StringParser/CodeUnits.purs",
+      "Text.Parsing.StringParser.Combinators": "src/Text/Parsing/StringParser/Combinators.purs",
+      "Text.Parsing.StringParser.Expr": "src/Text/Parsing/StringParser/Expr.purs"
+    },
+    "foreigns": []
+  },
+  "strings": {
+    "dependencies": [
+      "arrays",
+      "control",
+      "either",
+      "enums",
+      "foldable-traversable",
+      "gen",
+      "integers",
+      "maybe",
+      "newtype",
+      "nonempty",
+      "partial",
+      "prelude",
+      "tailrec",
+      "tuples",
+      "unfoldable",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/purescript/purescript-strings.git",
+    "version": "v4.0.0",
+    "sha256": "0i7i3irhx1l9abprll95fi374gp49qka0vbhk80cbnhmx1v5px5k",
+    "sources": {
+      "Data.Char": "src/Data/Char.purs",
+      "Data.Char.Gen": "src/Data/Char/Gen.purs",
+      "Data.String": "src/Data/String.purs",
+      "Data.String.CaseInsensitive": "src/Data/String/CaseInsensitive.purs",
+      "Data.String.CodePoints": "src/Data/String/CodePoints.purs",
+      "Data.String.CodeUnits": "src/Data/String/CodeUnits.purs",
+      "Data.String.Common": "src/Data/String/Common.purs",
+      "Data.String.Gen": "src/Data/String/Gen.purs",
+      "Data.String.NonEmpty": "src/Data/String/NonEmpty.purs",
+      "Data.String.NonEmpty.CaseInsensitive": "src/Data/String/NonEmpty/CaseInsensitive.purs",
+      "Data.String.NonEmpty.CodePoints": "src/Data/String/NonEmpty/CodePoints.purs",
+      "Data.String.NonEmpty.CodeUnits": "src/Data/String/NonEmpty/CodeUnits.purs",
+      "Data.String.NonEmpty.Internal": "src/Data/String/NonEmpty/Internal.purs",
+      "Data.String.Pattern": "src/Data/String/Pattern.purs",
+      "Data.String.Regex": "src/Data/String/Regex.purs",
+      "Data.String.Regex.Flags": "src/Data/String/Regex/Flags.purs",
+      "Data.String.Regex.Unsafe": "src/Data/String/Regex/Unsafe.purs",
+      "Data.String.Unsafe": "src/Data/String/Unsafe.purs"
+    },
+    "foreigns": [
+      "src/Data/String/CodeUnits.js",
+      "src/Data/String/Unsafe.js",
+      "src/Data/String/Common.js",
+      "src/Data/String/CodePoints.js",
+      "src/Data/String/Regex.js"
+    ]
+  },
+  "strongcheck": {
+    "dependencies": [
+      "arrays",
+      "console",
+      "control",
+      "datetime",
+      "effect",
+      "either",
+      "enums",
+      "exceptions",
+      "foldable-traversable",
+      "free",
+      "gen",
+      "identity",
+      "integers",
+      "invariant",
+      "lazy",
+      "lists",
+      "machines",
+      "math",
+      "newtype",
+      "partial",
+      "prelude",
+      "profunctor",
+      "random",
+      "strings",
+      "tailrec",
+      "transformers",
+      "tuples"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-strongcheck.git",
+    "version": "v4.1.1",
+    "sha256": "0c30w9y6mabphjiizk69hv43ahb1x8rg960nz4mccxb8hnj26z9x",
+    "sources": {
+      "Test.StrongCheck": "src/Test/StrongCheck.purs",
+      "Test.StrongCheck.Arbitrary": "src/Test/StrongCheck/Arbitrary.purs",
+      "Test.StrongCheck.Data.AlphaNumString": "src/Test/StrongCheck/Data/AlphaNumString.purs",
+      "Test.StrongCheck.Data.ApproxNumber": "src/Test/StrongCheck/Data/ApproxNumber.purs",
+      "Test.StrongCheck.Data.ArbBoundedEnum": "src/Test/StrongCheck/Data/ArbBoundedEnum.purs",
+      "Test.StrongCheck.Data.ArbDateTime": "src/Test/StrongCheck/Data/ArbDateTime.purs",
+      "Test.StrongCheck.Data.Negative": "src/Test/StrongCheck/Data/Negative.purs",
+      "Test.StrongCheck.Data.NonZero": "src/Test/StrongCheck/Data/NonZero.purs",
+      "Test.StrongCheck.Data.Positive": "src/Test/StrongCheck/Data/Positive.purs",
+      "Test.StrongCheck.Data.Signum": "src/Test/StrongCheck/Data/Signum.purs",
+      "Test.StrongCheck.Gen": "src/Test/StrongCheck/Gen.purs",
+      "Test.StrongCheck.LCG": "src/Test/StrongCheck/LCG.purs",
+      "Test.StrongCheck.Landscape": "src/Test/StrongCheck/Landscape.purs",
+      "Test.StrongCheck.Perturb": "src/Test/StrongCheck/Perturb.purs"
+    },
+    "foreigns": [
+      "src/Test/StrongCheck/Gen.js"
+    ]
+  },
+  "tailrec": {
+    "dependencies": [
+      "bifunctors",
+      "effect",
+      "either",
+      "identity",
+      "maybe",
+      "partial",
+      "prelude",
+      "refs"
+    ],
+    "repo": "https://github.com/purescript/purescript-tailrec.git",
+    "version": "v4.0.0",
+    "sha256": "0z7k80nl8dgv8mc2w8xsl2n0637bd1l8ppxak8kaifgjjwa81hx3",
+    "sources": {
+      "Control.Monad.Rec.Class": "src/Control/Monad/Rec/Class.purs"
+    },
+    "foreigns": []
+  },
+  "test-unit": {
+    "dependencies": [
+      "aff",
+      "avar",
+      "effect",
+      "either",
+      "free",
+      "js-timers",
+      "lists",
+      "prelude",
+      "quickcheck",
+      "strings"
+    ],
+    "repo": "https://github.com/bodil/purescript-test-unit.git",
+    "version": "v14.0.0",
+    "sha256": "0iyqdrhb0n5qpck8cprl68034ivywmphbw5wr7zy1jlyj9450nwh",
+    "sources": {
+      "Test.Unit": "src/Test/Unit.purs",
+      "Test.Unit.Assert": "src/Test/Unit/Assert.purs",
+      "Test.Unit.Console": "src/Test/Unit/Console.purs",
+      "Test.Unit.Main": "src/Test/Unit/Main.purs",
+      "Test.Unit.Output.Fancy": "src/Test/Unit/Output/Fancy.purs",
+      "Test.Unit.Output.Simple": "src/Test/Unit/Output/Simple.purs",
+      "Test.Unit.Output.TAP": "src/Test/Unit/Output/TAP.purs",
+      "Test.Unit.QuickCheck": "src/Test/Unit/QuickCheck.purs"
+    },
+    "foreigns": [
+      "src/Test/Unit/Main.js",
+      "src/Test/Unit/Console.js",
+      "src/Test/Unit/Output/TAP.js"
+    ]
+  },
+  "text-encoding": {
+    "dependencies": [
+      "arraybuffer-types",
+      "either",
+      "exceptions",
+      "functions",
+      "prelude",
+      "strings"
+    ],
+    "repo": "https://github.com/AlexaDeWit/purescript-text-encoding.git",
+    "version": "v0.0.8",
+    "sha256": "1m4q67zr0yfsbbzg9pycib9jp77ddrnhhfphr3i040f78x3jl6h7",
+    "sources": {
+      "Data.TextDecoder": "src/Data/TextDecoder.purs",
+      "Data.TextEncoder": "src/Data/TextEncoder.purs"
+    },
+    "foreigns": [
+      "src/Data/TextDecoder.js",
+      "src/Data/TextEncoder.js"
+    ]
+  },
+  "these": {
+    "dependencies": [
+      "gen",
+      "tuples"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-these.git",
+    "version": "v4.0.0",
+    "sha256": "0ywwpbcz1d0pdi3f9h9kla52vq1if8zwdz7jq7lqz5s8zj8kyg5r",
+    "sources": {
+      "Data.These": "src/Data/These.purs",
+      "Data.These.Gen": "src/Data/These/Gen.purs"
+    },
+    "foreigns": []
+  },
+  "transformers": {
+    "dependencies": [
+      "control",
+      "distributive",
+      "effect",
+      "either",
+      "foldable-traversable",
+      "identity",
+      "lazy",
+      "maybe",
+      "newtype",
+      "prelude",
+      "tailrec",
+      "tuples",
+      "unfoldable"
+    ],
+    "repo": "https://github.com/purescript/purescript-transformers.git",
+    "version": "v4.1.0",
+    "sha256": "1aazy1zk66lng8w0gjx2l7sqfr968gmibdxi4kd93zb7bw5vldvn",
+    "sources": {
+      "Control.Comonad.Env": "src/Control/Comonad/Env.purs",
+      "Control.Comonad.Env.Class": "src/Control/Comonad/Env/Class.purs",
+      "Control.Comonad.Env.Trans": "src/Control/Comonad/Env/Trans.purs",
+      "Control.Comonad.Store": "src/Control/Comonad/Store.purs",
+      "Control.Comonad.Store.Class": "src/Control/Comonad/Store/Class.purs",
+      "Control.Comonad.Store.Trans": "src/Control/Comonad/Store/Trans.purs",
+      "Control.Comonad.Traced": "src/Control/Comonad/Traced.purs",
+      "Control.Comonad.Traced.Class": "src/Control/Comonad/Traced/Class.purs",
+      "Control.Comonad.Traced.Trans": "src/Control/Comonad/Traced/Trans.purs",
+      "Control.Comonad.Trans.Class": "src/Control/Comonad/Trans/Class.purs",
+      "Control.Monad.Cont": "src/Control/Monad/Cont.purs",
+      "Control.Monad.Cont.Class": "src/Control/Monad/Cont/Class.purs",
+      "Control.Monad.Cont.Trans": "src/Control/Monad/Cont/Trans.purs",
+      "Control.Monad.Error.Class": "src/Control/Monad/Error/Class.purs",
+      "Control.Monad.Except": "src/Control/Monad/Except.purs",
+      "Control.Monad.Except.Trans": "src/Control/Monad/Except/Trans.purs",
+      "Control.Monad.List.Trans": "src/Control/Monad/List/Trans.purs",
+      "Control.Monad.Maybe.Trans": "src/Control/Monad/Maybe/Trans.purs",
+      "Control.Monad.RWS": "src/Control/Monad/RWS.purs",
+      "Control.Monad.RWS.Trans": "src/Control/Monad/RWS/Trans.purs",
+      "Control.Monad.Reader": "src/Control/Monad/Reader.purs",
+      "Control.Monad.Reader.Class": "src/Control/Monad/Reader/Class.purs",
+      "Control.Monad.Reader.Trans": "src/Control/Monad/Reader/Trans.purs",
+      "Control.Monad.State": "src/Control/Monad/State.purs",
+      "Control.Monad.State.Class": "src/Control/Monad/State/Class.purs",
+      "Control.Monad.State.Trans": "src/Control/Monad/State/Trans.purs",
+      "Control.Monad.Trans.Class": "src/Control/Monad/Trans/Class.purs",
+      "Control.Monad.Writer": "src/Control/Monad/Writer.purs",
+      "Control.Monad.Writer.Class": "src/Control/Monad/Writer/Class.purs",
+      "Control.Monad.Writer.Trans": "src/Control/Monad/Writer/Trans.purs"
+    },
+    "foreigns": []
+  },
+  "tuples": {
+    "dependencies": [
+      "bifunctors",
+      "control",
+      "distributive",
+      "foldable-traversable",
+      "invariant",
+      "maybe",
+      "newtype",
+      "prelude",
+      "type-equality"
+    ],
+    "repo": "https://github.com/purescript/purescript-tuples.git",
+    "version": "v5.0.0",
+    "sha256": "0vlhv4l2a2vb6rh5zfsjhbv7hy4vz9fa5p1ns0rk54xd2pzzlvgd",
+    "sources": {
+      "Data.Tuple": "src/Data/Tuple.purs",
+      "Data.Tuple.Nested": "src/Data/Tuple/Nested.purs"
+    },
+    "foreigns": []
+  },
+  "type-equality": {
+    "dependencies": [],
+    "repo": "https://github.com/purescript/purescript-type-equality.git",
+    "version": "v3.0.0",
+    "sha256": "1b7szyca5s96gaawvgwrw7fa8r7gqsdff7xhz3vvngnylv2scl3w",
+    "sources": {
+      "Type.Equality": "src/Type/Equality.purs"
+    },
+    "foreigns": []
+  },
+  "typelevel": {
+    "dependencies": [
+      "partial",
+      "prelude",
+      "tuples",
+      "typelevel-prelude",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/bodil/purescript-typelevel.git",
+    "version": "v4.0.0",
+    "sha256": "1gmkazrb68cj41vjldvqds0sxdvdxmn5l238bsgz89df82yamc1c",
+    "sources": {
+      "Data.Typelevel.Bool": "src/Data/Typelevel/Bool.purs",
+      "Data.Typelevel.Num": "src/Data/Typelevel/Num.purs",
+      "Data.Typelevel.Num.Aliases": "src/Data/Typelevel/Num/Aliases.purs",
+      "Data.Typelevel.Num.Ops": "src/Data/Typelevel/Num/Ops.purs",
+      "Data.Typelevel.Num.Reps": "src/Data/Typelevel/Num/Reps.purs",
+      "Data.Typelevel.Num.Sets": "src/Data/Typelevel/Num/Sets.purs",
+      "Data.Typelevel.Undefined": "src/Data/Typelevel/Undefined.purs"
+    },
+    "foreigns": []
+  },
+  "typelevel-prelude": {
+    "dependencies": [
+      "prelude",
+      "proxy",
+      "type-equality"
+    ],
+    "repo": "https://github.com/purescript/purescript-typelevel-prelude.git",
+    "version": "v3.0.0",
+    "sha256": "0dn95n9jnk2ilw38cf9p8p6q3xad6ck1rq3r4jba92kmk4ql665r",
+    "sources": {
+      "Type.Data.Boolean": "src/Type/Data/Boolean.purs",
+      "Type.Data.Ordering": "src/Type/Data/Ordering.purs",
+      "Type.Data.Symbol": "src/Type/Data/Symbol.purs",
+      "Type.Prelude": "src/Type/Prelude.purs",
+      "Type.Row": "src/Type/Row.purs",
+      "Type.Row.Homogeneous": "src/Type/Row/Homogeneous.purs"
+    },
+    "foreigns": []
+  },
+  "uint": {
+    "dependencies": [
+      "math",
+      "maybe"
+    ],
+    "repo": "https://github.com/zaquest/purescript-uint.git",
+    "version": "v4.0.1",
+    "sha256": "09jrda5l3rr291a82gsv9m01d3amcqqaivjf2537743bz71nq345",
+    "sources": {
+      "Data.UInt": "src/Data/UInt.purs"
+    },
+    "foreigns": [
+      "src/Data/UInt.js"
+    ]
+  },
+  "unfoldable": {
+    "dependencies": [
+      "foldable-traversable",
+      "maybe",
+      "partial",
+      "prelude",
+      "tuples"
+    ],
+    "repo": "https://github.com/purescript/purescript-unfoldable.git",
+    "version": "v4.0.0",
+    "sha256": "077vl30j3pxr3zw6cw7wd0vi22j92j8va15r26rn53wzbzcgr41j",
+    "sources": {
+      "Data.Unfoldable": "src/Data/Unfoldable.purs",
+      "Data.Unfoldable1": "src/Data/Unfoldable1.purs"
+    },
+    "foreigns": [
+      "src/Data/Unfoldable.js",
+      "src/Data/Unfoldable1.js"
+    ]
+  },
+  "unicode": {
+    "dependencies": [
+      "foldable-traversable",
+      "maybe",
+      "strings"
+    ],
+    "repo": "https://github.com/purescript-contrib/purescript-unicode.git",
+    "version": "v4.0.1",
+    "sha256": "1a53jv7pzyjk5v6kmwwy50d3l8d26k0id59sn8g3lzkih24nalhp",
+    "sources": {
+      "Data.Char.Unicode": "src/Data/Char/Unicode.purs",
+      "Data.Char.Unicode.Internal": "src/Data/Char/Unicode/Internal.purs"
+    },
+    "foreigns": [
+      "src/Data/Char/Unicode.js"
+    ]
+  },
+  "unordered-collections": {
+    "dependencies": [
+      "enums",
+      "integers",
+      "prelude",
+      "record",
+      "tuples"
+    ],
+    "repo": "https://github.com/fehrenbach/purescript-unordered-collections.git",
+    "version": "v1.3.0",
+    "sha256": "1vy91005zmx1k7bff2zwym6i8sh7pwqh4njgiagwcpzdyafsbfd3",
+    "sources": {
+      "Data.HashMap": "src/Data/HashMap.purs",
+      "Data.HashSet": "src/Data/HashSet.purs",
+      "Data.Hashable": "src/Data/Hashable.purs"
+    },
+    "foreigns": [
+      "src/Data/HashMap.js",
+      "src/Data/Hashable.js"
+    ]
+  },
+  "unsafe-coerce": {
+    "dependencies": [],
+    "repo": "https://github.com/purescript/purescript-unsafe-coerce.git",
+    "version": "v4.0.0",
+    "sha256": "0k9255mk2mz6xjb11pwkgfcblmmyvr86ig5kr92jwy95xim09zip",
+    "sources": {
+      "Unsafe.Coerce": "src/Unsafe/Coerce.purs"
+    },
+    "foreigns": [
+      "src/Unsafe/Coerce.js"
+    ]
+  },
+  "unsafe-reference": {
+    "dependencies": [],
+    "repo": "https://github.com/purescript-contrib/purescript-unsafe-reference",
+    "version": "v3.0.1",
+    "sha256": "0q758dz59qz0li4s3w1qcg921xp5i5rh6i1l611iv7rr8cbj11al",
+    "sources": {
+      "Unsafe.Reference": "src/Unsafe/Reference.purs"
+    },
+    "foreigns": [
+      "src/Unsafe/Reference.js"
+    ]
+  },
+  "validation": {
+    "dependencies": [
+      "bifunctors",
+      "control",
+      "either",
+      "foldable-traversable",
+      "prelude"
+    ],
+    "repo": "https://github.com/purescript/purescript-validation.git",
+    "version": "v4.0.0",
+    "sha256": "1y5i1jpr6jn1yjjpi4l5mk7jyd5v21fym892s0y5bdn4nj7i465l",
+    "sources": {
+      "Data.Validation.Semigroup": "src/Data/Validation/Semigroup.purs",
+      "Data.Validation.Semiring": "src/Data/Validation/Semiring.purs"
+    },
+    "foreigns": []
+  },
+  "variant": {
+    "dependencies": [
+      "enums",
+      "lists",
+      "maybe",
+      "partial",
+      "prelude",
+      "record",
+      "tuples",
+      "typelevel-prelude",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/natefaubion/purescript-variant.git",
+    "version": "v5.0.0",
+    "sha256": "14ivrp248sx0srpbhz6zyjn0hiim9j5x80k9kp1z5m082yx8714y",
+    "sources": {
+      "Data.Functor.Variant": "src/Data/Functor/Variant.purs",
+      "Data.Variant": "src/Data/Variant.purs",
+      "Data.Variant.Internal": "src/Data/Variant/Internal.purs"
+    },
+    "foreigns": []
+  },
+  "web-clipboard": {
+    "dependencies": [
+      "web-html"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-clipboard.git",
+    "version": "v1.0.0",
+    "sha256": "0zbhrm4ck8a8wf1knpmxccfyws07frld8i70wnkwjfan1pgdji63",
+    "sources": {
+      "Web.Clipboard.ClipboardEvent": "src/Web/Clipboard/ClipboardEvent.purs",
+      "Web.Clipboard.ClipboardEvent.EventTypes": "src/Web/Clipboard/ClipboardEvent/EventTypes.purs"
+    },
+    "foreigns": [
+      "src/Web/Clipboard/ClipboardEvent.js"
+    ]
+  },
+  "web-dom": {
+    "dependencies": [
+      "web-events"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-dom.git",
+    "version": "v1.0.0",
+    "sha256": "070ybc5xzpsh75p618ll9j0lzxqgvc4cl5cdrn71v0vagmyhgm8h",
+    "sources": {
+      "Web.DOM": "src/Web/DOM.purs",
+      "Web.DOM.CharacterData": "src/Web/DOM/CharacterData.purs",
+      "Web.DOM.ChildNode": "src/Web/DOM/ChildNode.purs",
+      "Web.DOM.Comment": "src/Web/DOM/Comment.purs",
+      "Web.DOM.DOMTokenList": "src/Web/DOM/DOMTokenList.purs",
+      "Web.DOM.Document": "src/Web/DOM/Document.purs",
+      "Web.DOM.DocumentFragment": "src/Web/DOM/DocumentFragment.purs",
+      "Web.DOM.DocumentType": "src/Web/DOM/DocumentType.purs",
+      "Web.DOM.Element": "src/Web/DOM/Element.purs",
+      "Web.DOM.HTMLCollection": "src/Web/DOM/HTMLCollection.purs",
+      "Web.DOM.Internal.Types": "src/Web/DOM/Internal/Types.purs",
+      "Web.DOM.MutationObserver": "src/Web/DOM/MutationObserver.purs",
+      "Web.DOM.MutationRecord": "src/Web/DOM/MutationRecord.purs",
+      "Web.DOM.Node": "src/Web/DOM/Node.purs",
+      "Web.DOM.NodeList": "src/Web/DOM/NodeList.purs",
+      "Web.DOM.NodeType": "src/Web/DOM/NodeType.purs",
+      "Web.DOM.NonDocumentTypeChildNode": "src/Web/DOM/NonDocumentTypeChildNode.purs",
+      "Web.DOM.NonElementParentNode": "src/Web/DOM/NonElementParentNode.purs",
+      "Web.DOM.ParentNode": "src/Web/DOM/ParentNode.purs",
+      "Web.DOM.ProcessingInstruction": "src/Web/DOM/ProcessingInstruction.purs",
+      "Web.DOM.Text": "src/Web/DOM/Text.purs"
+    },
+    "foreigns": [
+      "src/Web/DOM/HTMLCollection.js",
+      "src/Web/DOM/CharacterData.js",
+      "src/Web/DOM/ProcessingInstruction.js",
+      "src/Web/DOM/DocumentType.js",
+      "src/Web/DOM/Node.js",
+      "src/Web/DOM/Element.js",
+      "src/Web/DOM/NonElementParentNode.js",
+      "src/Web/DOM/Document.js",
+      "src/Web/DOM/NonDocumentTypeChildNode.js",
+      "src/Web/DOM/Text.js",
+      "src/Web/DOM/NodeList.js",
+      "src/Web/DOM/MutationObserver.js",
+      "src/Web/DOM/ParentNode.js",
+      "src/Web/DOM/MutationRecord.js",
+      "src/Web/DOM/DOMTokenList.js",
+      "src/Web/DOM/ChildNode.js"
+    ]
+  },
+  "web-events": {
+    "dependencies": [
+      "datetime",
+      "enums",
+      "nullable"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-events.git",
+    "version": "v1.0.0",
+    "sha256": "1j6gkap9ap1ik7aiiyxwdmvjfhfrw73dq5hi9a671k5prlma7v3k",
+    "sources": {
+      "Web.Event.CustomEvent": "src/Web/Event/CustomEvent.purs",
+      "Web.Event.Event": "src/Web/Event/Event.purs",
+      "Web.Event.EventPhase": "src/Web/Event/EventPhase.purs",
+      "Web.Event.EventTarget": "src/Web/Event/EventTarget.purs",
+      "Web.Event.Internal.Types": "src/Web/Event/Internal/Types.purs",
+      "Web.Internal.FFI": "src/Web/Internal/FFI.purs"
+    },
+    "foreigns": [
+      "src/Web/Internal/FFI.js",
+      "src/Web/Event/Event.js",
+      "src/Web/Event/EventTarget.js"
+    ]
+  },
+  "web-file": {
+    "dependencies": [
+      "foreign",
+      "media-types",
+      "web-dom"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-file.git",
+    "version": "v1.0.0",
+    "sha256": "14kzwrwbfacxr4krfriy8qx13wnhiydrgs6hp59a7bmx58w0ifks",
+    "sources": {
+      "Web.File.Blob": "src/Web/File/Blob.purs",
+      "Web.File.File": "src/Web/File/File.purs",
+      "Web.File.FileList": "src/Web/File/FileList.purs",
+      "Web.File.FileReader": "src/Web/File/FileReader.purs",
+      "Web.File.FileReader.ReadyState": "src/Web/File/FileReader/ReadyState.purs"
+    },
+    "foreigns": [
+      "src/Web/File/Blob.js",
+      "src/Web/File/FileReader.js",
+      "src/Web/File/FileList.js",
+      "src/Web/File/File.js"
+    ]
+  },
+  "web-html": {
+    "dependencies": [
+      "js-date",
+      "web-dom",
+      "web-file",
+      "web-storage"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-html.git",
+    "version": "v1.0.0",
+    "sha256": "1xcv91h1d6qvgnidgvcwgyi5dvainrc9sqrll6xl7gwkmaj7nk61",
+    "sources": {
+      "Web.HTML": "src/Web/HTML.purs",
+      "Web.HTML.Event.BeforeUnloadEvent": "src/Web/HTML/Event/BeforeUnloadEvent.purs",
+      "Web.HTML.Event.BeforeUnloadEvent.EventTypes": "src/Web/HTML/Event/BeforeUnloadEvent/EventTypes.purs",
+      "Web.HTML.Event.DataTransfer": "src/Web/HTML/Event/DataTransfer.purs",
+      "Web.HTML.Event.DragEvent": "src/Web/HTML/Event/DragEvent.purs",
+      "Web.HTML.Event.DragEvent.EventTypes": "src/Web/HTML/Event/DragEvent/EventTypes.purs",
+      "Web.HTML.Event.ErrorEvent": "src/Web/HTML/Event/ErrorEvent.purs",
+      "Web.HTML.Event.EventTypes": "src/Web/HTML/Event/EventTypes.purs",
+      "Web.HTML.Event.HashChangeEvent": "src/Web/HTML/Event/HashChangeEvent.purs",
+      "Web.HTML.Event.HashChangeEvent.EventTypes": "src/Web/HTML/Event/HashChangeEvent/EventTypes.purs",
+      "Web.HTML.Event.PageTransitionEvent": "src/Web/HTML/Event/PageTransitionEvent.purs",
+      "Web.HTML.Event.PageTransitionEvent.EventTypes": "src/Web/HTML/Event/PageTransitionEvent/EventTypes.purs",
+      "Web.HTML.Event.PopStateEvent": "src/Web/HTML/Event/PopStateEvent.purs",
+      "Web.HTML.Event.PopStateEvent.EventTypes": "src/Web/HTML/Event/PopStateEvent/EventTypes.purs",
+      "Web.HTML.Event.TrackEvent": "src/Web/HTML/Event/TrackEvent.purs",
+      "Web.HTML.Event.TrackEvent.EventTypes": "src/Web/HTML/Event/TrackEvent/EventTypes.purs",
+      "Web.HTML.HTMLAnchorElement": "src/Web/HTML/HTMLAnchorElement.purs",
+      "Web.HTML.HTMLAreaElement": "src/Web/HTML/HTMLAreaElement.purs",
+      "Web.HTML.HTMLAudioElement": "src/Web/HTML/HTMLAudioElement.purs",
+      "Web.HTML.HTMLBRElement": "src/Web/HTML/HTMLBRElement.purs",
+      "Web.HTML.HTMLBaseElement": "src/Web/HTML/HTMLBaseElement.purs",
+      "Web.HTML.HTMLBodyElement": "src/Web/HTML/HTMLBodyElement.purs",
+      "Web.HTML.HTMLButtonElement": "src/Web/HTML/HTMLButtonElement.purs",
+      "Web.HTML.HTMLCanvasElement": "src/Web/HTML/HTMLCanvasElement.purs",
+      "Web.HTML.HTMLDListElement": "src/Web/HTML/HTMLDListElement.purs",
+      "Web.HTML.HTMLDataElement": "src/Web/HTML/HTMLDataElement.purs",
+      "Web.HTML.HTMLDataListElement": "src/Web/HTML/HTMLDataListElement.purs",
+      "Web.HTML.HTMLDivElement": "src/Web/HTML/HTMLDivElement.purs",
+      "Web.HTML.HTMLDocument": "src/Web/HTML/HTMLDocument.purs",
+      "Web.HTML.HTMLDocument.ReadyState": "src/Web/HTML/HTMLDocument/ReadyState.purs",
+      "Web.HTML.HTMLElement": "src/Web/HTML/HTMLElement.purs",
+      "Web.HTML.HTMLEmbedElement": "src/Web/HTML/HTMLEmbedElement.purs",
+      "Web.HTML.HTMLFieldSetElement": "src/Web/HTML/HTMLFieldSetElement.purs",
+      "Web.HTML.HTMLFormElement": "src/Web/HTML/HTMLFormElement.purs",
+      "Web.HTML.HTMLHRElement": "src/Web/HTML/HTMLHRElement.purs",
+      "Web.HTML.HTMLHeadElement": "src/Web/HTML/HTMLHeadElement.purs",
+      "Web.HTML.HTMLHeadingElement": "src/Web/HTML/HTMLHeadingElement.purs",
+      "Web.HTML.HTMLIFrameElement": "src/Web/HTML/HTMLIFrameElement.purs",
+      "Web.HTML.HTMLImageElement": "src/Web/HTML/HTMLImageElement.purs",
+      "Web.HTML.HTMLInputElement": "src/Web/HTML/HTMLInputElement.purs",
+      "Web.HTML.HTMLKeygenElement": "src/Web/HTML/HTMLKeygenElement.purs",
+      "Web.HTML.HTMLLIElement": "src/Web/HTML/HTMLLIElement.purs",
+      "Web.HTML.HTMLLabelElement": "src/Web/HTML/HTMLLabelElement.purs",
+      "Web.HTML.HTMLLegendElement": "src/Web/HTML/HTMLLegendElement.purs",
+      "Web.HTML.HTMLLinkElement": "src/Web/HTML/HTMLLinkElement.purs",
+      "Web.HTML.HTMLMapElement": "src/Web/HTML/HTMLMapElement.purs",
+      "Web.HTML.HTMLMediaElement": "src/Web/HTML/HTMLMediaElement.purs",
+      "Web.HTML.HTMLMediaElement.CanPlayType": "src/Web/HTML/HTMLMediaElement/CanPlayType.purs",
+      "Web.HTML.HTMLMediaElement.NetworkState": "src/Web/HTML/HTMLMediaElement/NetworkState.purs",
+      "Web.HTML.HTMLMediaElement.ReadyState": "src/Web/HTML/HTMLMediaElement/ReadyState.purs",
+      "Web.HTML.HTMLMetaElement": "src/Web/HTML/HTMLMetaElement.purs",
+      "Web.HTML.HTMLMeterElement": "src/Web/HTML/HTMLMeterElement.purs",
+      "Web.HTML.HTMLModElement": "src/Web/HTML/HTMLModElement.purs",
+      "Web.HTML.HTMLOListElement": "src/Web/HTML/HTMLOListElement.purs",
+      "Web.HTML.HTMLObjectElement": "src/Web/HTML/HTMLObjectElement.purs",
+      "Web.HTML.HTMLOptGroupElement": "src/Web/HTML/HTMLOptGroupElement.purs",
+      "Web.HTML.HTMLOptionElement": "src/Web/HTML/HTMLOptionElement.purs",
+      "Web.HTML.HTMLOutputElement": "src/Web/HTML/HTMLOutputElement.purs",
+      "Web.HTML.HTMLParagraphElement": "src/Web/HTML/HTMLParagraphElement.purs",
+      "Web.HTML.HTMLParamElement": "src/Web/HTML/HTMLParamElement.purs",
+      "Web.HTML.HTMLPreElement": "src/Web/HTML/HTMLPreElement.purs",
+      "Web.HTML.HTMLProgressElement": "src/Web/HTML/HTMLProgressElement.purs",
+      "Web.HTML.HTMLQuoteElement": "src/Web/HTML/HTMLQuoteElement.purs",
+      "Web.HTML.HTMLScriptElement": "src/Web/HTML/HTMLScriptElement.purs",
+      "Web.HTML.HTMLSelectElement": "src/Web/HTML/HTMLSelectElement.purs",
+      "Web.HTML.HTMLSourceElement": "src/Web/HTML/HTMLSourceElement.purs",
+      "Web.HTML.HTMLSpanElement": "src/Web/HTML/HTMLSpanElement.purs",
+      "Web.HTML.HTMLStyleElement": "src/Web/HTML/HTMLStyleElement.purs",
+      "Web.HTML.HTMLTableCaptionElement": "src/Web/HTML/HTMLTableCaptionElement.purs",
+      "Web.HTML.HTMLTableCellElement": "src/Web/HTML/HTMLTableCellElement.purs",
+      "Web.HTML.HTMLTableColElement": "src/Web/HTML/HTMLTableColElement.purs",
+      "Web.HTML.HTMLTableDataCellElement": "src/Web/HTML/HTMLTableDataCellElement.purs",
+      "Web.HTML.HTMLTableElement": "src/Web/HTML/HTMLTableElement.purs",
+      "Web.HTML.HTMLTableHeaderCellElement": "src/Web/HTML/HTMLTableHeaderCellElement.purs",
+      "Web.HTML.HTMLTableRowElement": "src/Web/HTML/HTMLTableRowElement.purs",
+      "Web.HTML.HTMLTableSectionElement": "src/Web/HTML/HTMLTableSectionElement.purs",
+      "Web.HTML.HTMLTemplateElement": "src/Web/HTML/HTMLTemplateElement.purs",
+      "Web.HTML.HTMLTextAreaElement": "src/Web/HTML/HTMLTextAreaElement.purs",
+      "Web.HTML.HTMLTimeElement": "src/Web/HTML/HTMLTimeElement.purs",
+      "Web.HTML.HTMLTitleElement": "src/Web/HTML/HTMLTitleElement.purs",
+      "Web.HTML.HTMLTrackElement": "src/Web/HTML/HTMLTrackElement.purs",
+      "Web.HTML.HTMLTrackElement.ReadyState": "src/Web/HTML/HTMLTrackElement/ReadyState.purs",
+      "Web.HTML.HTMLUListElement": "src/Web/HTML/HTMLUListElement.purs",
+      "Web.HTML.HTMLVideoElement": "src/Web/HTML/HTMLVideoElement.purs",
+      "Web.HTML.History": "src/Web/HTML/History.purs",
+      "Web.HTML.Location": "src/Web/HTML/Location.purs",
+      "Web.HTML.Navigator": "src/Web/HTML/Navigator.purs",
+      "Web.HTML.SelectionMode": "src/Web/HTML/SelectionMode.purs",
+      "Web.HTML.ValidityState": "src/Web/HTML/ValidityState.purs",
+      "Web.HTML.Window": "src/Web/HTML/Window.purs"
+    },
+    "foreigns": [
+      "src/Web/HTML.js",
+      "src/Web/HTML/Window.js",
+      "src/Web/HTML/HTMLVideoElement.js",
+      "src/Web/HTML/HTMLFormElement.js",
+      "src/Web/HTML/HTMLDocument.js",
+      "src/Web/HTML/HTMLIFrameElement.js",
+      "src/Web/HTML/HTMLProgressElement.js",
+      "src/Web/HTML/History.js",
+      "src/Web/HTML/HTMLScriptElement.js",
+      "src/Web/HTML/ValidityState.js",
+      "src/Web/HTML/HTMLFieldSetElement.js",
+      "src/Web/HTML/HTMLMeterElement.js",
+      "src/Web/HTML/HTMLCanvasElement.js",
+      "src/Web/HTML/HTMLOListElement.js",
+      "src/Web/HTML/HTMLTableHeaderCellElement.js",
+      "src/Web/HTML/HTMLTableElement.js",
+      "src/Web/HTML/HTMLInputElement.js",
+      "src/Web/HTML/HTMLStyleElement.js",
+      "src/Web/HTML/HTMLMetaElement.js",
+      "src/Web/HTML/HTMLSelectElement.js",
+      "src/Web/HTML/HTMLLabelElement.js",
+      "src/Web/HTML/HTMLLinkElement.js",
+      "src/Web/HTML/HTMLTableRowElement.js",
+      "src/Web/HTML/HTMLParamElement.js",
+      "src/Web/HTML/HTMLModElement.js",
+      "src/Web/HTML/HTMLTableSectionElement.js",
+      "src/Web/HTML/HTMLObjectElement.js",
+      "src/Web/HTML/HTMLOptionElement.js",
+      "src/Web/HTML/HTMLLIElement.js",
+      "src/Web/HTML/HTMLTitleElement.js",
+      "src/Web/HTML/HTMLTableCellElement.js",
+      "src/Web/HTML/HTMLAnchorElement.js",
+      "src/Web/HTML/HTMLOptGroupElement.js",
+      "src/Web/HTML/HTMLAreaElement.js",
+      "src/Web/HTML/HTMLLegendElement.js",
+      "src/Web/HTML/Location.js",
+      "src/Web/HTML/HTMLElement.js",
+      "src/Web/HTML/HTMLTemplateElement.js",
+      "src/Web/HTML/HTMLQuoteElement.js",
+      "src/Web/HTML/HTMLDataElement.js",
+      "src/Web/HTML/HTMLBaseElement.js",
+      "src/Web/HTML/HTMLSourceElement.js",
+      "src/Web/HTML/HTMLTextAreaElement.js",
+      "src/Web/HTML/HTMLTrackElement.js",
+      "src/Web/HTML/HTMLTableColElement.js",
+      "src/Web/HTML/HTMLMediaElement.js",
+      "src/Web/HTML/HTMLImageElement.js",
+      "src/Web/HTML/HTMLButtonElement.js",
+      "src/Web/HTML/Navigator.js",
+      "src/Web/HTML/HTMLKeygenElement.js",
+      "src/Web/HTML/HTMLOutputElement.js",
+      "src/Web/HTML/HTMLTimeElement.js",
+      "src/Web/HTML/HTMLDataListElement.js",
+      "src/Web/HTML/HTMLEmbedElement.js",
+      "src/Web/HTML/HTMLMapElement.js",
+      "src/Web/HTML/Event/PageTransitionEvent.js",
+      "src/Web/HTML/Event/BeforeUnloadEvent.js",
+      "src/Web/HTML/Event/ErrorEvent.js",
+      "src/Web/HTML/Event/HashChangeEvent.js",
+      "src/Web/HTML/Event/DataTransfer.js",
+      "src/Web/HTML/Event/DragEvent.js",
+      "src/Web/HTML/Event/PopStateEvent.js"
+    ]
+  },
+  "web-socket": {
+    "dependencies": [
+      "arraybuffer-types",
+      "web-file"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-socket.git",
+    "version": "v1.0.0",
+    "sha256": "1dld6dvwyhpxwcj28grnndjbamdfmy2imn7sl2824n74s03sy9kj",
+    "sources": {
+      "Web.Socket.BinaryType": "src/Web/Socket/BinaryType.purs",
+      "Web.Socket.Event.CloseEvent": "src/Web/Socket/Event/CloseEvent.purs",
+      "Web.Socket.Event.EventTypes": "src/Web/Socket/Event/EventTypes.purs",
+      "Web.Socket.Event.MessageEvent": "src/Web/Socket/Event/MessageEvent.purs",
+      "Web.Socket.ReadyState": "src/Web/Socket/ReadyState.purs",
+      "Web.Socket.WebSocket": "src/Web/Socket/WebSocket.purs"
+    },
+    "foreigns": [
+      "src/Web/Socket/WebSocket.js",
+      "src/Web/Socket/Event/MessageEvent.js",
+      "src/Web/Socket/Event/CloseEvent.js"
+    ]
+  },
+  "web-storage": {
+    "dependencies": [
+      "nullable",
+      "web-events"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-storage.git",
+    "version": "v2.0.0",
+    "sha256": "1lr4lswsp62kl21rl6jb377a0sya105sfimkxm3y22grx88l6vj1",
+    "sources": {
+      "Web.Storage.Event.StorageEvent": "src/Web/Storage/Event/StorageEvent.purs",
+      "Web.Storage.Storage": "src/Web/Storage/Storage.purs"
+    },
+    "foreigns": [
+      "src/Web/Storage/Storage.js",
+      "src/Web/Storage/Event/StorageEvent.js"
+    ]
+  },
+  "web-touchevents": {
+    "dependencies": [
+      "web-uievents"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-touchevents.git",
+    "version": "v1.0.0",
+    "sha256": "1avg7jljd1j7d0b7k7fbqxi90aa01awp9x17v53mynzg6gyvc8zb",
+    "sources": {
+      "Web.TouchEvent": "src/Web/TouchEvent.purs",
+      "Web.TouchEvent.EventTypes": "src/Web/TouchEvent/EventTypes.purs",
+      "Web.TouchEvent.Touch": "src/Web/TouchEvent/Touch.purs",
+      "Web.TouchEvent.TouchEvent": "src/Web/TouchEvent/TouchEvent.purs",
+      "Web.TouchEvent.TouchList": "src/Web/TouchEvent/TouchList.purs"
+    },
+    "foreigns": [
+      "src/Web/TouchEvent/TouchEvent.js",
+      "src/Web/TouchEvent/Touch.js",
+      "src/Web/TouchEvent/TouchList.js"
+    ]
+  },
+  "web-uievents": {
+    "dependencies": [
+      "web-html"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-uievents.git",
+    "version": "v1.0.0",
+    "sha256": "1683ysabddnhsjiy70axpslagi2cp2ab3qd0r1qjx6ab2zjd6kc0",
+    "sources": {
+      "Web.UIEvent.CompositionEvent": "src/Web/UIEvent/CompositionEvent.purs",
+      "Web.UIEvent.CompositionEvent.EventTypes": "src/Web/UIEvent/CompositionEvent/EventTypes.purs",
+      "Web.UIEvent.EventTypes": "src/Web/UIEvent/EventTypes.purs",
+      "Web.UIEvent.FocusEvent": "src/Web/UIEvent/FocusEvent.purs",
+      "Web.UIEvent.FocusEvent.EventTypes": "src/Web/UIEvent/FocusEvent/EventTypes.purs",
+      "Web.UIEvent.InputEvent": "src/Web/UIEvent/InputEvent.purs",
+      "Web.UIEvent.InputEvent.EventTypes": "src/Web/UIEvent/InputEvent/EventTypes.purs",
+      "Web.UIEvent.KeyboardEvent": "src/Web/UIEvent/KeyboardEvent.purs",
+      "Web.UIEvent.KeyboardEvent.EventTypes": "src/Web/UIEvent/KeyboardEvent/EventTypes.purs",
+      "Web.UIEvent.MouseEvent": "src/Web/UIEvent/MouseEvent.purs",
+      "Web.UIEvent.MouseEvent.EventTypes": "src/Web/UIEvent/MouseEvent/EventTypes.purs",
+      "Web.UIEvent.UIEvent": "src/Web/UIEvent/UIEvent.purs",
+      "Web.UIEvent.WheelEvent": "src/Web/UIEvent/WheelEvent.purs",
+      "Web.UIEvent.WheelEvent.EventTypes": "src/Web/UIEvent/WheelEvent/EventTypes.purs"
+    },
+    "foreigns": [
+      "src/Web/UIEvent/InputEvent.js",
+      "src/Web/UIEvent/FocusEvent.js",
+      "src/Web/UIEvent/WheelEvent.js",
+      "src/Web/UIEvent/CompositionEvent.js",
+      "src/Web/UIEvent/MouseEvent.js",
+      "src/Web/UIEvent/KeyboardEvent.js"
+    ]
+  },
+  "web-xhr": {
+    "dependencies": [
+      "arraybuffer-types",
+      "datetime",
+      "http-methods",
+      "web-dom",
+      "web-file"
+    ],
+    "repo": "https://github.com/purescript-web/purescript-web-xhr.git",
+    "version": "v2.0.0",
+    "sha256": "05s3wp525wyvfz3rv456shvng9c0a4ncjdc7yxn2zglhq973km23",
+    "sources": {
+      "Web.XHR.EventTypes": "src/Web/XHR/EventTypes.purs",
+      "Web.XHR.FormData": "src/Web/XHR/FormData.purs",
+      "Web.XHR.ProgressEvent": "src/Web/XHR/ProgressEvent.purs",
+      "Web.XHR.ReadyState": "src/Web/XHR/ReadyState.purs",
+      "Web.XHR.ResponseType": "src/Web/XHR/ResponseType.purs",
+      "Web.XHR.XMLHttpRequest": "src/Web/XHR/XMLHttpRequest.purs",
+      "Web.XHR.XMLHttpRequestUpload": "src/Web/XHR/XMLHttpRequestUpload.purs"
+    },
+    "foreigns": [
+      "src/Web/XHR/FormData.js",
+      "src/Web/XHR/ProgressEvent.js",
+      "src/Web/XHR/XMLHttpRequest.js"
+    ]
+  },
+  "webaudio": {
+    "dependencies": [
+      "aff",
+      "affjax",
+      "arraybuffer",
+      "arraybuffer-types",
+      "arrays",
+      "assert",
+      "console",
+      "foldable-traversable",
+      "js-timers",
+      "lists",
+      "math",
+      "maybe",
+      "psci-support",
+      "refs",
+      "strings",
+      "tuples"
+    ],
+    "repo": "https://github.com/adkelley/purescript-webaudio.git",
+    "version": "v0.1.2",
+    "sha256": "0n95pmws71x3021xmlp7dibyp8ldy0fx0zwi0sd1higjramhzz88",
+    "sources": {
+      "Audio.WebAudio.AnalyserNode": "src/Audio/WebAudio/AnalyserNode.purs",
+      "Audio.WebAudio.AudioBufferSourceNode": "src/Audio/WebAudio/AudioBufferSourceNode.purs",
+      "Audio.WebAudio.AudioContext": "src/Audio/WebAudio/AudioContext.purs",
+      "Audio.WebAudio.AudioParam": "src/Audio/WebAudio/AudioParam.purs",
+      "Audio.WebAudio.BaseAudioContext": "src/Audio/WebAudio/BaseAudioContext.purs",
+      "Audio.WebAudio.BiquadFilterNode": "src/Audio/WebAudio/BiquadFilterNode.purs",
+      "Audio.WebAudio.ConvolverNode": "src/Audio/WebAudio/ConvolverNode.purs",
+      "Audio.WebAudio.DelayNode": "src/Audio/WebAudio/DelayNode.purs",
+      "Audio.WebAudio.DestinationNode": "src/Audio/WebAudio/DestinationNode.purs",
+      "Audio.WebAudio.DynamicsCompressorNode": "src/Audio/WebAudio/DynamicsCompressorNode.purs",
+      "Audio.WebAudio.GainNode": "src/Audio/WebAudio/GainNode.purs",
+      "Audio.WebAudio.MediaElementAudioSourceNode": "src/Audio/WebAudio/MediaElementAudioSourceNode.purs",
+      "Audio.WebAudio.Oscillator": "src/Audio/WebAudio/Oscillator.purs",
+      "Audio.WebAudio.StereoPannerNode": "src/Audio/WebAudio/StereoPannerNode.purs",
+      "Audio.WebAudio.Types": "src/Audio/WebAudio/Types.purs",
+      "Audio.WebAudio.Utils": "src/Audio/WebAudio/Utils.purs"
+    },
+    "foreigns": [
+      "src/Audio/WebAudio/BaseAudioContext.js",
+      "src/Audio/WebAudio/DynamicsCompressorNode.js",
+      "src/Audio/WebAudio/AudioContext.js",
+      "src/Audio/WebAudio/Utils.js",
+      "src/Audio/WebAudio/AudioParam.js",
+      "src/Audio/WebAudio/Oscillator.js",
+      "src/Audio/WebAudio/ConvolverNode.js",
+      "src/Audio/WebAudio/AudioBufferSourceNode.js",
+      "src/Audio/WebAudio/BiquadFilterNode.js",
+      "src/Audio/WebAudio/StereoPannerNode.js",
+      "src/Audio/WebAudio/AnalyserNode.js",
+      "src/Audio/WebAudio/GainNode.js",
+      "src/Audio/WebAudio/Types.js"
+    ]
+  },
+  "yargs": {
+    "dependencies": [
+      "console",
+      "either",
+      "exceptions",
+      "foreign",
+      "unsafe-coerce"
+    ],
+    "repo": "https://github.com/paf31/purescript-yargs.git",
+    "version": "v4.0.0",
+    "sha256": "10xbiyghplg54n9p7vs7mba9gmqfsbyiz0045c5p4p3v6djj60w3",
+    "sources": {
+      "Node.Yargs": "src/Node/Yargs.purs",
+      "Node.Yargs.Applicative": "src/Node/Yargs/Applicative.purs",
+      "Node.Yargs.Setup": "src/Node/Yargs/Setup.purs"
+    },
+    "foreigns": [
+      "src/Node/Yargs.js"
+    ]
+  }
+}
