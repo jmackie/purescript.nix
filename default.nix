@@ -113,4 +113,6 @@ in
         sources = builtins.filter isPurs inputs;
         foreigns = builtins.filter isJs inputs;
     };
+
+  elaborator = import ./elaborator { inherit pkgs; returnShellEnv = false; };
 }

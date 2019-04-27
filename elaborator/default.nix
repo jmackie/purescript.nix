@@ -1,5 +1,6 @@
 { pkgs ? import <nixpkgs> {}
 , compiler ? "ghc864"
+, returnShellEnv ? pkgs.lib.inNixShell
 }:
 let
   haskellPackages =
@@ -37,7 +38,7 @@ let
     ];
   };
 in
-if pkgs.lib.inNixShell then env else drv
+if returnShellEnv then env else drv
 
 # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/haskell-modules/generic-builder.nix
 # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/haskell-modules/make-package-set.nix
