@@ -1,6 +1,15 @@
+## Installing
+
 ```bash
-cabal new-run elaborator -- --help
-cabal new-run elaborator -- <(curl https://raw.githubusercontent.com/purescript/package-sets/master/packages.json)
+nix-env -f https://github.com/jmackie/purescript-nix/archive/master.tar.gz -iA elaborator
+
+elaborate-purescript-packages --help
+```
+
+## Using it
+
+```bash
+elaborate-purescript-packages <(curl https://raw.githubusercontent.com/purescript/package-sets/master/packages.json)
 ```
 
 ## Developing
