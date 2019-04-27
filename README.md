@@ -49,3 +49,4 @@ with commit hashes and stuff.
 - [ ] Should probably start versioning this stuff
 - [ ] Could actually invoke the `elaborator` through Nix...?
 - [ ] More `purs` derivations, aligning with versions supported in `package-sets`
+- [ ] Finish the `elaborator` CLI
