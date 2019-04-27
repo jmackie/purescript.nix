@@ -12,8 +12,8 @@ let
   purescript = import (nixpkgs.fetchFromGitHub {
     owner = "jmackie";
     repo = "purescript-nix";
-    rev = "2d87289f22bc0f823033fb59c16df6009de09038";
-    sha256 = "1ia36ssl642nkmnqg4iqz2jmmgnl7n3zcb3hrmq3ybgnv81ygr1k";
+    rev = "616e0ad7a14164b3f1fc26ecb9cead792b8e35f6";
+    sha256 = "0b0c6g5f8bxw4q7zsqjk28n408akx8fzam6z1kxh46bmvc0hmdfi";
   }) { inherit nixpkgs; } ;
 in
 purescript.compile {
