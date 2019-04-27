@@ -32,6 +32,10 @@ purescript.compile {
 
 See the [example](https://github.com/jmackie/purescript-nix/tree/master/example).
 
+## What's the point?
+
+- Caching
+
 ## Building an "elaborated" package set
 
 We can't use the [standard package sets](https://github.com/purescript/package-sets)
