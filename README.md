@@ -39,3 +39,8 @@ as they are because Nix needs to know what repo hash we expect. So there is a
 little Haskell executable under [`elaborator`](https://github.com/jmackie/purescript-nix/tree/master/example)
 that takes as input a standard package set and outputs that same package set
 with commit hashes and stuff.
+
+## TODO
+
+- [ ] Should probably start versioning this stuff
+- [ ] Could actually invoke the `elaborator` through Nix...?
