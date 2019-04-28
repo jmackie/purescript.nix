@@ -1,5 +1,5 @@
 { pkgs ? import <nixpkgs> {}
-, purs ? "v0.12.3" 
+, purs ? "v0.12.3"
 }:
 let
   compiler = (import ./purs.nix { inherit pkgs; }).${purs};
@@ -54,9 +54,10 @@ let
         mkdir -p $out
 
         ${if length deps == 0 then "" else ''
-        for outdir in ${toString (map (dep: "${dep}/*") deps)}; do
-          if [ ! -e "$out/$(basename $outdir)" ]; then
-            ln -s $outdir $out
+        # TODO: This would be more efficient if we could uniq on basename
+        for outputDir in ${toString (map (dep: "${dep}/*") deps)}; do
+          if [ ! -e "$out/$(basename $outputDir)" ]; then
+            ln -s $outputDir $out
           fi
         done
         ''}
@@ -67,11 +68,46 @@ let
     } // {
       _args = args; # Need to hang on to these
 
-      env = pkgs.mkShell {
+      shell = pkgs.mkShell {
+        # purs compile $PURS_FILES 'src/**/*.purs'
+        # purs docs --format html $PURS_FILES 'src/**/*.purs'
         PURS_FILES = toString depInputs;
+
         buildInputs = [
           compiler
         ];
+
+        shellHook = let for = xs: f: map f xs; in with builtins; ''
+          purs-dump() {
+            ${if length deps == 0 then "exit 0" else
+              concatStringsSep "\n"
+                (["echo Dumping dependency sources..."] ++
+                (for deps (dep: ''
+                  mkdir -p ./packages/${baseNameOf dep}
+
+                  (HERE=$(pwd) && cd ${dep.src} && cp --parents --no-preserve=mode,timestamps \
+                    ${toString (dep._args.sources ++ dep._args.foreigns)} $HERE/packages/${baseNameOf dep}/)
+
+                  #tar cf - -C ${dep.src} ${toString (dep._args.sources ++ dep._args.foreigns)} | \
+                  #  tar xf - --no-same-permissions -C ./packages/${baseNameOf dep}
+                '')) ++
+
+                ["echo Dumping outputs..."
+                ''
+                mkdir -p ./output
+                for outputDir in ${toString (map (dep: "${dep}/*") deps)}; do
+                  if [ ! -e "./output/$(basename $outputDir)" ]; then
+                    cp -r --dereference --no-preserve=mode,timestamps $outputDir ./output/
+
+                    #tar chf - -C $(dirname $outputDir) $(basename $outputDir) | tar xf - -C ./output
+                  fi
+                done
+                ''
+                ]
+                )
+            }
+          }
+        '';
       };
     };
 
