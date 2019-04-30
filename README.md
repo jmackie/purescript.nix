@@ -51,3 +51,4 @@ with commit hashes and stuff.
 - [ ] More `purs` derivations, aligning with versions supported in `package-sets`
 - [ ] Finish the `elaborator` CLI
 - [ ] Fix shell stuff so `purs compile` doesn't rebuild everything
+- [ ] Filter `src` for ignored PS stuff? Does this affect the derivation hash?
