@@ -6,15 +6,15 @@ Build your PureScript stuff with Nix.
 
 ```nix
 # default.nix
-{ nixpkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {} }:
 let
   # $ nix-prefetch-git https://github.com/jmackie/purescript-nix
-  purescript = import (nixpkgs.fetchFromGitHub {
+  purescript = import (pkgs.fetchFromGitHub {
     owner = "jmackie";
     repo = "purescript-nix";
     rev = "616e0ad7a14164b3f1fc26ecb9cead792b8e35f6";
     sha256 = "0b0c6g5f8bxw4q7zsqjk28n408akx8fzam6z1kxh46bmvc0hmdfi";
-  }) { inherit nixpkgs; } ;
+  }) { inherit pkgs; } ;
 in
 purescript.compile {
   name = "example";
