@@ -4,10 +4,10 @@
 }:
 let
   haskellPackages =
-    pkgs.haskell.packages.${compiler};
-
-  filterEnvironmentFiles =
-    builtins.filterSource (path: type: !(pkgs.lib.strings.hasPrefix ".ghc.environment" (baseNameOf path)));
+    pkgs.haskell.packages.${compiler}.override {
+      overrides = self: super: {
+      };
+    };
 
   # ghcid with support for cabal new-repl
   ghcid_ =
@@ -26,9 +26,14 @@ let
         --command "${newRepl}" \
         --setup ":l Main"
   '';
+  name =
+    "elaborator";
+
+  src =
+    pkgs.nix-gitignore.gitignoreSource [] ./.;
 
   drv =
-    haskellPackages.callCabal2nix "elaborator" (filterEnvironmentFiles ./.) {};
+    haskellPackages.callCabal2nix name src {};
 
   env = haskellPackages.shellFor {
     packages = p: [ drv ];
