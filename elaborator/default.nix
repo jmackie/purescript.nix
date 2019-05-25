@@ -13,24 +13,35 @@ let
   ghcid_ =
     let newRepl = ''
       cabal new-repl \
-        --ghc-options=-fno-code \
         --ghc-options=-fno-break-on-exception \
         --ghc-options=-fno-break-on-error \
         --ghc-options=-v1 \
         --ghc-options=-ferror-spans \
         --ghc-options=-j
     '';
+    # NOTE: not using `--ghc-options=-fno-code`
+    # because we might want to pass `--run`
     in pkgs.writeShellScriptBin "ghcid_" ''
       ${haskellPackages.ghcid}/bin/ghcid \
         --restart elaborator.cabal \
         --command "${newRepl}" \
-        --setup ":l Main"
+        --setup ":l Main" \
+        "$@"
   '';
+
+  gitignoreSrc = pkgs.fetchFromGitHub {
+    owner = "hercules-ci";
+    repo = "gitignore";
+    rev = "ec5dd0536a5e4c3a99c797b86180f7261197c124";
+    sha256 = "0k2r8y21rn4kr5dmddd3906x0733fs3bb8hzfpabkdav3wcy3klv";
+  };
+  inherit (import gitignoreSrc { inherit (pkgs) lib; }) gitignoreSource;
+
   name =
     "elaborator";
 
   src =
-    pkgs.nix-gitignore.gitignoreSource [] ./.;
+    gitignoreSource ./.;
 
   drv =
     haskellPackages.callCabal2nix name src {};

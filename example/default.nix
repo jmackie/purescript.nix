@@ -33,7 +33,9 @@ let
 in
 purescript.compile {
   name = "example";
-  src = ./.;
+  # https://github.com/siers/nix-gitignore#usage
+  # See also --> https://github.com/hercules-ci/gitignore
+  src = pkgs.nix-gitignore.gitignoreSource [] ./.;
   srcDirs = [
     "src"
   ];

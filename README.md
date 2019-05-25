@@ -48,8 +48,5 @@ with commit hashes and stuff.
 
 - [ ] Should probably start versioning this stuff
 - [ ] Could actually invoke the `elaborator` through Nix...?
-- [ ] More `purs` derivations, aligning with versions supported in `package-sets`
-- [ ] Finish the `elaborator` CLI
 - [ ] Fix shell stuff so `purs compile` doesn't rebuild everything
-- [ ] Filter `src` for ignored PS stuff? Does this affect the derivation hash?
 - [ ] Add CI testing

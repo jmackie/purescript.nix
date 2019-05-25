@@ -5,12 +5,13 @@ module Options
   ) where
 import           Prelude
 
-import qualified Options.Applicative    as Opt
+import qualified Options.Applicative             as Opt
+import qualified Options.Applicative.Help.Pretty as Doc
 import qualified Path
 
-import           Control.Applicative    ((<**>), (<|>))
-import           Control.Monad.IO.Class (MonadIO, liftIO)
-import           Path                   (Path)
+import           Control.Applicative             ((<**>), (<|>))
+import           Control.Monad.IO.Class          (MonadIO, liftIO)
+import           Path                            (Path)
 
 
 type PathOption a = Either (Path Path.Abs a) (Path Path.Rel a)
@@ -35,13 +36,26 @@ exec = liftIO (Opt.execParser parserInfo)
   parserInfo =
     Opt.info (parser <**> Opt.helper) $ mconcat
       [ Opt.fullDesc
-      , Opt.progDesc "Print a greeting for TARGET"
-      , Opt.header "hello - a test for optparse-applicative"
+      , Opt.headerDoc . pure $
+          Doc.cyan (Doc.text "PureScript package set elaborator")
+      , Opt.progDescDoc . pure $
+          Doc.hardline <>
+          Doc.cyan (Doc.text "Adds some extra fields to the standard \
+                             \PureScript package set.") <>
+          Doc.hardline <>
+          Doc.cyan (Doc.text "If no input file is specified it will be read from " <> Doc.bold (Doc.text "stdin.")) <>
+          Doc.hardline <>
+          Doc.cyan (Doc.text "The result is written to " <> Doc.bold (Doc.text "stdout."))
+      , Opt.footerDoc . pure $
+          Doc.text "Example:" <>
+          Doc.hardline <>
+          Doc.hardline <>
+          Doc.indent 2 (Doc.green (Doc.text "elaborate-purescript-packages <(curl https://raw.githubusercontent.com/purescript/package-sets/master/packages.json)"))
       ]
 
   parser :: Opt.Parser Options
-  parser = pure Options
-    <*> packageSet
+  parser =
+    Options <$> packageSet
 
 
 -- OPTION PARSERS
