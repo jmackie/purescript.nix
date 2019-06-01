@@ -1,5 +1,5 @@
 { pkgs ? import <nixpkgs> {}
-, purs ? "v0.12.3"
+, purs
 }:
 let
   compiler = (import ./purs.nix { inherit pkgs; }).${purs};

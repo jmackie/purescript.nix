@@ -29,6 +29,20 @@ rec {
       '';
     };
 
+  "v0.13.0" = let version = "v0.13.0"; in
+    if pkgs.stdenv.isDarwin then
+      fetch {
+        inherit version;
+        url = "https://github.com/purescript/purescript/releases/download/${version}/macos.tar.gz";
+        sha1 = "c3c3e51519683d55844fcd141b20eff472f94385";
+      }
+    else
+      fetch {
+        inherit version;
+        url = "https://github.com/purescript/purescript/releases/download/${version}/linux64.tar.gz";
+        sha1 = "249be2fa812c544d69dadaff45af53943d428215";
+      };
+
   # for url in https://github.com/purescript/purescript/releases/download/v0.12.{0..5}/{linux64,macos}.sha; do
   #     echo $url
   #     curl -s -L $url

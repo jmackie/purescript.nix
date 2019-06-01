@@ -14,7 +14,7 @@ function cleanup() {
 for tag in $(cd $REPO_DIR && git tag); do
 
     # Only build package sets for >0.12, and ignore release candidates
-    if [[ $tag == *"0.10"* || $tag == *"0.11"* || $tag == *"rc"* ]]; then
+    if [[ -f "$tag.json" || $tag == *"0.10"* || $tag == *"0.11"* || $tag == *"rc"* ]]; then
         continue
     fi
 

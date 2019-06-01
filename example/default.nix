@@ -1,6 +1,6 @@
 { pkgs ? import <nixpkgs> {} }:
 let
-  purescript = import ./.. { inherit pkgs; };
+  purescript = import ./.. { purs = "v0.12.3"; inherit pkgs; };
   # purescript = import (pkgs.fetchFromGitHub {
   #   owner = "jmackie";
   #   repo = "purescript-nix";

@@ -14,7 +14,7 @@ let
     repo = "purescript-nix";
     rev = "616e0ad7a14164b3f1fc26ecb9cead792b8e35f6";
     sha256 = "0b0c6g5f8bxw4q7zsqjk28n408akx8fzam6z1kxh46bmvc0hmdfi";
-  }) { inherit pkgs; } ;
+  }) { purs = "v0.13.0"; inherit pkgs; } ;
 in
 purescript.compile {
   name = "example";
@@ -26,7 +26,7 @@ purescript.compile {
     "prelude"
     "console"
   ];
-  package-set = purescript.package-sets."psc-0.12.3-20190427";
+  package-set = purescript.package-sets."psc-0.13.0";
 }
 ```
 
