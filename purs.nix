@@ -29,6 +29,21 @@ rec {
       '';
     };
 
+  "v0.13.2" = let version = "v0.13.2"; in
+    if pkgs.stdenv.isDarwin then
+      fetch {
+        inherit version;
+        url = "https://github.com/purescript/purescript/releases/download/${version}/macos.tar.gz";
+
+        sha1 = "d3ef12d802ef5ace14fbf7c6c2c97ce1c3b6304c";
+      }
+    else
+      fetch {
+        inherit version;
+        url = "https://github.com/purescript/purescript/releases/download/${version}/linux64.tar.gz";
+        sha1 = "3d0259a82a48a776e31116bd7a5f607a2f035c49";
+      };
+
   "v0.13.0" = let version = "v0.13.0"; in
     if pkgs.stdenv.isDarwin then
       fetch {
