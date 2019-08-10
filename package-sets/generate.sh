@@ -20,5 +20,5 @@ for tag in $(cd $REPO_DIR && git tag); do
 
     (cd $REPO_DIR && git checkout --quiet "$tag")
     echo "Elaborating $tag..."
-    elaborate-purescript-packages --package-set $REPO_DIR/packages.json >"$tag.json"
+    nix-shell ../elaborator/default.nix --run "elaborate-purescript-packages --package-set $REPO_DIR/packages.json >$tag.json"
 done
