@@ -3,55 +3,33 @@
 , returnShellEnv ? pkgs.lib.inNixShell
 }:
 let
+  kesha =
+   with builtins.fromJSON (builtins.readFile ./kesha-src.json);
+    builtins.fetchTarball {
+      inherit name sha256;
+      url = "${url}/archive/${rev}.tar.gz";
+    };
+
   haskellPackages =
     pkgs.haskell.packages.${compiler}.override {
       overrides = self: super: {
+        kesha = super.callCabal2nix "kesha" kesha {};
       };
     };
-
-  # ghcid with support for cabal new-repl
-  ghcid_ =
-    let newRepl = ''
-      cabal new-repl \
-        --ghc-options=-fno-break-on-exception \
-        --ghc-options=-fno-break-on-error \
-        --ghc-options=-v1 \
-        --ghc-options=-ferror-spans \
-        --ghc-options=-j
-    '';
-    # NOTE: not using `--ghc-options=-fno-code`
-    # because we might want to pass `--run`
-    in pkgs.writeShellScriptBin "ghcid_" ''
-      ${haskellPackages.ghcid}/bin/ghcid \
-        --restart elaborator.cabal \
-        --command "${newRepl}" \
-        --setup ":l Main" \
-        "$@"
-  '';
-
-  gitignoreSrc = pkgs.fetchFromGitHub {
-    owner = "hercules-ci";
-    repo = "gitignore";
-    rev = "ec5dd0536a5e4c3a99c797b86180f7261197c124";
-    sha256 = "0k2r8y21rn4kr5dmddd3906x0733fs3bb8hzfpabkdav3wcy3klv";
-  };
-  inherit (import gitignoreSrc { inherit (pkgs) lib; }) gitignoreSource;
 
   name =
     "elaborator";
 
   src =
-    gitignoreSource ./.;
+    builtins.filterSource (path: _type:
+      builtins.elem (builtins.baseNameOf path)  ["Main.hs" "Setup.hs" "elaborator.cabal"]) ./.;
 
   drv =
     haskellPackages.callCabal2nix name src {};
 
   env = haskellPackages.shellFor {
     packages = p: [ drv ];
-    buildInputs = [
-      haskellPackages.ghcid ghcid_
-      haskellPackages.stylish-haskell
-    ];
+    buildInputs = [];
   };
 in
 if returnShellEnv then env else drv
