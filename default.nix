@@ -2,8 +2,6 @@
 , purs
 }:
 let
-  compiler = (import ./purs.nix { inherit pkgs; }).${purs};
-
   getExtension = path: with builtins;
     let parts = pkgs.lib.splitString "." path;
     in elemAt parts (length parts - 1);
@@ -49,7 +47,7 @@ let
     pkgs.stdenv.mkDerivation {
       name = "purescript-" + name;
       inherit src;
-      buildInputs = [ compiler ];
+      buildInputs = [ purs ];
       buildCommand = with builtins; ''
         mkdir -p $out
 
@@ -57,7 +55,16 @@ let
         # TODO: This would be more efficient if we could uniq on basename
         for outputDir in ${toString (map (dep: "${dep}/*") deps)}; do
           if [ ! -e "$out/$(basename $outputDir)" ]; then
-            ln -s $outputDir $out
+
+            # NOTE: can't symlink here because the compiler may want to write
+            # externs.json or foreign.json, in which case it will fail
+            # because the symlinked paths aren't writeable
+            #ln -s $outputDir $out
+
+            # Unfortunately copying everything like this is a bit slow...
+
+            mkdir "$out/$(basename $outputDir)"
+            cp --no-preserve=mode,ownership $outputDir/* $out/$(basename $outputDir)/
           fi
         done
         ''}
@@ -67,48 +74,6 @@ let
 
     } // {
       _args = args; # Need to hang on to these
-
-      shell = pkgs.mkShell {
-        # purs compile $PURS_FILES 'src/**/*.purs'
-        # purs docs --format html $PURS_FILES 'src/**/*.purs'
-        PURS_FILES = toString depInputs;
-
-        buildInputs = [
-          compiler
-        ];
-
-        shellHook = let for = xs: f: map f xs; in with builtins; ''
-          purs-dump() {
-            ${if length deps == 0 then "exit 0" else
-              concatStringsSep "\n"
-                (["echo Dumping dependency sources..."] ++
-                (for deps (dep: ''
-                  mkdir -p ./packages/${baseNameOf dep}
-
-                  (HERE=$(pwd) && cd ${dep.src} && cp --parents --no-preserve=mode,timestamps \
-                    ${toString (dep._args.sources ++ dep._args.foreigns)} $HERE/packages/${baseNameOf dep}/)
-
-                  #tar cf - -C ${dep.src} ${toString (dep._args.sources ++ dep._args.foreigns)} | \
-                  #  tar xf - --no-same-permissions -C ./packages/${baseNameOf dep}
-                '')) ++
-
-                ["echo Dumping outputs..."
-                ''
-                mkdir -p ./output
-                for outputDir in ${toString (map (dep: "${dep}/*") deps)}; do
-                  if [ ! -e "./output/$(basename $outputDir)" ]; then
-                    cp -r --dereference --no-preserve=mode,timestamps $outputDir ./output/
-
-                    #tar chf - -C $(dirname $outputDir) $(basename $outputDir) | tar xf - -C ./output
-                  fi
-                done
-                ''
-                ]
-                )
-            }
-          }
-        '';
-      };
     };
 
   compileDependencies = package-set: deps:
@@ -132,8 +97,7 @@ let
         {}
         (tsortDeps package-set (flattenDeps package-set deps))
     );
-in
-{
+in rec {
   compile = { name, src, srcDirs, dependencies, package-set }:
     let
       inputs =
@@ -142,22 +106,27 @@ in
           srcDirs;
     in
     compilePackage {
-        name = name;
-        inherit src;
-        dependencies = compileDependencies package-set dependencies;
-        sources = builtins.filter isPurs inputs;
-        foreigns = builtins.filter isJs inputs;
+      name = name;
+      inherit src;
+      dependencies = compileDependencies package-set dependencies;
+      sources = builtins.filter isPurs inputs;
+      foreigns = builtins.filter isJs inputs;
     };
 
-  package-sets = with pkgs.lib;
-    attrsets.mapAttrs'
-      (name: value:
-      attrsets.nameValuePair
-        (strings.removeSuffix ".json" name)
-        (builtins.fromJSON (builtins.readFile (./package-sets + "/${name}"))))
-      (attrsets.filterAttrs
-        (name: value: value != "directory" && strings.hasSuffix ".json" name)
-        (builtins.readDir ./package-sets));
+  fetchPackageSet = { url, rev, sha256, packagesJson ? "packages.json" }:
+    pkgs.fetchgit {
+      inherit url rev sha256;
+      postFetch = ''
+        export LOCALE_ARCHIVE=${pkgs.glibcLocales}/lib/locale/locale-archive
+        export LANG=en_US.utf-8
+        cd $out
+        <${packagesJson} ${elaborator}/bin/elaborator > packages.elaborated.json
+        mv -v packages.elaborated.json ${packagesJson}
+      '';
+    };
+
+  loadPackageSet = { url, rev, sha256, packagesJson ? "packages.json" }@args:
+    builtins.fromJSON (builtins.readFile "${fetchPackageSet args}/${packagesJson}");
 
   elaborator = import ./elaborator { inherit pkgs; returnShellEnv = false; };
 }
