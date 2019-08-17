@@ -8,7 +8,7 @@ let
   purescript = import ./.. { inherit pkgs purs; };
   # purescript = import (pkgs.fetchFromGitHub {
   #   owner = "jmackie";
-  #   repo = "purescript-nix";
+  #   repo = "purescript.nix";
   #   rev = "COMMIT";
   #   sha256 = "HASH";
   # }) { inherit pkgs; } ;
